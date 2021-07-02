@@ -1,0 +1,17 @@
+.to-do-franq {
+	.form-check .form-check-label {
+		white-space: normal;
+	}
+	.form-check-label {
+		white-space: normal !important;
+	}
+}
+
+.list-wrapper .form-check {
+	.form-check-label {
+		white-space: normal !important;
+	}
+	.completed .form-check {
+		text-decoration: none !important;
+	}
+}

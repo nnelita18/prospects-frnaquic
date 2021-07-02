@@ -24,10 +24,20 @@
     width: 100%;
   }
 }
+.title-wrapper {
+  background-color: #525463;
+  color: #f1ffff;
+  padding: 1rem 2rem;
+  margin: 0;
+}
+.subtitle-wrapper {
+  color: #122164;
+  margin-bottom: 1rem;
+}
 
 .content-wrapper {
   background: $content-bg;
-  padding: 2.375rem 2.375rem;
+  padding: 0 2.375rem 2.375rem;
   width: 100%;
   @include flex-grow(1);
   @media(max-width: 767px) {

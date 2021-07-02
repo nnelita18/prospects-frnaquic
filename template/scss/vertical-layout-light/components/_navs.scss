@@ -1,0 +1,20 @@
+$navssm: '.navssm';
+
+#{$navssm}{
+	&__sem {
+		.nav-tabs {
+			justify-content: center;
+		}
+		.nav-link {
+			border-radius: .8rem;
+			margin: 0.3rem 0.4rem;
+			&.active {
+				background-color: $sidebar-dark-menu-active-bg;
+				color: #f1ffff;
+			}
+		}
+	}
+	&__content {
+
+	}
+}

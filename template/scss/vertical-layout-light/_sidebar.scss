@@ -244,13 +244,13 @@
           }
           .nav-link {
             &[aria-expanded="true"] {
-              background: #1a1f26;
+              background: #122164;
             }
           }
         }
       }
       &.sub-menu {
-        background: #1a1f26;
+        background: #122164;
         .nav-item {
           .nav-link {
             color: $sidebar-dark-submenu-color;

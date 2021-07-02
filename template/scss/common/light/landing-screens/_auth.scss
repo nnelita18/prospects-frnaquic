@@ -2,8 +2,10 @@
 
 .auth {
 	.login-half-bg {
-		background: url("../../images/auth/login-bg.jpg");
+		background: url("../../images/login/login-bgfinal.jpg");
 		background-size: cover;
+		background-position: right bottom;
+
 	}
 	.register-half-bg {
 		background: url("../../images/auth/register-bg.jpg");
@@ -47,6 +49,7 @@
 		}
 	}
 	&.auth-img-bg {
+		background-color: #fbd39c;
 		padding: 0;
 		.auth-form-transparent {
 			@media (min-width:768px) {
@@ -58,14 +61,15 @@
 	.brand-logo {
 		margin-bottom: 2rem;
 		img {
-			width: 150px;
+			// width: 150px;
 		}
 	}
 	form {
 		.form-group {
 			margin-bottom: 1.5rem;
 			label {
-				font-size: .8125rem;
+				font-size: 1rem;
+				font-weight: 500;
 			}
 			.form-control {
 				background: transparent;

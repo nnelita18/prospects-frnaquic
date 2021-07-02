@@ -1,0 +1,634 @@
+
+  <div class="row title-wrapper">
+    <div class="col-12 col-xl-8">
+      <h3 class="font-weight-bold mb-0">Solicitud de Sucursal</h3>
+    </div>
+  </div>
+  <div class="content-wrapper register-ps">
+    <div class="row">
+      <div class="col-12 grid-margin">
+        <div class="container pt-4">
+          <!-- <h1>Sucursal: Franquicia Y </h1> -->
+          <p>
+            Aquí podrá visualizar el progreso de su Solicitud de Sucursal.
+          </p>
+          <div class="progress progress--reg">
+            <div class="progress-bar bg-secondary progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <form id="registration_form" class="forms-sample" novalidate action="action.php" method="post">
+            <div class="card-step">
+              <h2>Paso 1: Información Personal</h2>
+              <div class="card card--orange d-none">
+                <div class="card-header">Tipo de tienda</div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group d-none">
+                        <label>Tipo de tienda:</label><span class="requered_class">*</span>
+                        <select class="form-control input-sm notEmpty" onchange="cambia();" name="tipotienda" id="tipotienda">
+                          <option value="0" selected>Seleccione...</option>
+                          <option value="2">Franquicia</option>
+                          <option value="1">Tienda Propia</option>
+                        </select>
+                      </div>
+                      <div class="form-group row align-items-center">
+                        <label class="col-md-2 col-form-label">Tipo de tienda:</label>
+                        <div class="col-md-4">
+                          <div class="radio">
+                            <input label="Franquicia" type="radio" id="male" name="tipotienda" value="2" checked>
+                            <input label="Tienda Propia" type="radio" id="female" name="tipotienda" value="1">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="disable" id="formulario">
+                <div class="card card--orange">
+                  <div class="card-header">Datos Personales</div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label>Nombre:</label><span class="requered_class">*</span>
+                          <input class="form-control input-sm notEmpty" onkeypress="return soloLetras(event)" type="text" placeholder="Nombre (s)" name="nombre" id="nombre" required>
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label>A. Paterno:</label><span class="requered_class">*</span>
+                          <input class="form-control input-sm notEmpty" onkeypress="return soloLetras(event)" type="text" placeholder="Apellido paterno" name="apaterno" id="apaterno" required>
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label>A. Materno:</label><span class="requered_class">*</span>
+                          <input class="form-control input-sm notEmpty" onkeypress="return soloLetras(event)" type="text" placeholder="Apellido materno" name="amaterno" id="amaterno" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label>Tel Celular:</label><span class="requered_class">*</span>
+                          <input class="form-control input-sm istel" onKeyPress="return soloNum(event)" type="text" placeholder="Celular a 10 digitos obligatorio" name="cel" id="cel" maxlength="10" minlength="10" required>
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label>Tel Casa:</label>
+                          <input class="form-control input-sm " onKeyPress="return soloNum(event)" type="text" placeholder="Número a 10 digitos obligatorio" name="tel" id="tel" maxlength="10" minlength="10" required>
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label>E-mail:</label><span class="requered_class">*</span>
+                          <input class="form-control input-sm notEmpty" type="text" placeholder="E-mail" name="email" id="email" required>
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label>RFC (Solo Si Requiere Factura):</label>
+                          <input class="form-control input-sm " maxlength="13" minlength="13" type="text" placeholder="RFC" onchange="ValidaRfc(this.value)" name="rfc" id="rfc" required>
+                          <label id="errfc"></label>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row d-none">
+                  <div class="col-md-12 col-sm-12 form-group text-right">
+                    <button class="btn btn-default btn-sm" onclick="resetForm();"><i class="fa fa-user-plus"></i> limpiar campos</button>
+                    <button class="btn btn-success btn-sm" onclick="checkForm();"><i class="fa fa-user-plus"></i> guardar solicitud</button>
+                  </div>
+                  <div class="col-md-12 col-sm-12 form-group text-right">
+                    <div id="error"></div>
+                  </div>
+                </div>
+              </div>
+
+              <input type="button" name="data[password]" class="next btn btn-primary" value="Siguiente" />
+            </div>
+            <div class="card card--orange card-step">
+              <h2> Paso 2: Información del Negocio / Otros</h2>
+              <div class="card-header">Datos del Negocio</div>
+              <div class="card-body mb-3">
+                <div class="row">
+                  <div class="col-md-8 col-sm-8 form-group">
+                    <label>Nombre del Negocio:</label><span class="requered_class">*</span>
+                    <input class="form-control input-sm notEmpty" type="text" placeholder="Nombre del Negocio" name="nnego" id="nnego" required>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4 col-sm-6 form-group">
+                    <label>Calle:<span class="txr">*</span>
+                    </label>
+                    <input type="text" class="form-control input-sm notEmpty" name="calle" id="calle" placeholder="Calle" required>
+                  </div>
+                  <div class="col-md-4 col-sm-6 form-group">
+                    <label>Num. Exterior:<span class="txr">*</span>
+                    </label>
+                    <input type="text" class="form-control input-sm notEmpty" name="numext" id="numext" placeholder="Num. Exterior" required>
+                  </div>
+                  <div class="col-md-4 col-sm-6 form-group">
+                    <label>Num. Interior:</label>
+                    <input type="text" class="form-control input-sm" name="numint" id="numint" placeholder="Num. Interior">
+                  </div>
+                  <div class="col-md-4 col-sm-6 form-group">
+                    <label>Colonia:<span class="txr">*</span>
+                    </label>
+                    <input type="text" class="form-control input-sm notEmpty" name="colonia" id="colonia" placeholder="Colonia" required>
+                  </div>
+                  <div class="col-md-4 col-sm-6 form-group">
+                    <label>Municipio:<span class="txr">*</span>
+                    </label>
+                    <input type="text" class="form-control input-sm notEmpty" name="muni" id="muni" placeholder="Municipio" required>
+                  </div>
+                  <div class="col-md-4 col-sm-6 form-group">
+                    <label>Ciudad:<span class="txr">*</span>
+                    </label>
+                    <input type="text" class="form-control input-sm notEmpty" name="ciudad" id="ciudad" placeholder="Ciudad" required>
+                  </div>
+                  <div class="col-md-4 col-sm-6 form-group">
+                    <label>Estado:<span class="txr">*</span>
+                    </label>
+                    <select class="form-control input-sm select" name="edo" id="edo">
+                      <option value="" selected>Seleccione...</option>
+                      <option>Aguascalientes</option>
+                      <option>Baja California</option>
+                      <option>Baja California Sur</option>
+                      <option>Campeche</option>
+                      <option>Chiapas</option>
+                      <option>Chihuahua</option>
+                      <option>Coahuila</option>
+                      <option>Colima</option>
+                      <option>Distrito Federal</option>
+                      <option>Durango</option>
+                      <option>Edo. México</option>
+                      <option>Guanajuato</option>
+                      <option>Guerrero</option>
+                      <option>Hidalgo</option>
+                      <option>Jalisco</option>
+                      <option>Michoacan</option>
+                      <option>Morelos</option>
+                      <option>Nayarit</option>
+                      <option>Nuevo León</option>
+                      <option>Oaxaca</option>
+                      <option>Puebla</option>
+                      <option>Queretaro</option>
+                      <option>Quintana Roo</option>
+                      <option>San Luis Potosí</option>
+                      <option>Sinaloa</option>
+                      <option>Sonora</option>
+                      <option>Tabasco</option>
+                      <option>Tamaulipas</option>
+                      <option>Tlaxcala</option>
+                      <option>Veracruz</option>
+                      <option>Yucatan</option>
+                      <option>Zacatecas</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4 col-sm-6 form-group">
+                    <label>Cod. Postal:<span class="txr">*</span>
+                    </label>
+                    <input type="text" class="form-control input-sm iscp" name="cp" id="cp" maxlength="5" minlength="5" placeholder="Cod. Postal" onKeyPress="return soloNum(event)" required>
+                  </div>
+                  <div class="col-md-4 col-sm-6 form-group">
+                    <label>Entre calle:<span class="txr">*</span>
+                    </label>
+                    <input type="text" class="form-control input-sm notEmpty" name="ecalle" id="ecalle" placeholder="Primer calle">
+                  </div>
+                  <div class="col-md-4 col-sm-6 form-group">
+                    <label>Y calle:<span class="txr">*</span>
+                    </label>
+                    <input type="text" class="form-control input-sm notEmpty" name="ycalle" id="ycalle" placeholder="Segunda calle">
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="card-footer"> -->
+                <input type="button" name="previous" class="previous btn btn-info" value="Previo" />
+                <input type="button" name="next" class="next btn btn-primary" value="Siguiente" />
+              <!-- </div> -->
+            </div>
+            <div class="card card--orange card-step">
+              <h2> Paso 3: Información de ubicación</h2>
+              <div class="card-header">Descripción de la Ubicación</div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-12 col-sm-12 form-group">
+                    <label>Descripción:</label>
+                    <textarea class="form-control input-sm" name="dubic" id="dubic"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div id="tipomod" class="disable">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-4 col-sm-6 form-group">
+                      <label>Tipo de Franquicia:</label>
+                      <select class="form-control input-sm select" name="modalidad" id="modalidad">
+                        <option value="" selected>Seleccione...</option>
+                        <option value="1">Franquicia Completa</option>
+                        <option value="2">Franquicia Intermedia</option>
+                        <option value="3">Franquicia Informal</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="card-footer"> -->
+                <input type="button" name="previous" class="previous btn btn-info" value="Previo" />
+                <input type="button" name="next" class="next btn btn-primary" value="Siguiente" />
+              <!-- </div> -->
+            </div>
+            <div class="card card--orange card-step">
+              <h2>Paso 4: Documentación a Anexar</h2>
+              <div class="card-header">Documentos</div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="card-body"  >
+                      <h4 class="card-title">Lista de Documentación</h4>
+
+                      <div class="form-group row">
+                        <div class="col-md-8">
+                          <label for=""> &#8212;  Identificación oficial vigente</label>
+                          <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                            </div>
+                            <div class="custom-file">
+                              <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                              <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 cust-badge">
+                          <div class="badge badge-primary">credecial1.jpg</div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="col-md-8">
+                          <label for=""> &#8212;  Comprobante de domicilio del Punto de Venta (local): antigüedad no mayor a 3 meses.</label>
+                          <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                            </div>
+                            <div class="custom-file">
+                              <input type="file" class="custom-file-input" id="inputGroupFile02" aria-describedby="inputGroupFileAddon01">
+                              <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 cust-badge">
+                          <div class="badge badge-primary">recibo-luz.jpg</div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="col-md-8">
+                          <label for=""> &#8212;  Comprobante de domicilio particular (antigüedad no mayor a 3 meses luz, agua, etc).</label>
+                          <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                            </div>
+                            <div class="custom-file">
+                              <input type="file" class="custom-file-input" id="inputGroupFile03" aria-describedby="inputGroupFileAddon01">
+                              <label class="custom-file-label" for="inputGroupFile03">Choose file</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 cust-badge">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="col-md-8">
+                          <label for=""> &#8212;  Cuenta bancaria a nombre del franquiciatario y carátula del estado de cuenta.</label>
+                          <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                            </div>
+                            <div class="custom-file">
+                              <input type="file" class="custom-file-input" id="inputGroupFile03" aria-describedby="inputGroupFileAddon01">
+                              <label class="custom-file-label" for="inputGroupFile03">Choose file</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 cust-badge">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="col-md-8">
+                          <label for=""> &#8212;  RFC (Registro Federal de Contribuyentes)</label>
+                          <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                            </div>
+                            <div class="custom-file">
+                              <input type="file" class="custom-file-input" id="inputGroupFile03" aria-describedby="inputGroupFileAddon01">
+                              <label class="custom-file-label" for="inputGroupFile03">Choose file</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 cust-badge">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="col-md-8">
+                          <label for=""> &#8212;  Boucher de depósito o comprobante de transferencia</label>
+                          <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="inputGroupFileAddon03">Upload</span>
+                            </div>
+                            <div class="custom-file">
+                              <input type="file" class="custom-file-input" id="inputGroupFile03" aria-describedby="inputGroupFileAddon01">
+                              <label class="custom-file-label" for="inputGroupFile03">Choose file</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 cust-badge">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-header">Gastos fijos</div>
+              <div class="card-body">
+                <h4 class="card-title">Detalle de Gastos Fijos</h4>
+
+                <div class="card navssm">
+                  <nav class="navssm__sem">
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                      <a class="nav-link active" id="nav-luz-tab" data-toggle="tab" href="#nav-luz" role="tab" aria-controls="nav-luz" aria-selected="true">LUZ</a>
+                      <a class="nav-link" id="nav-agua-tab" data-toggle="tab" href="#nav-agua" role="tab" aria-controls="nav-agua" aria-selected="false">AGUA</a>
+                      <a class="nav-link" id="nav-telf-tab" data-toggle="tab" href="#nav-telf" role="tab" aria-controls="nav-telf" aria-selected="false">TELÉFONO FIJO</a>
+                      <a class="nav-link" id="nav-cel-tab" data-toggle="tab" href="#nav-cel" role="tab" aria-controls="nav-cel" aria-selected="false">CELULAR</a>
+                      <a class="nav-link" id="nav-rent-tab" data-toggle="tab" href="#nav-rent" role="tab" aria-controls="nav-rent" aria-selected="false">RENTA</a>
+                      <a class="nav-link" id="nav-gerent-tab" data-toggle="tab" href="#nav-gerent" role="tab" aria-controls="nav-gerent" aria-selected="false">GERENTE</a>
+                      <a class="nav-link" id="nav-encar-tab" data-toggle="tab" href="#nav-encar" role="tab" aria-controls="nav-encar" aria-selected="false">ENCARGADOS</a>
+                      <a class="nav-link" id="nav-otrosgs-tab" data-toggle="tab" href="#nav-otrosgs" role="tab" aria-controls="nav-otrosgs" aria-selected="false">OTROS GASTOS</a>
+                    </div>
+                  </nav>
+                  <div class="tab-content navssm__content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-luz" role="tabpanel" aria-labelledby="nav-luz-tab">
+                      <div class="card-body">
+                        <h4 class="card-title">Luz</h4>
+                        <div class="form-group row">
+                          <div class="col">
+                            <label>DADO DE ALTA A NOMBRE DE</label>
+                            <input type="text" class="form-control" value="Jacinto Toledo">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col">
+                            <label>ESTADO ACTUAL</label>
+                            <input type="text" class="form-control" value="Suspendido">
+                          </div>
+                          <div class="col">
+                            <label>GASTO MENSUAL</label>
+                            <input type="text" class="form-control" value="$250.00">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col">
+                            <label>Comentarios respecto de las condiciones actuales de los servicios</label>
+                            <textarea class="form-control" id="" rows="4"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-agua" role="tabpanel" aria-labelledby="nav-agua-tab">
+                      <div class="card-body">
+                        <h4 class="card-title">Servicio: Agua</h4>
+                        <div class="form-group row">
+                          <div class="col">
+                            <label>DADO DE ALTA A NOMBRE DE</label>
+                            <input type="text" class="form-control" value="Jacinto Toledo">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col">
+                            <label>ESTADO ACTUAL</label>
+                            <input type="text" class="form-control" value="Suspendido">
+                          </div>
+                          <div class="col">
+                            <label>GASTO MENSUAL</label>
+                            <input type="text" class="form-control" value="$400.00">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col">
+                            <label>Comentarios respecto de las condiciones actuales de los servicios</label>
+                            <textarea class="form-control" id="" rows="4"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-telf" role="tabpanel" aria-labelledby="nav-telf-tab">
+                      <div class="card-body">
+                        <h4 class="card-title">Servicio: Teléfono Fijo</h4>
+                        <div class="form-group row">
+                          <div class="col">
+                            <label>DADO DE ALTA A NOMBRE DE</label>
+                            <input type="text" class="form-control" value="Jacinto Toledo">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col">
+                            <label>ESTADO ACTUAL</label>
+                            <input type="text" class="form-control" value="Activo">
+                          </div>
+                          <div class="col">
+                            <label>GASTO MENSUAL</label>
+                            <input type="text" class="form-control" value="$400.00">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col">
+                            <label>Comentarios respecto de las condiciones actuales de los servicios</label>
+                            <textarea class="form-control" id="" rows="4"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-cel" role="tabpanel" aria-labelledby="nav-cel-tab">
+                      <div class="card-body">
+                        <h4 class="card-title">Servicio: Celular</h4>
+                        <div class="form-group row">
+                          <div class="col">
+                            <label>DADO DE ALTA A NOMBRE DE</label>
+                            <input type="text" class="form-control" value="Jacinto Toledo">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col">
+                            <label>ESTADO ACTUAL</label>
+                            <input type="text" class="form-control" value="Suspendido">
+                          </div>
+                          <div class="col">
+                            <label>GASTO MENSUAL</label>
+                            <input type="text" class="form-control" value="$600.00">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col">
+                            <label>Comentarios respecto de las condiciones actuales de los servicios</label>
+                            <textarea class="form-control" id="" rows="4"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-rent" role="tabpanel" aria-labelledby="nav-rent-tab">
+                      <div class="card-body">
+                        <h4 class="card-title">Servicio: Renta</h4>
+                        <div class="form-group row">
+                          <div class="col">
+                            <label>DADO DE ALTA A NOMBRE DE</label>
+                            <input type="text" class="form-control" value="Jacinto Toledo">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col">
+                            <label>ESTADO ACTUAL</label>
+                            <input type="text" class="form-control" value="Suspendido">
+                          </div>
+                          <div class="col">
+                            <label>GASTO MENSUAL</label>
+                            <input type="text" class="form-control" value="$14,000.00">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col">
+                            <label>Comentarios respecto de las condiciones actuales de los servicios</label>
+                            <textarea class="form-control" id="" rows="4"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-gerent" role="tabpanel" aria-labelledby="nav-gerent-tab">
+                      <div class="card-body">
+                        <h4 class="card-title">Gerente </h4>
+                        <div class="form-group row">
+                          <div class="col">
+                            <label>DADO DE ALTA A NOMBRE DE</label>
+                            <input type="text" class="form-control" value="Jacinto Toledo">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col">
+                            <label>ESTADO ACTUAL</label>
+                            <input type="text" class="form-control" value="Suspendido">
+                          </div>
+                          <div class="col">
+                            <label>GASTO MENSUAL</label>
+                            <input type="text" class="form-control" value="$5,500.00">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col">
+                            <label>Comentarios respecto de las condiciones actuales de los servicios</label>
+                            <textarea class="form-control" id="" rows="4"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-encar" role="tabpanel" aria-labelledby="nav-encar-tab">
+                      <div class="card-body">
+                        <h4 class="card-title">Encargados</h4>
+                        <div class="form-group row">
+                          <div class="col">
+                            <label>DADO DE ALTA A NOMBRE DE</label>
+                            <input type="text" class="form-control" value="Jacinto Toledo">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col">
+                            <label>ESTADO ACTUAL</label>
+                            <input type="text" class="form-control" value="Suspendido">
+                          </div>
+                          <div class="col">
+                            <label>GASTO MENSUAL</label>
+                            <input type="text" class="form-control" value="$4,400.00">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col">
+                            <label>Comentarios respecto de las condiciones actuales de los servicios</label>
+                            <textarea class="form-control" id="" rows="4"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-otrosgs" role="tabpanel" aria-labelledby="nav-otrosgs-tab">
+                      <div class="card-body">
+                        <h4 class="card-title">OTROS GASTOS</h4>
+                        <div class="form-group row">
+                          <div class="col">
+                            <label>DADO DE ALTA A NOMBRE DE</label>
+                            <input type="text" class="form-control" value="Jacinto Toledo">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col">
+                            <label>ESTADO ACTUAL</label>
+                            <input type="text" class="form-control" value="Suspendido">
+                          </div>
+                          <div class="col">
+                            <label>GASTO MENSUAL</label>
+                            <input type="text" class="form-control" value="$560.00">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col">
+                            <label>Comentarios respecto de las condiciones actuales de los servicios</label>
+                            <textarea class="form-control" id="" rows="4"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+              <input type="button" name="previous" class="previous btn btn-info" value="Previo" />
+              <input type="submit" name="submit" class="submit btn btn-success" value="Enviar" id="submit_data" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+<script>
+  $(document).ready(function () {
+    var current = 1,
+      current_step, next_step, steps;
+    steps = $(".card-step").length;
+    $(".next").click(function () {
+      current_step = $(this).parent();
+      next_step = $(this).parent().next();
+      next_step.show();
+      current_step.hide();
+      setProgressBar(++current);
+    });
+    $(".previous").click(function () {
+      current_step = $(this).parent();
+      next_step = $(this).parent().prev();
+      next_step.show();
+      current_step.hide();
+      setProgressBar(--current);
+    });
+    setProgressBar(current);
+    // Change progress bar action
+    function setProgressBar(curStep) {
+      var percent = parseFloat(100 / steps) * curStep;
+      percent = percent.toFixed();
+      $(".progress-bar").css("width", percent + "%").html(percent + "%");
+    }
+  });
+</script>

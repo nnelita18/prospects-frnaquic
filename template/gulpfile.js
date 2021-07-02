@@ -23,8 +23,8 @@ gulp.task('sass', function () {
     return gulp.src('./scss/**/style.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
-        .pipe(sourcemaps.write('./maps'))
-        .pipe(gulp.dest('./css'))
+        .pipe(sourcemaps.write('./assets/maps'))
+        .pipe(gulp.dest('./assets/css'))
         .pipe(browserSync.stream());
 });
 
@@ -40,7 +40,7 @@ gulp.task('serve', gulp.series('sass', function() {
 
     gulp.watch('scss/**/*.scss', gulp.series('sass'));
     gulp.watch('**/*.html').on('change', browserSync.reload);
-    gulp.watch('js/**/*.js').on('change', browserSync.reload);
+    gulp.watch('assets/js/**/*.js').on('change', browserSync.reload);
 
 }));
 
@@ -55,9 +55,9 @@ gulp.task('serve:lite', function() {
         notify: false
     });
 
-    gulp.watch('**/*.css').on('change', browserSync.reload);
+    gulp.watch('assets/**/*.css').on('change', browserSync.reload);
     gulp.watch('**/*.html').on('change', browserSync.reload);
-    gulp.watch('js/**/*.js').on('change', browserSync.reload);
+    gulp.watch('assets/js/**/*.js').on('change', browserSync.reload);
 
 });
 
@@ -87,12 +87,12 @@ gulp.task('injectCommonAssets', function () {
         './vendors/js/vendor.bundle.base.js',
     ], {read: false}), {name: 'plugins', relative: true}))
     .pipe(inject(gulp.src([
-        './css/*.css', 
-        './js/off-canvas.js', 
-        './js/hoverable-collapse.js', 
-        './js/template.js', 
-        './js/settings.js', 
-        './js/todolist.js'
+        './assets/css/*.css',
+        './assets/js/off-canvas.js',
+        './assets/js/hoverable-collapse.js',
+        './assets/js/template.js',
+        './assets/js/settings.js',
+        './assets/js/todolist.js'
     ], {read: false}), {relative: true}))
     .pipe(gulp.dest('.'));
 });
@@ -102,7 +102,7 @@ gulp.task('injectLayoutStyles', function () {
     var verticalLightStream = gulp.src(['./**/vertical-default-light/**/*.html',
             './index.html'])
         .pipe(inject(gulp.src([
-            './css/vertical-layout-light/style.css', 
+            './assets/css/vertical-layout-light/style.css',
         ], {read: false}), {relative: true}))
         .pipe(gulp.dest('.'));
     return merge(verticalLightStream);
@@ -116,12 +116,12 @@ gulp.task('replacePath', function(){
         .pipe(replace('href="index.html"', 'href="../../index.html"'))
         .pipe(gulp.dest('.'));
     var replacePath2 = gulp.src(['./pages/*.html'], { base: "./" })
-        .pipe(replace('="images/', '="../images/'))
+        .pipe(replace('="assets/images/', '="../images/'))
         .pipe(replace('"pages/', '"../pages/'))
         .pipe(replace('href="index.html"', 'href="../index.html"'))
         .pipe(gulp.dest('.'));
     var replacePath3 = gulp.src(['./*/index.html'], { base: "./" })
-        .pipe(replace('="images/', '="images/'))
+        .pipe(replace('="assets/images/', '="assets/images/'))
         .pipe(gulp.dest('.'));
     return merge(replacePath1 , replacePath2, replacePath3);
 });

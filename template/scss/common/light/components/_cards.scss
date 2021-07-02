@@ -10,12 +10,15 @@
   -moz-transition:background $action-transition-duration $action-transition-timing-function;
   -ms-transition:background $action-transition-duration $action-transition-timing-function;
   &.tale-bg {
-    background: #DAE7FF;
+    background: #FEFFFF;
   }
   &.transparent {
     background: transparent;
   }
   border: none;
+  .card-header {
+    background-color: #1e2f91;
+  }
   .card-body {
     padding: $card-padding-y $card-padding-x;
     + .card-body {
@@ -120,6 +123,21 @@
       background: lighten($card-light-danger, 5%)
     }
   }
+  // &.card--section {
+  //   background: #ffffff;
+  //   .card-header {
+  //     background-color: #1e2f91;
+  //     border-top-right-radius: 0.6rem;
+  //     border-top-left-radius: 0.6rem;
+  //     color: #f1f1f1;
+  //     font-weight: 600;
+  //     font-size: 1rem;
+  //     padding: 0.5rem 1.25rem;
+  //   }
+  //   .card-body {
+  //     // background-color: #f2f2f2;
+  //   }
+  // }
 }
 
 @each $color, $value in $theme-colors {

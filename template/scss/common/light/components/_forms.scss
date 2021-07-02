@@ -1,4 +1,5 @@
 /* Forms */
+$bg-control: #f0f4f7;
 
 .form-group {
   margin-bottom: 1.5rem;
@@ -16,20 +17,24 @@
   }
 }
 .form-control {
-  border: 1px solid $border-color;
+  background-color: $bg-control;
+  border: 1px solid $bg-control;
   font-weight: 400;
   font-size: $input-font-size;
-  border-radius: 4px;
+  border-radius: 1.5rem;
 }
 
 select {
+  background-color: $bg-control;
   &.form-control {
     padding: .4375rem .75rem;
     border: 0;
-    outline: 1px solid $border-color;
+    border-radius: 1.5rem;
+    // outline: 1px solid $bg-control;
     color: $input-placeholder-color;
     &:focus {
-      outline: 1px solid $border-color;
+      background-color: $bg-control;
+      // outline: 1px solid $bg-control;
     }
     @each $color, $value in $theme-colors {
       &.border-#{$color} {

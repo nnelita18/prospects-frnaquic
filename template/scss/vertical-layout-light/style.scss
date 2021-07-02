@@ -1,7 +1,19 @@
 @import "../common/light/common";
+
 @import "variables";
+@import "components/navs";
+@import "components/cards";
+@import "components/forms";
+
 @import "vertical-wrapper";
 @import "sidebar";
 @import "navbar";
 @import "layouts";
-@import "settings-panel"
+@import "settings-panel";
+
+// Pages
+@import "pages/register";
+@import "pages/request";
+@import "pages/progress-percent";
+
+@import "pages/perfil";

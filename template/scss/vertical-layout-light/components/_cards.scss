@@ -1,0 +1,38 @@
+$orange-card: #f78f01;
+$orange-color-card: #f1ffff;
+
+.card {
+	border-radius: 0.8rem;
+	.card-header {
+		border-top-right-radius: 0.8rem;
+		border-top-left-radius: 0.8rem;
+		font-weight: 500;
+	}
+	&--section {
+		background-color: #FEFFFF;
+		.card-header {
+			background-color: #1e2f91;
+			color: #f1f1f1;
+			font-weight: 600;
+			font-size: 1rem;
+			padding: 0.5rem 1.25rem;
+		}
+		.card-body {
+			background-color: #FEFFFF;
+		}
+	}
+	&--orange {
+		margin-bottom: 1rem;
+		background-color: transparent;
+		.card-header {
+			background-color: $orange-card;
+			color: $orange-color-card;
+		}
+		.card-body {
+			background-color: #FEFFFF;
+			margin-bottom: 0.8rem;
+			border-bottom-right-radius: 0.8rem;
+			border-bottom-left-radius: 0.8rem;
+		}
+	}
+}
