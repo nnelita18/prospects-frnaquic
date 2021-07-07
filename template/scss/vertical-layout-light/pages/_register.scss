@@ -79,3 +79,15 @@ $register: '.register-ps';
 		font-size: 0.9rem;
 	}
 }
+
+[hidden] {
+  display: none !important;
+}
+
+.hide {
+    display: none;
+}
+.borderl-0 {
+	border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}

@@ -1,0 +1,314 @@
+<div class="row title-wrapper">
+    <div class="col-12 col-xl-8">
+      <h3 class="font-weight-bold mb-0">Depósitos</h3>
+    </div>
+  </div>
+<section class="content-wrapper register-ps">
+	<div class="row">
+		<div class="col-12">
+			<nav class="mt-3 nav-register">
+				<div class="nav nav-tabs" id="nav-tab" role="tablist">
+					<a class="nav-link active" id="nav-repdep-tab" data-toggle="tab" href="#nav-repdep" role="tab" aria-controls="nav-repdep" aria-selected="true">Reportar Depósito</a>
+          <a class="nav-link" id="nav-cuentasabon-tab" data-toggle="tab" href="#nav-cuentasabon" role="tab" aria-controls="nav-cuentasabon" aria-selected="false">Cuentas para Abonar</a>
+					<a class="nav-link" id="nav-depslist-tab" data-toggle="tab" href="#nav-depslist" role="tab" aria-controls="nav-depslist" aria-selected="false">Depósitos Realizados</a>
+				</div>
+			</nav>
+			<div class="tab-content p-2" id="nav-tabContent">
+				<div class="tab-pane fade show active" id="nav-repdep" role="tabpanel" aria-labelledby="nav-repdep-tab">
+					<div class="card">
+						<div class="card-body">
+							<form action="#" method="post" accept-charset="utf-8" name="form_deposito" id="form_deposito">
+								<div class="row justify-content-sm-around justify-content-center">
+									<div class="col-sm-auto col-12 order-md-1 order-sm-2 order-2">
+										<div id="site-2-2" class="form-group">
+											<label>¿Desea Facturar el Depósito?</label>
+											<div class="form-row justify-content-center">
+												<div class="form-check-inline">
+													<label class="form-check-label">
+														<input type="radio" class="form-check-input" name="facturar" value="1">Si</label>
+												</div>
+												<div class="form-check-inline">
+													<label class="form-check-label">
+														<input type="radio" class="form-check-input" name="facturar" value="0" checked>No</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-auto col-12 order-md-2 order-sm-1 order-1">
+										<div class="alert alert-danger">
+											Horarios para Aplicación de Depósitos:
+											<br>Lunes - Viernes 10 am - 3 pm y 4 pm - 7 pm.
+											<br>Sábado de 10 am a 1:30 pm
+										</div>
+									</div>
+								</div>
+								<fieldset id="always" class="">
+									<div class="row text-center">
+										<div class="col-md-12">
+											<h5 class="text-left">Datos del depósito</h5>
+										</div>
+									</div>
+									<div class="row text-center">
+										<div class="col-sm">
+											<div class="form-group text-left">
+												<label style="font-weight: bold">Seleccione tipo de depósito <span class="required">*</span>
+												</label>
+												<select class="form-control" id="tipo_deposito" name="tipo_deposito">
+													<option value="Express" selected>Comprar tiempo aire</option>
+													<option value="ExpressPedidos">Pedido de equipos o accesorios</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-4 form-group">
+											<label>Fecha del Depósito <span class="required">*</span>
+											</label>
+											<input type="text" class="form-control" id="datepicker1" name="fecha_deposito" placeholder="Fecha cuando se realizo el depósito" required readonly>
+										</div>
+										<div class="col-md-4 form-group">
+											<label>Banco <span class="required">*</span>
+											</label>
+											<select class="form-control" name="banco" id="banco" required="">
+												<option selected="" value="">Seleccione un Banco</option>
+												<option value="1">Banco Azteca</option>
+												<option value="2">BBVA Bancomer</option>
+												<option value="3">Banorte</option>
+												<option value="4">Coppel</option>
+												<option value="5">Banamex</option>
+												<option value="6">Inbursa</option>
+											</select>
+										</div>
+										<div class="col-md-4 form-group">
+											<label>Cuenta <span class="required">*</span>
+											</label>
+											<select class="form-control" name="cuentas" id="cuentas" required>
+												<option selected value="">Seleccione un Cuenta</option>
+											</select>
+										</div>
+									</div>
+									<div class="row">
+											<div class="col-md-4 form-group">
+												<label>Monto <span class="required">*</span>
+												</label>
+												<input type="number" class="form-control" name="monto" min="500" placeholder="Monto Depositado" step=".01" onkeypress="return soloNum(event);" required />
+											</div>
+
+											<div class="col-md-4 form-group">
+												<label>No. Movimiento <span class="required">*</span>
+												</label>
+												<input type="text" class="form-control" name="movimiento" maxlength="20" onkeypress="return soloNum(event);" required placeholder="No de movimiento" style="text-align: center;" />
+											</div>
+											<div class="col-md-4 form-group" style="overflow-x: hidden;">
+												<label>VOUCHER <span class="required">*</span>
+												</label>
+												<input type="file" name="voucher" required accept=".jpg,.png,.pdf,.jpeg.gif" style="opacity: 1 !important; position: static !important" />
+											</div>
+									</div>
+									<div class="row" id='inputFolio' hidden>
+										<div class="col-4">
+											<div class="form-group">
+												<label>No. de Folio del pedido <span class="required">*</span>
+												</label>
+												<input type="text" class="form-control" id="folio" name="folio" maxlength="20" onkeypress="return soloNum(event);" placeholder="No. de Folio del pedido" />
+											</div>
+										</div>
+									</div>
+									<!-- <div class="row" id='inputMovimiento'>
+
+									</div> -->
+								</fieldset>
+								<fieldset id="si_fact" disabled class="d-none">
+									<div class="row text-center">
+										<div class="col-12">
+											<h3>Datos del Facturación</h3>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm">
+											<div class="form-group">
+												<label>Nombre <span class="required">*</span>
+												</label>
+												<input type="text" class="form-control" name="nombre" maxlength="60" required placeholder="Nombre del
+							                                            cliente" />
+											</div>
+										</div>
+										<div class="col-sm">
+											<div class="form-group">
+												<label>Calle <span class="required">*</span>
+												</label>
+												<input type="text" class="form-control" name="calle" maxlength="80" required placeholder="Calle" />
+											</div>
+										</div>
+										<div class="col-sm">
+											<div class="form-group">
+												<label>Colonia <span class="required">*</span>
+												</label>
+												<input type="text" class="form-control" name="colonia" placeholder="colonia" required maxlength="60" />
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm">
+											<div class="form-group">
+												<label>Localidad <span class="required">*</span>
+												</label>
+												<input type="text" class="form-control" name="localidad" required placeholder="Localidad" maxlength="60" />
+											</div>
+										</div>
+										<div class="col-sm">
+											<div class="form-group">
+												<label>Municipio o Delegación <span class="required">*</span>
+												</label>
+												<input type="text" class="form-control" name="municipio" required placeholder="Municipio" maxlength="60" />
+											</div>
+										</div>
+										<div class="col-sm">
+											<div class="form-group">
+												<label>Estado <span class="required">*</span>
+												</label>
+												<input type="text" class="form-control" name="estado" placeholder="Entidad Federativa" maxlength="60" />
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm">
+											<div class="form-group">
+												<label>País <span class="required">*</span>
+												</label>
+												<input type="text" class="form-control" name="pais" required readonly value="México" placeholder="País" maxlength="40" />
+											</div>
+										</div>
+										<div class="col-sm">
+											<div class="form-group">
+												<label>No. Interior <span class="required">*</span>
+												</label>
+												<input type="text" class="form-control" name="interior" required placeholder="Número interior" maxlength="10" />
+											</div>
+										</div>
+										<div class="col-sm">
+											<div class="form-group">
+												<label>No. Exterior <span class="required">*</span>
+												</label>
+												<input type="text" class="form-control" name="exterior" placeholder="Número exterior" maxlength="10" />
+											</div>
+										</div>
+										<div class="col-sm">
+											<div class="form-group">
+												<label>Código Postal <span class="required">*</span>
+												</label>
+												<input type="text" class="form-control" name="cp" pattern="\d{5,8}" placeholder="Código Postal" minlength="5" maxlength="8" />
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm">
+											<div class="form-group">
+												<label>e-mail</label>
+												<input type="email" class="form-control" name="correo2" placeholder="Correo Electrónico" maxlength="30" />
+											</div>
+										</div>
+										<div class="col-sm">
+											<div class="form-group">
+												<label>Teléfono <span class="required">*</span>
+												</label>
+												<input type="tel" class="form-control" name="tel2" required placeholder="Teléfono de contacto" pattern="\d{10}" title="telefono a 10 dígitos" maxlength="10" minlength="10" />
+											</div>
+										</div>
+										<div class="col-sm">
+											<div class="form-group">
+												<label>RFC <span class="required">*</span>
+												</label>
+												<input type="text" class="form-control" placeholder="Registro Federal de Contribuyentes" name="rfc" required pattern="^([A-ZÑ&]{3,4})(\d{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[12]\d|3[01]))([A-Z\d]{3})$" title="El RFC no tiene el formato correcto, es invalido" maxlength="13" minlength="12" />
+											</div>
+										</div>
+									</div>
+								</fieldset>
+								<div id="site-2-4" class="row justify-content-center d-none">
+									<div class="col-auto">
+										<button type="submit" name="enviar" class="btn btn-success">Reportar Depósito</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+        <div class="tab-pane fade" id="nav-cuentasabon" role="tabpanel" aria-labelledby="nav-cuentasabon-tab">
+          <div class="card">
+            <div class="card-body">
+                <div class="table-responsive measuringWrapper">
+                  <table class="table table-sm table-bordered" id="table_referencias" style="width: 100%">
+                    <thead>
+                      <tr>
+                        <th>Banco</th>
+                        <th>Cuenta</th>
+                        <th>CLABE(interbancaria)</th>
+                        <th>Cuenta a Nombre de:</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Banorte</td>
+                        <td>0247742453</td>
+                        <td>072 6500 0247742453 0</td>
+                        <td>Microtecnologias móviles S.A de C.V.</td>
+                      </tr>
+                      <tr>
+                        <td>BBVA Bancomer</td>
+                        <td>0196761445</td>
+                        <td>012 6500 0196761445 5</td>
+                        <td>Microtecnologias móviles S.A de C.V.</td>
+                      </tr>
+                      <tr>
+                        <td>Banco Azteca</td>
+                        <td>01780108305054</td>
+                        <td>127 9050 0108305054 6</td>
+                        <td>Microtecnologias móviles S.A de C.V.</td>
+                      </tr>
+                      <tr>
+                        <td>Coppel</td>
+                        <td>12000002109</td>
+                        <td>137650120000021091</td>
+                        <td>Microtecnologias móviles S.A de C.V.</td>
+                      </tr>
+                      <tr>
+                        <td>Inbursa</td>
+                        <td>50056057983</td>
+                        <td></td>
+                        <td>Microtecnologias móviles S.A de C.V.</td>
+                      </tr>
+                    </tbody>
+                    
+                  </table>
+                </div>
+              </div>
+          </div>
+        </div>
+				<div class="tab-pane fade" id="nav-depslist" role="tabpanel" aria-labelledby="nav-depslist-tab">
+          <div class="card">
+            <div class="card-body">
+              <div class="table-responsive" id="site-2-5">
+                <table class="table table-sm table-bordered" id="depositos_table" style="width: 100%">
+                  <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Fecha Depósito</th>
+                        <th>Monto</th>
+                        <th>Banco</th>
+                        <th>Movimiento</th>
+                        <th>Autorizó</th>
+                        <th>Status</th>
+                        <th>Acciones</th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+            </div>
+          </div>
+    					
+				</div>
+        
+			</div>
+		</div>
+	</div>
+</section>
