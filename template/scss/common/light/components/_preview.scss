@@ -18,8 +18,8 @@
       position: relative;
       img,
       .preview-icon {
-        width: 36px;
-        height: 36px;
+        width: 25px;
+        height: 25px;
         border-radius: 100%;
       }
       .preview-icon {
@@ -36,6 +36,7 @@
           }
         }
       }
+
       .badge {
         border: 2px solid color(white);
         border-radius: 100%;
@@ -93,6 +94,12 @@
         &:first-child {
           margin-right: 10px;
         }
+      }
+    }
+    .preview-subject {
+      font-size: .88rem;
+      .small-text {
+        font-size: 0.8rem !important;
       }
     }
   }

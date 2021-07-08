@@ -24507,8 +24507,8 @@ dl li {
 
 .preview-list .preview-item .preview-thumbnail img,
 .preview-list .preview-item .preview-thumbnail .preview-icon {
-  width: 36px;
-  height: 36px;
+  width: 25px;
+  height: 25px;
   border-radius: 100%;
 }
 
@@ -24587,6 +24587,14 @@ dl li {
   margin-right: 10px;
 }
 
+.preview-list .preview-item .preview-subject {
+  font-size: .88rem;
+}
+
+.preview-list .preview-item .preview-subject .small-text {
+  font-size: 0.8rem !important;
+}
+
 .preview-list.comment-preview .preview-item {
   padding: .87rem 0;
 }
@@ -24661,6 +24669,14 @@ dl li {
 
 .table.table-bordered, .jsgrid .table-bordered.jsgrid-table {
   border-top: 1px solid #CED4DA;
+}
+
+.table.table-striped, .jsgrid .table-striped.jsgrid-table {
+  border: 1px solid #f2f3f4;
+}
+
+.table.table-striped thead, .jsgrid .table-striped.jsgrid-table thead {
+  background-color: #b9b5b5;
 }
 
 .nav-tabs .nav-link {
@@ -28470,6 +28486,13 @@ div.tagsinput span.tag a {
 .card--orange .card-header {
   background-color: #f78f01;
   color: #f1ffff;
+}
+
+.card--orange .card-header .card-title {
+  color: #f1f1f1;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0;
 }
 
 .card--orange .card-body {

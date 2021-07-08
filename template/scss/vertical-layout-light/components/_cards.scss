@@ -7,6 +7,7 @@ $orange-color-card: #f1ffff;
 		border-top-right-radius: 0.8rem;
 		border-top-left-radius: 0.8rem;
 		font-weight: 500;
+
 	}
 	&--section {
 		background-color: #FEFFFF;
@@ -16,6 +17,7 @@ $orange-color-card: #f1ffff;
 			font-weight: 600;
 			font-size: 1rem;
 			padding: 0.5rem 1.25rem;
+
 		}
 		.card-body {
 			background-color: #FEFFFF;
@@ -27,6 +29,12 @@ $orange-color-card: #f1ffff;
 		.card-header {
 			background-color: $orange-card;
 			color: $orange-color-card;
+			.card-title {
+				color: #f1f1f1;
+				font-weight: 600;
+				font-size: 1rem;
+				margin: 0;
+			}
 		}
 		.card-body {
 			background-color: #FEFFFF;

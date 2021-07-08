@@ -41,4 +41,10 @@
   &.table-bordered {
     border-top: 1px solid $border-color;
   }
+  &.table-striped {
+    border: 1px solid #f2f3f4;
+    thead {
+      background-color: #b9b5b5;
+    }
+  }
 }

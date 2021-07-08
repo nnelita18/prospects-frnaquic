@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
   <!-- endinject -->
   <!-- Plugin css for this page -->
+  <link rel="stylesheet" type="text/css" href="vendors/DataTables/datatables.min.css"/>
   <!-- <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css"> -->
   <!-- <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css"> -->
   <!-- <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css"> -->
@@ -37,11 +38,75 @@
           <li class="nav-item nav-search d-none d-lg-block"></li>
         </ul>
         <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item dropdown px-3">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+              <i class="icon-bell mx-0"></i>
+              <span class="count bg-danger" ></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Tienes notificaciones nuevas</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning">
+                    <i class="ti-info-alt mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Tu próximo depósito esta por vencer</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    6:30pm
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="ti-check mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Tu depósito con fecha 15-07-2021 fué acreditado</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                     12:03pm
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="ti-check mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Tu depósito con fecha 30-06-2021 fué acreditado</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                     11:20am
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="ti-check mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Tu depósito con fecha 15-05-2021 fué acreditado</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                     10:30am
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
               <img src="assets/images/home/profile.jpg" alt="profile"/>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item"> <i class="ti-unlock text-primary"></i>
+                Cambiar Contraseña
+              </a>
               <a class="dropdown-item">
                 <i class="ti-power-off text-primary"></i>
                 Cerrar Sesión
@@ -66,13 +131,13 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link pageto" href="solicitud.html">
+            <a class="nav-link pageto" href="views/prospecto/solicitud.html">
               <i class="ti-write menu-icon"></i>
               <span class="menu-title">Mi Solicitud</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link pageto" href="pagos.html">
+            <a class="nav-link pageto" href="views/prospecto/pagos.html">
               <i class="ti-money menu-icon"></i>
               <span class="menu-title">Pagos</span>
             </a>
@@ -215,9 +280,7 @@
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->
         <footer class="footer">
-          <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021.  Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash. All rights reserved.</span>
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="ti-heart text-danger ml-1"></i></span>
+          <div class="d-sm-flex justify-content-center justify-content-sm-between"> <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021  Microtecnologías Móviles S.A. de C.V.</span>
           </div>
         </footer>
         <!-- partial -->
@@ -232,6 +295,7 @@
   <script src="vendors/js/vendor.bundle.base.js"></script>
   <!-- endinject -->
   <!-- Plugin js for this page -->
+  <script type="text/javascript" src="vendors/DataTables/datatables.min.js"></script>
   <!-- <script src="vendors/chart.js/Chart.min.js"></script> -->
 <!--   <script src="vendors/datatables.net/jquery.dataTables.js"></script>
   <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
