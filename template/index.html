@@ -104,7 +104,7 @@
               <img src="assets/images/home/profile.jpg" alt="profile"/>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-              <a class="dropdown-item"> <i class="ti-unlock text-primary"></i>
+              <a class="dropdown-item" data-toggle="modal" data-target="#change-psw"> <i class="ti-unlock text-primary"></i>
                 Cambiar Contraseña
               </a>
               <a class="dropdown-item">
@@ -296,6 +296,53 @@
     <!-- page-body-wrapper ends -->
   </div>
   <!-- container-scroller -->
+
+  <!-- Cambiar COntraseña Modal -->
+    <div class="modal fade modal-comm" id="change-psw" tabindex="-1" role="dialog" aria-labelledby="change-pswLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="change-pswLabel">Cambiar Contraseña</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="auth-form-transparent text-left p-3">
+                        <form class="pt-3">
+                            <div class="form-group">
+                                <label for="exampleInputEmail">Ingresa los siguientes datos para cambiar tu
+                                    contraseña.</label>
+                                <div class="input-group">
+                                    <input type="password" class="form-control form-control-lg" id="passActual"
+                                        placeholder="Contraseña actual">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="password" class="form-control form-control-lg" id="passNuevo"
+                                        placeholder="Nueva Contraseña">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="password" class="form-control form-control-lg" id="passNuevo2"
+                                        placeholder="Confirmar Nueva Contraseña">
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" id="btnCambiarPass" class="btn btn-primary mr-3">Cambiar
+                        Contraseña</button>
+                    <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
   <!-- plugins:js -->
   <script src="vendors/js/vendor.bundle.base.js"></script>

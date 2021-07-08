@@ -23784,6 +23784,8 @@ dl li {
 }
 
 .modal .modal-dialog .modal-content .modal-header {
+  background-color: #788893;
+  color: #f1ffff;
   padding: 25px 26px;
 }
 
@@ -28409,6 +28411,7 @@ div.tagsinput span.tag a {
 }
 
 .auth .brand-logo {
+  text-align: center;
   margin-bottom: 2rem;
 }
 

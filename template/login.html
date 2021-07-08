@@ -59,7 +59,14 @@
                 <div class="my-3">
                   <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" href="./index.html">Entrar</a>
                 </div>
+                <div class="text-center">
+                  <button type="button" class="btn btn-link text-primary" data-toggle="modal" data-target="#recov-psw">
+                    Recuperar contraseña
+                  </button>
+                </div>
+
               </form>
+
             </div>
           </div>
           <div class="col-lg-6 login-half-bg d-flex flex-row">
@@ -72,6 +79,37 @@
     <!-- page-body-wrapper ends -->
   </div>
   <!-- container-scroller -->
+
+  <!-- Recuperar Contraseña Modal -->
+<div class="modal fade" id="recov-psw" tabindex="-1" role="dialog" aria-labelledby="recov-pswLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="recov-pswLabel">Recuperación de Contraseña</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="auth-form-transparent text-left p-3">
+            <form class="pt-3">
+                <div class="form-group">
+                    <label for="exampleInputEmail">Ingresa el correo que usaste para crear tu cuenta, te enviaremos un enlace para que configures tu nueva contraseña.</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control form-control-lg" id="exampleInputEmail" placeholder="Correo Electronico">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary mr-2">Enviar</button>
+        <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
   <!-- plugins:js -->
   <script src="vendors/js/vendor.bundle.base.js"></script>
