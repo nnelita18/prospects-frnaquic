@@ -20929,6 +20929,11 @@ code {
   margin-left: .5rem;
 }
 
+.btn-action {
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.5rem;
+}
+
 .btn.btn-social-icon, .fc button.btn-social-icon, .ajax-upload-dragdrop .btn-social-icon.ajax-file-upload, .swal2-modal .swal2-buttonswrapper .btn-social-icon.swal2-styled, .wizard > .actions a.btn-social-icon {
   width: 50px;
   height: 50px;
@@ -28452,6 +28457,15 @@ div.tagsinput span.tag a {
   color: #f1ffff;
 }
 
+.nav-register .nav-link {
+  font-weight: 500;
+}
+
+.nav-register .nav-link.active {
+  background-color: #f78f01;
+  color: #f1f1f1;
+}
+
 .card {
   border-radius: 0.8rem;
 }
@@ -28568,6 +28582,19 @@ div.tagsinput span.tag a {
   color: #f1ffff;
   padding: 1rem 2rem;
   margin: 0;
+}
+
+.title-wrapper .breadcrumb {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.title-wrapper .breadcrumb .breadcrumb-item {
+  color: #cacaca;
+}
+
+.title-wrapper .breadcrumb .breadcrumb-item a {
+  color: #f1ffff;
 }
 
 .subtitle-wrapper {
@@ -30793,6 +30820,19 @@ div.tagsinput span.tag a {
 
 .cust-badge .badge {
   font-size: 0.9rem;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.hide {
+  display: none;
+}
+
+.borderl-0 {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .to-do-franq .form-check .form-check-label {

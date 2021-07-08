@@ -18,3 +18,14 @@ $navssm: '.navssm';
 
 	}
 }
+
+.nav-register {
+	
+	.nav-link {
+		font-weight: 500;
+		&.active {
+			background-color: $sidebar-dark-menu-active-bg;
+			color: #f1f1f1;
+		}	
+	}
+}

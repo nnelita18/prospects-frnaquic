@@ -29,6 +29,17 @@
   color: #f1ffff;
   padding: 1rem 2rem;
   margin: 0;
+  .breadcrumb {
+    padding-top: 0;
+    padding-bottom: 0;
+    .breadcrumb-item {
+      color: #cacaca;
+      a {
+        color: #f1ffff;
+      }
+
+    }
+  }
 }
 .subtitle-wrapper {
   color: #122164;
