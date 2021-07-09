@@ -55,3 +55,15 @@
     padding: 1.5rem 1.5rem;
   }
 }
+
+.bg-imgcover {
+  background: {
+    image: url('../../images/inicio/bg-home.jpg');
+    size: cover;
+    repeat: no-repeat;
+    position: right center;
+  }
+  &--imghome {
+
+  } 
+}

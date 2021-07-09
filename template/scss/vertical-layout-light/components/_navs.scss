@@ -19,6 +19,14 @@ $navssm: '.navssm';
 	}
 }
 
+.nav-pills {
+	.nav-link {
+		&.active {
+			background-color: #1e2f91;
+		}
+	}
+}
+
 .nav-register {
 	
 	.nav-link {

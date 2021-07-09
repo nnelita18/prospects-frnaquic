@@ -58,6 +58,11 @@
         margin: auto;
       }
     }
+
+    .brand-sec {
+      display: block;
+      font-size: 0.8rem;
+    }
   }
 
   .navbar-menu-wrapper {
@@ -371,6 +376,10 @@
       .navbar-brand {
         &.brand-logo {
           display: none;
+          .small {
+            width: 100%;
+            text-align: center;
+          }
         }
         &.brand-logo-mini {
           display: inline-block;

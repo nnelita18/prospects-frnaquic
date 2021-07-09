@@ -21998,6 +21998,7 @@ code {
 
 .card .card-header {
   background-color: #1e2f91;
+  color: #f1ffff;
 }
 
 .card .card-body {
@@ -22009,7 +22010,7 @@ code {
 }
 
 .card .card-title {
-  color: #010101;
+  color: #eaeaea;
   margin-bottom: 1.2rem;
   text-transform: capitalize;
   font-size: 1.125rem;
@@ -22929,8 +22930,8 @@ select.border-dark.tt-hint:focus {
   background: #57B657;
   -webkit-transform-origin: 50% 250%;
   transform-origin: 50% 250%;
-  -webkit-animation: rota 1.13s linear infinite, opa 3.67s ease-in-out infinite alternate;
-  animation: rota 1.13s linear infinite, opa 3.67s ease-in-out infinite alternate;
+  -webkit-animation: rota 1.13s linear infinite, opa 3.67s ease-in-out infinite alternate;
+  animation: rota 1.13s linear infinite, opa 3.67s ease-in-out infinite alternate;
 }
 
 #pgloading .bokeh li:nth-child(2) {
@@ -22940,8 +22941,8 @@ select.border-dark.tt-hint:focus {
   background: #FF4747;
   -webkit-transform-origin: -150% 50%;
   transform-origin: -150% 50%;
-  -webkit-animation: rota 1.86s linear infinite, opa 4.29s ease-in-out infinite alternate;
-  animation: rota 1.86s linear infinite, opa 4.29s ease-in-out infinite alternate;
+  -webkit-animation: rota 1.86s linear infinite, opa 4.29s ease-in-out infinite alternate;
+  animation: rota 1.86s linear infinite, opa 4.29s ease-in-out infinite alternate;
 }
 
 #pgloading .bokeh li:nth-child(3) {
@@ -22951,8 +22952,8 @@ select.border-dark.tt-hint:focus {
   background: #FFC100;
   -webkit-transform-origin: 50% -150%;
   transform-origin: 50% -150%;
-  -webkit-animation: rota 1.45s linear infinite, opa 5.12s ease-in-out infinite alternate;
-  animation: rota 1.45s linear infinite, opa 5.12s ease-in-out infinite alternate;
+  -webkit-animation: rota 1.45s linear infinite, opa 5.12s ease-in-out infinite alternate;
+  animation: rota 1.45s linear infinite, opa 5.12s ease-in-out infinite alternate;
 }
 
 #pgloading .bokeh li:nth-child(4) {
@@ -22962,8 +22963,8 @@ select.border-dark.tt-hint:focus {
   background: #122164;
   -webkit-transform-origin: 250% 50%;
   transform-origin: 250% 50%;
-  -webkit-animation: rota 1.72s linear infinite, opa 5.25s ease-in-out infinite alternate;
-  animation: rota 1.72s linear infinite, opa 5.25s ease-in-out infinite alternate;
+  -webkit-animation: rota 1.72s linear infinite, opa 5.25s ease-in-out infinite alternate;
+  animation: rota 1.72s linear infinite, opa 5.25s ease-in-out infinite alternate;
 }
 
 @-webkit-keyframes rota {
@@ -23212,7 +23213,7 @@ select.border-dark.tt-hint:focus {
   background: #FFC100;
   color: #FFC100;
   margin: 80px auto;
-  box-shadow: 15px 15px  0 0, -15px -15px  0 0, 15px -15px  0 0, -15px 15px  0 0, 0 15px  0 0, 15px 0  0 0, -15px 0  0 0, 0 -15px 0 0;
+  box-shadow: 15px 15px  0 0, -15px -15px  0 0, 15px -15px  0 0, -15px 15px  0 0, 0 15px  0 0, 15px 0  0 0, -15px 0  0 0, 0 -15px 0 0;
   animation: anim 2s linear infinite;
 }
 
@@ -23221,10 +23222,10 @@ select.border-dark.tt-hint:focus {
     -webkit-filter: hue-rotate(0deg);
   }
   50% {
-    box-shadow: 20px 20px  0 0, -20px -20px  0 0, 20px -20px  0 0, -20px 20px  0 0, 0 10px  0 0, 10px 0  0 0, -10px 0  0 0, 0 -10px 0 0;
+    box-shadow: 20px 20px  0 0, -20px -20px  0 0, 20px -20px  0 0, -20px 20px  0 0, 0 10px  0 0, 10px 0  0 0, -10px 0  0 0, 0 -10px 0 0;
   }
   75% {
-    box-shadow: 20px 20px  0 0, -20px -20px  0 0, 20px -20px  0 0, -20px 20px  0 0, 0 10px  0 0, 10px 0  0 0, -10px 0  0 0, 0 -10px 0 0;
+    box-shadow: 20px 20px  0 0, -20px -20px  0 0, 20px -20px  0 0, -20px 20px  0 0, 0 10px  0 0, 10px 0  0 0, -10px 0  0 0, 0 -10px 0 0;
   }
   100% {
     transform: rotate(360deg);
@@ -28460,6 +28461,10 @@ div.tagsinput span.tag a {
   color: #f1ffff;
 }
 
+.nav-pills .nav-link.active {
+  background-color: #1e2f91;
+}
+
 .nav-register .nav-link {
   font-weight: 500;
 }
@@ -28471,12 +28476,21 @@ div.tagsinput span.tag a {
 
 .card {
   border-radius: 0.8rem;
+  background-color: transparent;
 }
 
 .card .card-header {
   border-top-right-radius: 0.8rem;
   border-top-left-radius: 0.8rem;
   font-weight: 500;
+}
+
+.card .card-title {
+  color: #585654;
+}
+
+.card .card-body {
+  background-color: #FEFFFF;
 }
 
 .card--section {
@@ -28619,10 +28633,17 @@ div.tagsinput span.tag a {
   }
 }
 
+.bg-imgcover {
+  background-image: url("../../images/inicio/bg-home.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
 /* Sidebar */
 .sidebar {
   min-height: calc(100vh - 60px);
-  background: #fff;
+  background: #f4f5fb;
   font-family: "Nunito", sans-serif;
   font-weight: 500;
   padding: 0;
@@ -28990,6 +29011,11 @@ div.tagsinput span.tag a {
   width: calc(70px - 30px);
   max-width: 100%;
   margin: auto;
+}
+
+.navbar .navbar-brand-wrapper .brand-sec {
+  display: block;
+  font-size: 0.8rem;
 }
 
 .navbar .navbar-menu-wrapper {
@@ -30021,6 +30047,10 @@ div.tagsinput span.tag a {
   .navbar .navbar-brand-wrapper .navbar-brand.brand-logo {
     display: none;
   }
+  .navbar .navbar-brand-wrapper .navbar-brand.brand-logo .small {
+    width: 100%;
+    text-align: center;
+  }
   .navbar .navbar-brand-wrapper .navbar-brand.brand-logo-mini {
     display: inline-block;
   }
@@ -30216,7 +30246,7 @@ div.tagsinput span.tag a {
   .sidebar-icon-only .sidebar .nav .nav-item.hover-open .collapse,
   .sidebar-icon-only .sidebar .nav .nav-item.hover-open .collapsing {
     display: block;
-    background: #fff;
+    background: #f4f5fb;
     border-radius: 0 0 5px 0;
     position: absolute;
     left: 70px;

@@ -3,11 +3,18 @@ $orange-color-card: #f1ffff;
 
 .card {
 	border-radius: 0.8rem;
+	background-color: transparent;
 	.card-header {
 		border-top-right-radius: 0.8rem;
 		border-top-left-radius: 0.8rem;
 		font-weight: 500;
-
+		
+	}
+	.card-title {
+		color: #585654;
+	}
+	.card-body {
+		background-color: #FEFFFF;
 	}
 	&--section {
 		background-color: #FEFFFF;
