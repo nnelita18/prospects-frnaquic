@@ -3,7 +3,7 @@ $orange-color-card: #f1ffff;
 
 .card {
 	border-radius: 0.8rem;
-	background-color: transparent;
+	// background-color: transparent;
 	.card-header {
 		border-top-right-radius: 0.8rem;
 		border-top-left-radius: 0.8rem;
@@ -14,7 +14,10 @@ $orange-color-card: #f1ffff;
 		color: #585654;
 	}
 	.card-body {
-		background-color: #FEFFFF;
+		// background-color: #FEFFFF;
+		border-bottom-right-radius: 0.8rem;
+		border-bottom-left-radius: 0.8rem;
+		margin-bottom: 0.8rem;
 	}
 	&--section {
 		background-color: #FEFFFF;

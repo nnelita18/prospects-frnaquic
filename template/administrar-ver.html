@@ -255,10 +255,10 @@
 
               <input type="button" name="data[password]" class="next btn btn-primary" value="Siguiente" />
             </div>
-            <div class="card card-step">
+            <div class="card card-step bg-transparent">
               <h2> Paso 2: Información del Negocio y Ubicación</h2>
               <div class="card-header">Datos del Negocio</div>
-              <div class="card-body mb-3">
+              <div class="card-body mb-3 bg-white">
                 <div class="row">
                   <div class="col-md-8 col-sm-8 form-group">
                     <label>Nombre del Negocio:</label><span class="requered_class">*</span>
@@ -371,10 +371,10 @@
                 <input type="button" name="next" class="next btn btn-primary" value="Siguiente" />
               <!-- </div> -->
             </div>
-            <div class="card card-step">
+            <div class="card card-step bg-transparent">
               <h2>Paso 3: Información de la franquicia</h2>
               <div class="card-header">Tipo Franquicia</div>
-              <div class="card-body">
+              <div class="card-body bg-white">
                 <div class="form-group row align-items-center">
                   <label class="col-md-2 col-form-label">Tipo de tienda:</label>
                   <div class="col-md-9">
@@ -388,7 +388,7 @@
                 </div>
               </div>
               <div class="card-header">Datos del registro</div>
-              <div class="card-body">
+              <div class="card-body bg-white">
                 <div class="row">
                   <div class="col-md-6 form-group">
                     <label>Fecha:<span class="txr">*</span>
@@ -403,7 +403,7 @@
                 </div>
               </div>
               <div class="card-header">Datos Inversión</div>
-              <div class="card-body">
+              <div class="card-body bg-white">
                 <div class="row">
                   <div class="col-md-6 form-group">
                     <label>Remodelación:<span class="txr">*</span>
@@ -428,7 +428,7 @@
                 </div>
               </div>
               <div class="card-header">Descuentos y límites autorizados</div>
-              <div class="card-body">
+              <div class="card-body bg-white">
                 <div class="row">
                   <div class="col-md-6 form-group">
                     <label>Descuento en recargas:<span class="txr">*</span>
@@ -462,10 +462,174 @@
                 <input type="button" name="next" class="next btn btn-primary" value="Siguiente" />
               <!-- </div> -->
             </div>
-            <div class="card card-step">
+            <div class="card card-step bg-transparent">
+              <h2>Paso 4: Descuentos y límites autorizados</h2>
+              <div class="card-header">Descuentos y límites autorizados</div>
+              <div class="card-body bg-white">
+
+<div id="formEditarLim">
+            <div class="modal-content">
+                    <input type="text" class="form-control" id="codigo_dis_lim" name="codigo_dis_lim" hidden>
+                    <div class="form-row col-md-12 container-fluid">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <h5 class="text-center">Tiempo Aire</h5>
+                            <div class="row mt-2">
+                                <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                                    <label>Telcel:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">%</span>
+                                        <input type="text" class="form-control input-sm" name="telcel" id="telcel"
+                                            placeholder="" pattern="\d+(\.\d+)?" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                                    <label>Movistar:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">%</span>
+                                        <input type="text" class="form-control input-sm" name="movistar" id="movistar"
+                                            placeholder="" pattern="\d+(\.\d+)?" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                                    <label>Unefon:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">%</span>
+                                        <input type="text" class="form-control input-sm" name="unefon" id="unefon"
+                                            placeholder="" pattern="\d+(\.\d+)?" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                                    <label>AT&T:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">%</span>
+                                        <input type="text" class="form-control input-sm" name="att" id="att"
+                                            placeholder="" pattern="\d+(\.\d+)?" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <h5 class="text-center">Pago de Servicios</h5>
+                            <div class="row mt-2">
+                                <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                                    <label>Cargo x servicio:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">$</span>
+                                        <input type="text" class="form-control input-sm" name="cargo" id="cargo"
+                                            placeholder="cargo x servicio" pattern="\d+(\.\d+)?" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <h5 class="text-center">Lista de precio para Equipos</h5>
+                            <div class="row mt-2">
+                                <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                                    <label>Precio mayoreo:</label>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <label class="input-group-text" for="equipos_pm"></label>
+                                        </div>
+                                        <select class="custom-select" id="equipos_pm" name='equipos_pm'>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <h5 class="text-center">Lista de precio para Accesorios</h5>
+                            <div class="row mt-2">
+                                <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                                    <label>Precio mayoreo:</label>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <label class="input-group-text" for="acc_pm"></label>
+                                        </div>
+                                        <select class="custom-select" id="acc_pm" name='acc_pm'>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <h5 class="text-center">Venta de Chip 50</h5>
+                            <div class="row mt-2">
+                                <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                                    <label>Costo:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">$</span>
+                                        <input type="text" class="form-control input-sm" name="chips" id="chips"
+                                            placeholder="Costo" pattern="\d+(\.\d+)?" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <h5 class="text-center">Cargos</h5>
+                            <div class="row mt-2">
+                                <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                                    <label>TAF:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">$</span>
+                                        <input type="text" class="form-control input-sm" name="cargo_taf" id="cargo_taf"
+                                            placeholder="Costo" pattern="\d+(\.\d+)?" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                                    <label>Portabilidad:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">$</span>
+                                        <input type="text" class="form-control input-sm" name="cargo_porta"
+                                            id="cargo_porta" placeholder="Costo" pattern="\d+(\.\d+)?" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                                    <label>Recuperación:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">$</span>
+                                        <input type="text" class="form-control input-sm" name="cargo_rec" id="cargo_rec"
+                                            placeholder="Costo" pattern="\d+(\.\d+)?" required>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button><button
+                        type="submit" class="btn btn-primary">Guardar cambios</button>
+                </div>
+            </div>
+        </div>
+
+              </div>
+              <!-- <div class="card-footer"> -->
+                <input type="button" name="previous" class="previous btn btn-info" value="Previo" />
+                <input type="button" name="next" class="next btn btn-primary" value="Siguiente" />
+              <!-- </div> -->
+            </div>
+            <div class="card card-step bg-transparent">
               <h2> Paso 5: Fotos de Perfil y Franquicia</h2>
               <div class="card-header">Foto de perfil</div>
-              <div class="card-body">
+              <div class="card-body bg-white">
                 <div class="form-group row">
                   <div class="col-md-8">
                     <label for=""> &#8212; Adjunta tu Foto</label>
@@ -485,7 +649,7 @@
                 </div>
               </div>
               <div class="card-header">Fotografías del local</div>
-              <div class="card-body">
+              <div class="card-body bg-white">
                 <div class="form-group row">
                   <div class="col-md-8">
                     <label for=""> &#8212; <strong>Foto Frontal</strong>: frente de la fachada del local con periódico del día</label>
@@ -543,10 +707,10 @@
                 <input type="button" name="next" class="next btn btn-primary" value="Siguiente" />
               <!-- </div> -->
             </div>
-            <div class="card card-step">
+            <div class="card card-step bg-transparent">
               <h2>Paso 4: Documentación a Anexar</h2>
               <div class="card-header">Documentos</div>
-              <div class="card-body">
+              <div class="card-body bg-white">
                 <div class="row">
                   <div class="col-12">
                     <div class="card-body">
@@ -602,7 +766,7 @@
                 </div>
               </div>
               <div class="card-header">Gastos fijos</div>
-              <div class="card-body">
+              <div class="card-body bg-white">
                 <h4 class="card-title">Detalle de Gastos Fijos</h4>
                 <p class="card-description">
                   COMENTARIOS <code>COMENTARIOS RESPECTO DE LAS CONDICIONES ACTUALES DE LOS SERVICIOS</code>
