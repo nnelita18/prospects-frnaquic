@@ -13,6 +13,12 @@ $navssm: '.navssm';
 				color: #f1ffff;
 			}
 		}
+		&.nav-small {
+			.nav-link {
+				font-size: 0.8rem;
+				margin: 0.2rem;
+			}
+		}
 	}
 	&__content {
 
