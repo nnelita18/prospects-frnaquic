@@ -28478,6 +28478,18 @@ div.tagsinput span.tag a {
   margin: 0.2rem;
 }
 
+.navssm__sem.nav-small .nav-link .ti-checked {
+  color: #a5a4a4;
+}
+
+.navssm__sem.nav-small .completed .ti-check {
+  background-color: #5368de;
+  color: #f1f1f1;
+  font-weight: 700;
+  padding: 0.4rem;
+  border-radius: 50%;
+}
+
 .nav-pills .nav-link.active {
   background-color: #1e2f91;
 }
@@ -28554,7 +28566,7 @@ div.tagsinput span.tag a {
 .card--inverse-s {
   background: rgba(163, 164, 165, 0.2);
   border: 1px solid #d5d5d6;
-  color: #7c7d7d;
+  color: #4a4949;
   padding: 1rem !important;
   margin-bottom: 0.8rem;
 }
@@ -28566,9 +28578,17 @@ div.tagsinput span.tag a {
   color: #1e2f91;
 }
 
+.card--inverse-s label {
+  color: #4a4949;
+}
+
+.card--inverse-s .input-group .input-group-text, .card--inverse-s .asColorPicker-wrap .input-group-text {
+  color: #797471;
+}
+
 .card--inverse-w {
   border: 1px solid #d5d5d6;
-  color: #7c7d7d;
+  color: #4a4949;
   padding: 1rem !important;
   margin-bottom: 0.8rem;
 }
@@ -28578,6 +28598,10 @@ div.tagsinput span.tag a {
   font-weight: 600;
   margin-bottom: .9rem;
   color: #1e2f91;
+}
+
+.card--inverse-w .input-group .input-group-text, .card--inverse-w .asColorPicker-wrap .input-group-text {
+  color: #797471;
 }
 
 .ajax-upload-dragdrop {
@@ -28605,6 +28629,13 @@ div.tagsinput span.tag a {
   left: 0px;
   z-index: 100;
   opacity: 0;
+}
+
+.disable-form .form-control:focus, .disable-form .asColorPicker-input:focus, .disable-form .dataTables_wrapper select:focus, .dataTables_wrapper .disable-form select:focus, .disable-form .jsgrid .jsgrid-table .jsgrid-filter-row input:focus[type=text], .jsgrid .jsgrid-table .jsgrid-filter-row .disable-form input:focus[type=text],
+.disable-form .jsgrid .jsgrid-table .jsgrid-filter-row select:focus, .jsgrid .jsgrid-table .jsgrid-filter-row .disable-form select:focus, .disable-form .jsgrid .jsgrid-table .jsgrid-filter-row input:focus[type=number], .jsgrid .jsgrid-table .jsgrid-filter-row .disable-form input:focus[type=number], .disable-form .select2-container--default .select2-selection--single:focus, .select2-container--default .disable-form .select2-selection--single:focus, .disable-form .select2-container--default .select2-selection--single .select2-search__field:focus, .select2-container--default .select2-selection--single .disable-form .select2-search__field:focus, .disable-form .typeahead:focus,
+.disable-form .tt-query:focus,
+.disable-form .tt-hint:focus {
+  border: 0;
 }
 
 .page-body-wrapper {

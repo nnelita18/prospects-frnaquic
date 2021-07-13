@@ -20,3 +20,11 @@
 		}
 	}
 }
+
+.disable-form {
+	.form-control {
+		&:focus {
+			border: 0;
+		}
+	}
+}

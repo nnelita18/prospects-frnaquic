@@ -55,27 +55,40 @@ $orange-color-card: #f1ffff;
 	}
 	&--inverse-s {
 		background: rgba(163, 164, 165, 0.2);
-    border: 1px solid #d5d5d6;
-    color: #7c7d7d;
-    padding: 1rem !important;
-    margin-bottom: 0.8rem;
-    h5 {
-			font-size: 1rem;
-			font-weight: 600;
-			margin-bottom: .9rem;
-			color: #1e2f91;
-    }
+	    border: 1px solid #d5d5d6;
+	    color: #4a4949;
+	    padding: 1rem !important;
+	    margin-bottom: 0.8rem;
+	    h5 {
+				font-size: 1rem;
+				font-weight: 600;
+				margin-bottom: .9rem;
+				color: #1e2f91;
+	    }
+	    label {
+	    	color: #4a4949;
+	    }
+	    .input-group {
+	    	.input-group-text {
+	    		color: #797471;
+	    	}
+	    }
 	}
 	&--inverse-w {
 		border: 1px solid #d5d5d6;
-		color: #7c7d7d;
-    padding: 1rem !important;
-    margin-bottom: 0.8rem;
-    h5 {
-			font-size: 1rem;
-			font-weight: 600;
-			margin-bottom: .9rem;
-			color: #1e2f91;
-    }
+		color: #4a4949;
+	    padding: 1rem !important;
+	    margin-bottom: 0.8rem;
+	    h5 {
+				font-size: 1rem;
+				font-weight: 600;
+				margin-bottom: .9rem;
+				color: #1e2f91;
+	    }
+	    .input-group {
+	    	.input-group-text {
+	    		color: #797471;
+	    	}
+	    }
 	}
 }
