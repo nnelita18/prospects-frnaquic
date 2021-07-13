@@ -67,7 +67,7 @@
 											<input type="text" class="form-control" id="datepicker1" name="fecha_deposito" placeholder="Fecha cuando se realizo el depósito" required readonly>
 										</div>
 										<div class="col-md-4 form-group">
-											<label>Banco <span class="required">*</span>
+											<label class="w-100">Banco <span class="required">*</span> <span id="mostrarFichas" class="float-right btn btn-sm btn-warning p-1" style="cursor: pointer;"><i class="ti-help"></i></span>
 											</label>
 											<select class="form-control" name="banco" id="banco" required="">
 												<option selected="" value="">Seleccione un Banco</option>
@@ -119,8 +119,8 @@
 									</div> -->
 								</fieldset>
 								<fieldset id="si_fact" disabled class="d-none">
-									<div class="row text-center">
-										<div class="col-12">
+									<div class="row text-center card card--orange">
+										<div class="col-12 card-header">
 											<h3>Datos del Facturación</h3>
 										</div>
 									</div>
@@ -312,3 +312,345 @@
 		</div>
 	</div>
 </section>
+
+<!-- Modal Dafult Fichas SelectBanco-->
+<div class="modal fade modal-comm modal-fichasbanco" id="modalSelBanco" tabindex="-1" aria-labelledby="modalSelBancoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header justify-content-center">
+        <h5 class="modal-title" id="modalSelBancoLabel">Aviso!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4>Primero selecciona el <strong>Banco</strong> en donde realizó el <strong>Depósito</strong></h4>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Entendido!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Banco Azteca-->
+<div class="modal fade modal-comm modal-fichasbanco show" id="mfichasAzt" tabindex="-1" aria-labelledby="mfichasAztLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="mfichasAztLabel">Fichas de depósito <strong>Cuenta Banco Azteca</strong></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="carouselAzteca" class="carousel slide carousel-fichas" data-ride="carousel">
+                    <a class="carousel-control-prev" href="#carouselAzteca" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselAzteca" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselAzteca" data-slide-to="1"></li>
+                        <li data-target="#carouselAzteca" data-slide-to="2"></li>
+                    </ol>
+                    <a class="carousel-control-next" href="#carouselAzteca" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="assets/images/depositos/fichas/azteca-1.jpg" class="d-block w-100" alt="Banco Azteca">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/images/depositos/fichas/azteca-2.jpg" class="d-block w-100" alt="Banco Azteca">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/images/depositos/fichas/azteca-1.jpg" class="d-block w-100" alt="Banco Azteca">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Banco BBVA-->
+<div class="modal fade modal-comm modal-fichasbanco show" id="mfichasBBVA" tabindex="-1" aria-labelledby="mfichasBBVALabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="mfichasBBVALabel">Fichas de depósito <strong>Cuenta Banco BBVA Bancomer</strong></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="carouselBBVA" class="carousel slide carousel-fichas" data-ride="carousel">
+                    <a class="carousel-control-prev" href="#carouselBBVA" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselBBVA" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselBBVA" data-slide-to="1"></li>
+                        <li data-target="#carouselBBVA" data-slide-to="2"></li>
+                        <li data-target="#carouselBBVA" data-slide-to="3"></li>
+                        <li data-target="#carouselBBVA" data-slide-to="4"></li>
+                        <li data-target="#carouselBBVA" data-slide-to="5"></li>
+                        <li data-target="#carouselBBVA" data-slide-to="6"></li>
+                        <li data-target="#carouselBBVA" data-slide-to="7"></li>
+                        <li data-target="#carouselBBVA" data-slide-to="8"></li>
+                        <li data-target="#carouselBBVA" data-slide-to="9"></li>
+                        <li data-target="#carouselBBVA" data-slide-to="10"></li>
+                        <li data-target="#carouselBBVA" data-slide-to="11"></li>
+                        <li data-target="#carouselBBVA" data-slide-to="12"></li>
+                    </ol>
+                    <a class="carousel-control-next" href="#carouselBBVA" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active"><img src="assets/images/depositos/fichas/BBVA-1.jpg" class="d-block w-100" alt="BBVA"></div>
+                        <div class="carousel-item"><img src="assets/images/depositos/fichas/BBVA-2.jpg" class="d-block w-100" alt="BBVA"></div>
+                        <div class="carousel-item"><img src="assets/images/depositos/fichas/BBVA-3.jpg" class="d-block w-100" alt="BBVA"></div>
+                        <div class="carousel-item"><img src="assets/images/depositos/fichas/BBVA-4.jpg" class="d-block w-100" alt="BBVA"></div>
+                        <div class="carousel-item"><img src="assets/images/depositos/fichas/BBVA-5.jpg" class="d-block w-100" alt="BBVA"></div>
+                        <div class="carousel-item"><img src="assets/images/depositos/fichas/BBVA-6.jpg" class="d-block w-100" alt="BBVA"></div>
+                        <div class="carousel-item"><img src="assets/images/depositos/fichas/BBVA-7.jpg" class="d-block w-100" alt="BBVA"></div>
+                        <div class="carousel-item"><img src="assets/images/depositos/fichas/BBVA-8.jpg" class="d-block w-100" alt="BBVA"></div>
+                        <div class="carousel-item"><img src="assets/images/depositos/fichas/BBVA-9.jpg" class="d-block w-100" alt="BBVA"></div>
+                        <div class="carousel-item"><img src="assets/images/depositos/fichas/BBVA-10.jpg" class="d-block w-100" alt="BBVA"></div>
+                        <div class="carousel-item"><img src="assets/images/depositos/fichas/BBVA-11.jpg" class="d-block w-100" alt="BBVA"></div>
+                        <div class="carousel-item"><img src="assets/images/depositos/fichas/BBVA-12.jpg" class="d-block w-100" alt="BBVA"></div>
+                        <div class="carousel-item"><img src="assets/images/depositos/fichas/BBVA-0.jpg" class="d-block w-100" alt="BBVA"></div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Banco Banorte-->
+<div class="modal fade modal-comm modal-fichasbanco show" id="mfichasBan" tabindex="-1" aria-labelledby="mfichasBanLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="mfichasBanLabel">Fichas de depósito <strong>Cuenta Banco Banorte</strong></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="carouselBan" class="carousel slide carousel-fichas" data-ride="carousel">
+                    <a class="carousel-control-prev" href="#carouselBan" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselBan" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselBan" data-slide-to="1"></li>
+                        <li data-target="#carouselBan" data-slide-to="2"></li>
+                        <li data-target="#carouselBan" data-slide-to="3"></li>
+                        <li data-target="#carouselBan" data-slide-to="4"></li>
+                        <li data-target="#carouselBan" data-slide-to="5"></li>
+                        <li data-target="#carouselBan" data-slide-to="6"></li>
+                        <li data-target="#carouselBan" data-slide-to="7"></li>
+                        <li data-target="#carouselBan" data-slide-to="8"></li>
+                        <li data-target="#carouselBan" data-slide-to="9"></li>
+                        <li data-target="#carouselBan" data-slide-to="10"></li>
+                    </ol>
+                    <a class="carousel-control-next" href="#carouselBan" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active"><img src="assets/images/depositos/fichas/Banorte-1.jpg" class="d-block w-100" alt="..."></div>
+                        <div class="carousel-item"><img src="assets/images/depositos/fichas/Banorte-2.jpg" class="d-block w-100" alt="..."></div>
+                        <div class="carousel-item"><img src="assets/images/depositos/fichas/Banorte-3.jpg" class="d-block w-100" alt="..."></div>
+                        <div class="carousel-item"><img src="assets/images/depositos/fichas/Banorte-4.jpg" class="d-block w-100" alt="..."></div>
+                        <div class="carousel-item"><img src="assets/images/depositos/fichas/Banorte-5.jpg" class="d-block w-100" alt="..."></div>
+                        <div class="carousel-item"><img src="assets/images/depositos/fichas/Banorte-6.jpg" class="d-block w-100" alt="..."></div>
+                        <div class="carousel-item"><img src="assets/images/depositos/fichas/Banorte-7.jpg" class="d-block w-100" alt="..."></div>
+                        <div class="carousel-item"><img src="assets/images/depositos/fichas/Banorte-8.jpg" class="d-block w-100" alt="..."></div>
+                        <div class="carousel-item"><img src="assets/images/depositos/fichas/Banorte-9.jpg" class="d-block w-100" alt="..."></div>
+                        <div class="carousel-item"><img src="assets/images/depositos/fichas/Banorte-10.jpg" class="d-block w-100" alt="..."></div>
+                        <div class="carousel-item"><img src="assets/images/depositos/fichas/Banorte-11.jpg" class="d-block w-100" alt="..."></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Banco Coppel-->
+<div class="modal fade modal-comm modal-fichasbanco show" id="mfichasCop" tabindex="-1" aria-labelledby="mfichasCopLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="mfichasCopLabel">Fichas de depósito <strong>Cuenta Banco Coppel</strong></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="carouselCop" class="carousel slide carousel-fichas" data-ride="carousel">
+                    <a class="carousel-control-prev" href="#carouselCop" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselCop" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselCop" data-slide-to="1"></li>
+                    </ol>
+                    <a class="carousel-control-next" href="#carouselCop" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="assets/images/depositos/fichas/Coppel-1.jpg" class="d-block w-100" alt="Coppel">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/images/depositos/fichas/Coppel-2.jpg" class="d-block w-100" alt="Coppel">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Banco Inbursa-->
+<div class="modal fade modal-comm modal-fichasbanco show" id="mfichasInb" tabindex="-1" aria-labelledby="mfichasInbLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="mfichasInbLabel">Fichas de depósito <strong>Cuenta Banco Inbursa</strong></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="carouselInbursa" class="carousel slide carousel-fichas" data-ride="carousel">
+                    <a class="carousel-control-prev" href="#carouselInbursa" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselInbursa" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselInbursa" data-slide-to="1"></li>
+                    </ol>
+                    <a class="carousel-control-next" href="#carouselInbursa" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="assets/images/depositos/fichas/Inbursa-1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/images/depositos/fichas/Inbursa-2.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+	var $$ = document;
+  var form_deposito = $$.form_deposito;
+
+  var handler = {
+
+        radiosFacturar: function (ev) {
+            var val = this.value;
+
+            console.log(val);
+
+            if (val === '') {
+                form_deposito.enviar.closest('.row').classList.add('d-none'); //el padre mas cercano
+                always.classList.add('d-none'); //el padre mas cercano
+                si_fact.disabled = true;
+                si_fact.classList.add('d-none');
+                return;
+            } else if (val !== '') {
+                form_deposito.enviar.closest('.row').classList.remove('d-none'); //el padre mas cercano
+                always.classList.remove('d-none'); //el padre mas cercano
+            }
+
+            if (val === '1') {
+                si_fact.disabled = false;
+                si_fact.classList.remove('d-none');
+            } else if (val === '0') {
+                si_fact.disabled = true;
+                si_fact.classList.add('d-none');
+            }
+        }
+	 }
+
+	 form_deposito.facturar.forEach((radio, i) => {
+      radio.addEventListener('change', handler.radiosFacturar);
+  });
+</script>
+
+<script>
+    $('#banco').on('change', function() {
+        let tagInfoRefencia = $('#mostrarFichas'),
+            numbank         = this.value;
+
+        if (numbank !== '') {
+            if (tagInfoRefencia.hasClass('btn-warning')) {
+                tagInfoRefencia.removeClass('btn-warning');
+                tagInfoRefencia.addClass('btn-info');
+            }
+        } else {
+            tagInfoRefencia.removeClass('btn-info');
+            tagInfoRefencia.addClass('btn-warning');
+        }
+    });
+    $('#mostrarFichas').on('click', function (){
+        let $tipoFicha = $('#banco').val(),
+        $selecBank     = $('#modalSelBanco'),
+        $fichasAzteca  = $('#mfichasAzt'),
+        $fichasBBVA    = $('#mfichasBBVA'),
+        $fichasBanorte = $('#mfichasBan'),
+        $fichasCoppel  = $('#mfichasCop'),
+        // $fichasBanamx  = $('#mfichasBanmx'),
+        $fichasInbursa = $('#mfichasInb');
+
+        switch ($tipoFicha) {
+          case '1':
+            $modalFichas = $fichasAzteca;
+            break;
+          case '2':
+            $modalFichas = $fichasBBVA;
+            break;
+          case '3':
+          $modalFichas = $fichasBanorte;
+            break;
+          case '4':
+          $modalFichas = $fichasCoppel;
+            break;
+          // case '5':
+          // $modalFichas = $fichasBanamx;
+          //   break;
+          case '6':
+          $modalFichas = $fichasInbursa;
+            break;
+          default:
+          $modalFichas = $selecBank;
+            console.log('Seleccione un banco en:')
+            break;
+        }
+
+        $modalFichas.modal('show');
+    });
+</script>

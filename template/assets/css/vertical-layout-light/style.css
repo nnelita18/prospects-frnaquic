@@ -22930,8 +22930,8 @@ select.border-dark.tt-hint:focus {
   background: #57B657;
   -webkit-transform-origin: 50% 250%;
   transform-origin: 50% 250%;
-  -webkit-animation: rota 1.13s linear infinite, opa 3.67s ease-in-out infinite alternate;
-  animation: rota 1.13s linear infinite, opa 3.67s ease-in-out infinite alternate;
+  -webkit-animation: rota 1.13s linear infinite, opa 3.67s ease-in-out infinite alternate;
+  animation: rota 1.13s linear infinite, opa 3.67s ease-in-out infinite alternate;
 }
 
 #pgloading .bokeh li:nth-child(2) {
@@ -22941,8 +22941,8 @@ select.border-dark.tt-hint:focus {
   background: #FF4747;
   -webkit-transform-origin: -150% 50%;
   transform-origin: -150% 50%;
-  -webkit-animation: rota 1.86s linear infinite, opa 4.29s ease-in-out infinite alternate;
-  animation: rota 1.86s linear infinite, opa 4.29s ease-in-out infinite alternate;
+  -webkit-animation: rota 1.86s linear infinite, opa 4.29s ease-in-out infinite alternate;
+  animation: rota 1.86s linear infinite, opa 4.29s ease-in-out infinite alternate;
 }
 
 #pgloading .bokeh li:nth-child(3) {
@@ -22952,8 +22952,8 @@ select.border-dark.tt-hint:focus {
   background: #FFC100;
   -webkit-transform-origin: 50% -150%;
   transform-origin: 50% -150%;
-  -webkit-animation: rota 1.45s linear infinite, opa 5.12s ease-in-out infinite alternate;
-  animation: rota 1.45s linear infinite, opa 5.12s ease-in-out infinite alternate;
+  -webkit-animation: rota 1.45s linear infinite, opa 5.12s ease-in-out infinite alternate;
+  animation: rota 1.45s linear infinite, opa 5.12s ease-in-out infinite alternate;
 }
 
 #pgloading .bokeh li:nth-child(4) {
@@ -22963,8 +22963,8 @@ select.border-dark.tt-hint:focus {
   background: #122164;
   -webkit-transform-origin: 250% 50%;
   transform-origin: 250% 50%;
-  -webkit-animation: rota 1.72s linear infinite, opa 5.25s ease-in-out infinite alternate;
-  animation: rota 1.72s linear infinite, opa 5.25s ease-in-out infinite alternate;
+  -webkit-animation: rota 1.72s linear infinite, opa 5.25s ease-in-out infinite alternate;
+  animation: rota 1.72s linear infinite, opa 5.25s ease-in-out infinite alternate;
 }
 
 @-webkit-keyframes rota {
@@ -23213,7 +23213,7 @@ select.border-dark.tt-hint:focus {
   background: #FFC100;
   color: #FFC100;
   margin: 80px auto;
-  box-shadow: 15px 15px  0 0, -15px -15px  0 0, 15px -15px  0 0, -15px 15px  0 0, 0 15px  0 0, 15px 0  0 0, -15px 0  0 0, 0 -15px 0 0;
+  box-shadow: 15px 15px  0 0, -15px -15px  0 0, 15px -15px  0 0, -15px 15px  0 0, 0 15px  0 0, 15px 0  0 0, -15px 0  0 0, 0 -15px 0 0;
   animation: anim 2s linear infinite;
 }
 
@@ -23222,10 +23222,10 @@ select.border-dark.tt-hint:focus {
     -webkit-filter: hue-rotate(0deg);
   }
   50% {
-    box-shadow: 20px 20px  0 0, -20px -20px  0 0, 20px -20px  0 0, -20px 20px  0 0, 0 10px  0 0, 10px 0  0 0, -10px 0  0 0, 0 -10px 0 0;
+    box-shadow: 20px 20px  0 0, -20px -20px  0 0, 20px -20px  0 0, -20px 20px  0 0, 0 10px  0 0, 10px 0  0 0, -10px 0  0 0, 0 -10px 0 0;
   }
   75% {
-    box-shadow: 20px 20px  0 0, -20px -20px  0 0, 20px -20px  0 0, -20px 20px  0 0, 0 10px  0 0, 10px 0  0 0, -10px 0  0 0, 0 -10px 0 0;
+    box-shadow: 20px 20px  0 0, -20px -20px  0 0, 20px -20px  0 0, -20px 20px  0 0, 0 10px  0 0, 10px 0  0 0, -10px 0  0 0, 0 -10px 0 0;
   }
   100% {
     transform: rotate(360deg);
@@ -23817,6 +23817,18 @@ dl li {
   .modal .modal-dialog .modal-content .modal-footer > :not(:first-child) {
     margin-left: 0;
   }
+}
+
+.modal.modal-fichasbanco .close {
+  background: white;
+  margin-right: 0.1rem;
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+  margin-left: 0.1rem;
+  padding: .5rem;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
 }
 
 /* Pagination */
@@ -31047,6 +31059,43 @@ div.tagsinput span.tag a {
 .content-box .card:nth-child(1) svg circle:nth-child(2) {
   stroke-dashoffset: calc(440 - (440 * 90) / 100);
   stroke: #f78f01;
+}
+
+.modal-fichasbanco .modal-header {
+  padding-top: .3rem;
+  padding-bottom: .3rem;
+}
+
+.modal-fichasbanco .carousel-inner {
+  padding-top: 2rem !important;
+}
+
+.carousel-fichas .carousel-control-prev, .carousel-fichas .carousel-control-next {
+  background: #f78f01 !important;
+  height: 1.6rem !important;
+  opacity: 1;
+  width: 2rem !important;
+}
+
+.carousel-fichas .carousel-indicators {
+  top: -16px !important;
+  bottom: auto;
+}
+
+.carousel-fichas .carousel-indicators li {
+  background-color: #1c4581;
+}
+
+.carousel-fichas .carousel-indicators li.active {
+  background-color: #f78f01;
+}
+
+.carousel-fichas .carousel-control-prev {
+  left: 25%;
+}
+
+.carousel-fichas .carousel-control-next {
+  right: 25%;
 }
 
 /*# sourceMappingURL=../assets/maps/vertical-layout-light/style.css.map */

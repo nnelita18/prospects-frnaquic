@@ -1,0 +1,34 @@
+.modal-fichasbanco {
+	.modal-header {
+		padding-top: .3rem;
+		padding-bottom: .3rem;
+	}
+	.carousel-inner {
+		padding-top: 2rem !important;
+	}
+}
+
+.carousel-fichas {
+	.carousel-control-prev, .carousel-control-next {
+		background: $sidebar-dark-menu-active-bg !important;
+		height: 1.6rem !important;
+		opacity: 1;
+		width: 2rem !important;
+	}
+	.carousel-indicators {
+		top: -16px !important;
+		bottom: auto;
+		li {
+			background-color: #1c4581;
+			&.active {
+				background-color: $sidebar-dark-menu-active-bg;
+			}
+		}
+	}
+	.carousel-control-prev {
+	    left: 25%;
+	}
+	.carousel-control-next {
+	    right: 25%;
+	}
+}

@@ -36,4 +36,17 @@
       }
     }
   }
+  &.modal-fichasbanco {
+    .close {
+      background: white;
+      margin-right: 0.1rem;
+      margin-top: 0.1rem;
+      margin-bottom: 0.1rem;
+      margin-left: 0.1rem;
+      padding: .5rem;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+    }
+  }
 }
