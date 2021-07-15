@@ -1,0 +1,41 @@
+.schedule-table {
+	.form-group {
+		margin: 0.5rem 0;
+	}
+	.form-control {
+		border-radius: .3rem;
+		padding: 0.3rem 0.8rem;
+		color: #525463;
+	}
+}
+
+.hg-tb {
+	height: 18rem;
+}
+
+.table-sc { 
+	display: table; 
+	background-color: #e8e8e8;
+	padding: 0.5rem;
+	border-radius: 0.3rem;
+}
+.table-sc .trow { 
+	display: table-row; 
+}
+.table-sc .heading { 
+	display: table-header-group; 
+	text-align: center;
+	color: #1e2f91;
+	font-weight: 600;
+}
+.table-sc .tbody { 
+	display: table-row-group; 
+}
+.table-sc .tfoot { 
+	display: table-footer-group; 
+}
+.table-sc .cell, 
+.table-sc .head { 
+	display: table-cell; 
+	padding: 0.2rem;
+}

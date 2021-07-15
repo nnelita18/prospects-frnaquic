@@ -22930,8 +22930,8 @@ select.border-dark.tt-hint:focus {
   background: #57B657;
   -webkit-transform-origin: 50% 250%;
   transform-origin: 50% 250%;
-  -webkit-animation: rota 1.13s linear infinite, opa 3.67s ease-in-out infinite alternate;
-  animation: rota 1.13s linear infinite, opa 3.67s ease-in-out infinite alternate;
+  -webkit-animation: rota 1.13s linear infinite, opa 3.67s ease-in-out infinite alternate;
+  animation: rota 1.13s linear infinite, opa 3.67s ease-in-out infinite alternate;
 }
 
 #pgloading .bokeh li:nth-child(2) {
@@ -22941,8 +22941,8 @@ select.border-dark.tt-hint:focus {
   background: #FF4747;
   -webkit-transform-origin: -150% 50%;
   transform-origin: -150% 50%;
-  -webkit-animation: rota 1.86s linear infinite, opa 4.29s ease-in-out infinite alternate;
-  animation: rota 1.86s linear infinite, opa 4.29s ease-in-out infinite alternate;
+  -webkit-animation: rota 1.86s linear infinite, opa 4.29s ease-in-out infinite alternate;
+  animation: rota 1.86s linear infinite, opa 4.29s ease-in-out infinite alternate;
 }
 
 #pgloading .bokeh li:nth-child(3) {
@@ -22952,8 +22952,8 @@ select.border-dark.tt-hint:focus {
   background: #FFC100;
   -webkit-transform-origin: 50% -150%;
   transform-origin: 50% -150%;
-  -webkit-animation: rota 1.45s linear infinite, opa 5.12s ease-in-out infinite alternate;
-  animation: rota 1.45s linear infinite, opa 5.12s ease-in-out infinite alternate;
+  -webkit-animation: rota 1.45s linear infinite, opa 5.12s ease-in-out infinite alternate;
+  animation: rota 1.45s linear infinite, opa 5.12s ease-in-out infinite alternate;
 }
 
 #pgloading .bokeh li:nth-child(4) {
@@ -22963,8 +22963,8 @@ select.border-dark.tt-hint:focus {
   background: #122164;
   -webkit-transform-origin: 250% 50%;
   transform-origin: 250% 50%;
-  -webkit-animation: rota 1.72s linear infinite, opa 5.25s ease-in-out infinite alternate;
-  animation: rota 1.72s linear infinite, opa 5.25s ease-in-out infinite alternate;
+  -webkit-animation: rota 1.72s linear infinite, opa 5.25s ease-in-out infinite alternate;
+  animation: rota 1.72s linear infinite, opa 5.25s ease-in-out infinite alternate;
 }
 
 @-webkit-keyframes rota {
@@ -23213,7 +23213,7 @@ select.border-dark.tt-hint:focus {
   background: #FFC100;
   color: #FFC100;
   margin: 80px auto;
-  box-shadow: 15px 15px  0 0, -15px -15px  0 0, 15px -15px  0 0, -15px 15px  0 0, 0 15px  0 0, 15px 0  0 0, -15px 0  0 0, 0 -15px 0 0;
+  box-shadow: 15px 15px  0 0, -15px -15px  0 0, 15px -15px  0 0, -15px 15px  0 0, 0 15px  0 0, 15px 0  0 0, -15px 0  0 0, 0 -15px 0 0;
   animation: anim 2s linear infinite;
 }
 
@@ -23222,10 +23222,10 @@ select.border-dark.tt-hint:focus {
     -webkit-filter: hue-rotate(0deg);
   }
   50% {
-    box-shadow: 20px 20px  0 0, -20px -20px  0 0, 20px -20px  0 0, -20px 20px  0 0, 0 10px  0 0, 10px 0  0 0, -10px 0  0 0, 0 -10px 0 0;
+    box-shadow: 20px 20px  0 0, -20px -20px  0 0, 20px -20px  0 0, -20px 20px  0 0, 0 10px  0 0, 10px 0  0 0, -10px 0  0 0, 0 -10px 0 0;
   }
   75% {
-    box-shadow: 20px 20px  0 0, -20px -20px  0 0, 20px -20px  0 0, -20px 20px  0 0, 0 10px  0 0, 10px 0  0 0, -10px 0  0 0, 0 -10px 0 0;
+    box-shadow: 20px 20px  0 0, -20px -20px  0 0, 20px -20px  0 0, -20px 20px  0 0, 0 10px  0 0, 10px 0  0 0, -10px 0  0 0, 0 -10px 0 0;
   }
   100% {
     transform: rotate(360deg);
@@ -31127,6 +31127,55 @@ div.tagsinput span.tag a {
 
 .carousel-fichas .carousel-control-next {
   right: 25%;
+}
+
+.schedule-table .form-group {
+  margin: 0.5rem 0;
+}
+
+.schedule-table .form-control, .schedule-table .asColorPicker-input, .schedule-table .dataTables_wrapper select, .dataTables_wrapper .schedule-table select, .schedule-table .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text], .jsgrid .jsgrid-table .jsgrid-filter-row .schedule-table input[type=text],
+.schedule-table .jsgrid .jsgrid-table .jsgrid-filter-row select, .jsgrid .jsgrid-table .jsgrid-filter-row .schedule-table select, .schedule-table .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number], .jsgrid .jsgrid-table .jsgrid-filter-row .schedule-table input[type=number], .schedule-table .select2-container--default .select2-selection--single, .select2-container--default .schedule-table .select2-selection--single, .schedule-table .select2-container--default .select2-selection--single .select2-search__field, .select2-container--default .select2-selection--single .schedule-table .select2-search__field, .schedule-table .typeahead,
+.schedule-table .tt-query,
+.schedule-table .tt-hint {
+  border-radius: .3rem;
+  padding: 0.3rem 0.8rem;
+  color: #525463;
+}
+
+.hg-tb {
+  height: 18rem;
+}
+
+.table-sc {
+  display: table;
+  background-color: #e8e8e8;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+}
+
+.table-sc .trow {
+  display: table-row;
+}
+
+.table-sc .heading {
+  display: table-header-group;
+  text-align: center;
+  color: #1e2f91;
+  font-weight: 600;
+}
+
+.table-sc .tbody {
+  display: table-row-group;
+}
+
+.table-sc .tfoot {
+  display: table-footer-group;
+}
+
+.table-sc .cell,
+.table-sc .head {
+  display: table-cell;
+  padding: 0.2rem;
 }
 
 /*# sourceMappingURL=../assets/maps/vertical-layout-light/style.css.map */

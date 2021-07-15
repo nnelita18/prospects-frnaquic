@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Nuevos Franquiciatarios Microtec</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="vendors/feather/feather.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" type="text/css" href="vendors/DataTables/datatables.min.css"/>
+  <link rel="stylesheet" type="text/css" href="vendors/bootstrap-datepicker/bootstrap-datepicker.min.css"/>
+  <!-- <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css"> -->
+  <!-- <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css"> -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="assets/css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="assets/images/favicon.png" />
+</head>
+<body class="">
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo text-warning" href="index.html">Franquicias <span class="small text-white brand-sec">Administrar</span></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html">F</a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav mr-lg-2">
+          <li class="nav-item nav-search d-none d-lg-block"></li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item dropdown px-3">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+              <i class="icon-bell mx-0"></i>
+              <span class="count bg-danger" ></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Tienes notificaciones nuevas</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning">
+                    <i class="ti-info-alt mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Tu próximo depósito esta por vencer</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    6:30pm
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="ti-check mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Tu depósito con fecha 15-07-2021 fué acreditado</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                     12:03pm
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="ti-check mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Tu depósito con fecha 30-06-2021 fué acreditado</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                     11:20am
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="ti-check mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Tu depósito con fecha 15-05-2021 fué acreditado</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                     10:30am
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="assets/images/home/profile.jpg" alt="profile"/>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item"> <i class="ti-unlock text-primary"></i>
+                Cambiar Contraseña
+              </a>
+              <a class="dropdown-item">
+                <i class="ti-power-off text-primary"></i>
+                Cerrar Sesión
+              </a>
+            </div>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="administrar.html">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Inicio</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pageto" href="views/admin/lista-solicitudes.html">
+              <i class="ti-write menu-icon"></i>
+              <span class="menu-title">Lista de Solicitudes</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div id="change-content" class="main-panel">
+
+
+  <div class="row title-wrapper">
+    <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+      <h3 class="font-weight-bold mb-0">Horario Samtec</h3>
+    </div>
+  </div>
+  <div class="content-wrapper register-ps">
+    <div class="row">
+      <div class="col-12 grid-margin stretch-card">
+       
+      <div class="card mt-4">
+        <div class="card-header">
+          Horario
+        </div>
+        <div class="card-body">
+          
+          <p class="card-description">
+            Ingresa el horario correspondiente.
+          </p>
+          <div class="table-responsive hg-tb">
+            <div class="table table-sc table-hover schedule-table table-sm">
+              <div class="heading">
+                <div class="trow">
+                  <div class="cell text-left">Día</div>
+                  <div class="cell">Domingo</div>
+                  <div class="cell">Lunes</div>
+                  <div class="cell">Martes</div>
+                  <div class="cell">Miércoles</div>
+                  <div class="cell">Jueves</div>
+                  <div class="cell">Viernes</div>
+                  <div class="cell">Sábado</div>
+                </div>
+              </div>
+              <div class="tbody">
+                <div class="trow">
+                  <div class="cell">
+                    Inicio:
+                  </div>
+                  <div class="cell">
+                    <div class="input-group date" id="horario1" data-target-input="nearest">
+                      <div class="input-group" data-target="#horario1" data-toggle="datetimepicker">
+                        <input type="text" class="form-control datetimepicker-input fclock" data-target="#horario1" placeholder="10:37 AM">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cell">
+                    <div class="input-group date" id="horario2" data-target-input="nearest">
+                      <div class="input-group" data-target="#horario2" data-toggle="datetimepicker">
+                        <input type="text" class="form-control datetimepicker-input fclock" data-target="#horario2" placeholder="10:37 AM">
+                      </div>
+                    </div>
+                  </div> 
+                  <div class="cell">
+                    <div class="input-group date" id="horario3" data-target-input="nearest">
+                      <div class="input-group" data-target="#horario3" data-toggle="datetimepicker">
+                        <input type="text" class="form-control datetimepicker-input fclock" data-target="#horario3" placeholder="10:37 AM">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cell">
+                    <div class="input-group date" id="horario4" data-target-input="nearest">
+                      <div class="input-group" data-target="#horario4" data-toggle="datetimepicker">
+                        <input type="text" class="form-control datetimepicker-input fclock" data-target="#horario4" placeholder="10:37 AM">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cell">
+                    <div class="input-group date" id="horario5" data-target-input="nearest">
+                      <div class="input-group" data-target="#horario5" data-toggle="datetimepicker">
+                        <input type="text" class="form-control datetimepicker-input fclock" data-target="#horario5" placeholder="10:37 AM">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cell">
+                    <div class="input-group date" id="horario6" data-target-input="nearest">
+                      <div class="input-group" data-target="#horario6" data-toggle="datetimepicker">
+                        <input type="text" class="form-control datetimepicker-input fclock" data-target="#horario6" placeholder="10:37 AM">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cell">
+                    <div class="input-group date" id="horario7" data-target-input="nearest">
+                      <div class="input-group" data-target="#horario7" data-toggle="datetimepicker">
+                        <input type="text" class="form-control datetimepicker-input fclock" data-target="#horario7" placeholder="10:37 AM">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="trow">
+                  <div class="cell">
+                    Fin:
+                  </div>
+                  <div class="cell">
+                    <div class="input-group date" id="horario11" data-target-input="nearest">
+                      <div class="input-group" data-target="#horario11" data-toggle="datetimepicker">
+                        <input type="text" class="form-control datetimepicker-input fclock" data-target="#horario11" placeholder="10:37 AM">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cell">
+                    <div class="input-group date" id="horario12" data-target-input="nearest">
+                      <div class="input-group" data-target="#horario12" data-toggle="datetimepicker">
+                        <input type="text" class="form-control datetimepicker-input fclock" data-target="#horario12" placeholder="10:37 AM">
+                      </div>
+                    </div>
+                  </div> 
+                  <div class="cell">
+                    <div class="input-group date" id="horario13" data-target-input="nearest">
+                      <div class="input-group" data-target="#horario13" data-toggle="datetimepicker">
+                        <input type="text" class="form-control datetimepicker-input fclock" data-target="#horario13" placeholder="10:37 AM">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cell">
+                    <div class="input-group date" id="horario14" data-target-input="nearest">
+                      <div class="input-group" data-target="#horario14" data-toggle="datetimepicker">
+                        <input type="text" class="form-control datetimepicker-input fclock" data-target="#horario14" placeholder="10:37 AM">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cell">
+                    <div class="input-group date" id="horario15" data-target-input="nearest">
+                      <div class="input-group" data-target="#horario15" data-toggle="datetimepicker">
+                        <input type="text" class="form-control datetimepicker-input fclock" data-target="#horario15" placeholder="10:37 AM">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cell">
+                    <div class="input-group date" id="horario16" data-target-input="nearest">
+                      <div class="input-group" data-target="#horario16" data-toggle="datetimepicker">
+                        <input type="text" class="form-control datetimepicker-input fclock" data-target="#horario16" placeholder="10:37 AM">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cell">
+                    <div class="input-group date" id="horario7" data-target-input="nearest">
+                      <div class="input-group" data-target="#horario7" data-toggle="datetimepicker">
+                        <input type="text" class="form-control datetimepicker-input fclock" data-target="#horario7" placeholder="10:37 AM">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between"> <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021  Microtecnologías Móviles S.A. de C.V.</span>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDciw1GU7AFDx3gQydToRyPi3oehMwWpDk"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script type="text/javascript" src="vendors/DataTables/datatables.min.js"></script>
+
+  <script type="text/javascript" src="vendors/moment/moment.min.js"></script>
+  <script type="text/javascript" src="vendors/tempusdominus-bootstrap-4/tempusdominus-bootstrap-4.js"></script>
+  <script type="text/javascript" src="vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+  <!-- <script src="vendors/chart.js/Chart.min.js"></script> -->
+<!--   <script src="vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="assets/js/dataTables.select.min.js"></script> -->
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="assets/js/off-canvas.js"></script>
+  <script src="assets/js/hoverable-collapse.js"></script>
+  <script src="assets/js/template.js"></script>
+  <!-- <script src="assets/js/settings.js"></script> -->
+  <script src="assets/js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <!-- <script src="assets/js/dashboard.js"></script> -->
+  <!-- <script src="assets/js/Chart.roundedBarCharts.js"></script> -->
+  <script src="assets/js/init.js"></script>
+  <!-- End custom js for this page-->
+
+<script>
+  let numClocks = $('.date .fclock').length;
+
+  for (let cl = 0; cl < numClocks; cl++) {
+   
+      $('#horario'+(cl+1)).datetimepicker({
+        format: 'LT'
+      });
+  }
+
+</script>
+
+<!-- <script src="controllers/solicitud/solicitud-ubicacion.js"></script> -->
+</body>
+
+</html>
+
