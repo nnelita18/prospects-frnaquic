@@ -20930,7 +20930,7 @@ code {
 }
 
 .btn-action {
-  padding: 0.2rem 0.4rem;
+  padding: 0.4rem;
   border-radius: 0.5rem;
 }
 
@@ -22930,8 +22930,8 @@ select.border-dark.tt-hint:focus {
   background: #57B657;
   -webkit-transform-origin: 50% 250%;
   transform-origin: 50% 250%;
-  -webkit-animation: rota 1.13s linear infinite, opa 3.67s ease-in-out infinite alternate;
-  animation: rota 1.13s linear infinite, opa 3.67s ease-in-out infinite alternate;
+  -webkit-animation: rota 1.13s linear infinite, opa 3.67s ease-in-out infinite alternate;
+  animation: rota 1.13s linear infinite, opa 3.67s ease-in-out infinite alternate;
 }
 
 #pgloading .bokeh li:nth-child(2) {
@@ -22941,8 +22941,8 @@ select.border-dark.tt-hint:focus {
   background: #FF4747;
   -webkit-transform-origin: -150% 50%;
   transform-origin: -150% 50%;
-  -webkit-animation: rota 1.86s linear infinite, opa 4.29s ease-in-out infinite alternate;
-  animation: rota 1.86s linear infinite, opa 4.29s ease-in-out infinite alternate;
+  -webkit-animation: rota 1.86s linear infinite, opa 4.29s ease-in-out infinite alternate;
+  animation: rota 1.86s linear infinite, opa 4.29s ease-in-out infinite alternate;
 }
 
 #pgloading .bokeh li:nth-child(3) {
@@ -22952,8 +22952,8 @@ select.border-dark.tt-hint:focus {
   background: #FFC100;
   -webkit-transform-origin: 50% -150%;
   transform-origin: 50% -150%;
-  -webkit-animation: rota 1.45s linear infinite, opa 5.12s ease-in-out infinite alternate;
-  animation: rota 1.45s linear infinite, opa 5.12s ease-in-out infinite alternate;
+  -webkit-animation: rota 1.45s linear infinite, opa 5.12s ease-in-out infinite alternate;
+  animation: rota 1.45s linear infinite, opa 5.12s ease-in-out infinite alternate;
 }
 
 #pgloading .bokeh li:nth-child(4) {
@@ -22963,8 +22963,8 @@ select.border-dark.tt-hint:focus {
   background: #122164;
   -webkit-transform-origin: 250% 50%;
   transform-origin: 250% 50%;
-  -webkit-animation: rota 1.72s linear infinite, opa 5.25s ease-in-out infinite alternate;
-  animation: rota 1.72s linear infinite, opa 5.25s ease-in-out infinite alternate;
+  -webkit-animation: rota 1.72s linear infinite, opa 5.25s ease-in-out infinite alternate;
+  animation: rota 1.72s linear infinite, opa 5.25s ease-in-out infinite alternate;
 }
 
 @-webkit-keyframes rota {
@@ -23213,7 +23213,7 @@ select.border-dark.tt-hint:focus {
   background: #FFC100;
   color: #FFC100;
   margin: 80px auto;
-  box-shadow: 15px 15px  0 0, -15px -15px  0 0, 15px -15px  0 0, -15px 15px  0 0, 0 15px  0 0, 15px 0  0 0, -15px 0  0 0, 0 -15px 0 0;
+  box-shadow: 15px 15px  0 0, -15px -15px  0 0, 15px -15px  0 0, -15px 15px  0 0, 0 15px  0 0, 15px 0  0 0, -15px 0  0 0, 0 -15px 0 0;
   animation: anim 2s linear infinite;
 }
 
@@ -23222,10 +23222,10 @@ select.border-dark.tt-hint:focus {
     -webkit-filter: hue-rotate(0deg);
   }
   50% {
-    box-shadow: 20px 20px  0 0, -20px -20px  0 0, 20px -20px  0 0, -20px 20px  0 0, 0 10px  0 0, 10px 0  0 0, -10px 0  0 0, 0 -10px 0 0;
+    box-shadow: 20px 20px  0 0, -20px -20px  0 0, 20px -20px  0 0, -20px 20px  0 0, 0 10px  0 0, 10px 0  0 0, -10px 0  0 0, 0 -10px 0 0;
   }
   75% {
-    box-shadow: 20px 20px  0 0, -20px -20px  0 0, 20px -20px  0 0, -20px 20px  0 0, 0 10px  0 0, 10px 0  0 0, -10px 0  0 0, 0 -10px 0 0;
+    box-shadow: 20px 20px  0 0, -20px -20px  0 0, 20px -20px  0 0, -20px 20px  0 0, 0 10px  0 0, 10px 0  0 0, -10px 0  0 0, 0 -10px 0 0;
   }
   100% {
     transform: rotate(360deg);
@@ -28638,6 +28638,68 @@ div.tagsinput span.tag a {
   border: 0;
 }
 
+#preloder {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  background: rgba(0, 0, 0, 0.68);
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -13px;
+  margin-left: -13px;
+  border-radius: 60px;
+  animation: loader 0.8s linear infinite;
+  -webkit-animation: loader 0.8s linear infinite;
+}
+
+@keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    border: 4px solid #f44336;
+    border-left-color: transparent;
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    border: 4px solid #673ab7;
+    border-left-color: transparent;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    border: 4px solid #f44336;
+    border-left-color: transparent;
+  }
+}
+
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    border: 4px solid #f44336;
+    border-left-color: transparent;
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    border: 4px solid #673ab7;
+    border-left-color: transparent;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    border: 4px solid #f44336;
+    border-left-color: transparent;
+  }
+}
+
 .page-body-wrapper {
   min-height: calc(100vh - 60px);
   display: -webkit-flex;
@@ -30946,6 +31008,16 @@ div.tagsinput span.tag a {
   border-bottom-left-radius: 0;
 }
 
+.info-sp {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  margin: 0 0.5rem;
+  cursor: help;
+}
+
 .to-do-franq .form-check .form-check-label {
   white-space: normal;
 }
@@ -31155,6 +31227,7 @@ div.tagsinput span.tag a {
 
 .table-sc .trow {
   display: table-row;
+  margin: 0;
 }
 
 .table-sc .heading {

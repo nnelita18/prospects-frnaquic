@@ -1,5 +1,12 @@
 (function($) {
   /* ----------------------------------------------
+      Preloader
+    --------------------*/
+  $(window).on('load', function () {
+      $(".loader").fadeOut();
+      $("#preloder").delay(200).fadeOut("slow");
+  });
+  /* ----------------------------------------------
  * Menu active selection
  *
  * ---------------------------------------------- */
@@ -40,7 +47,44 @@
 
 function loadContent(part, contentReplace) {
   $.get(part, function (data, textStatus, jqXHR) {
-    contentReplace.html(data);
+    $(".loader").css('display','block');
+        // $("#preloder").removeClass('d-none');
+        // $("#preloder").removeClass('d-none');
+        $("#preloder").css('display','block');
     // $('html, body').animate( {scrollTop : 0}, 800 );
+  })
+  .done(function(data, textStatus, jqXHR) {
+    // swal({
+    //     title: 'Obteniendo datos',
+    //     icon: 'success',
+    //     timer: 800,
+    //     button: false
+    //   }).then(
+    //     function() {},
+    //     // handling the promise rejection
+    //     function(dismiss) {
+    //       if (dismiss === 'timer') {
+    //         console.log('I was closed by the timer')
+    //       }
+    //     }
+    //   )
+    $(".loader").fadeOut();
+        // $("#preloder").removeClass('d-none');
+        // $("#preloder").removeClass('d-none');
+        $("#preloder").delay(200).fadeOut("slow");
+  })
+  .fail(function(data, textStatus, jqXHR) {
+    swal({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Ha ocurrido un error al obtener los datos!'
+    }).then(
+      function () {
+        location.reload();
+      }
+    )
+  })
+  .always(function(data, textStatus, jqXHR) {
+    contentReplace.html(data);
   });
 }

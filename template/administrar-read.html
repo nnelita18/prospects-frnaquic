@@ -231,7 +231,7 @@
                   <div class="row">
                     <div class="col-md-8 col-sm-8 form-group">
                       <label>Nombre del Negocio:</label><span class="requered_class">*</span>
-                      <input class="form-control input-sm notEmpty" type="text" placeholder="Nombre del Negocio" name="nnego" id="nnego" required>
+                      <input class="form-control input-sm notEmpty" type="text" placeholder="Nombre del Negocio" name="nnego" id="nnego" disabled>
                     </div>
                   </div>
 
@@ -340,10 +340,10 @@
                     <label class="col-md-2 col-form-label">Tipo de tienda:</label>
                     <div class="col-md-9">
                       <div class="radio">
-                        <input label="Express" type="radio" id="male" name="tipFranquicia" value="1" checked>
-                        <input label="Oro" type="radio" id="female" name="tipFranquicia" value="2">
-                        <input label="Platinum" type="radio" id="female" name="tipFranquicia" value="3">
-                        <input label="Diamante" type="radio" id="female" name="tipFranquicia" value="4">
+                        <input label="Express" type="radio" id="male" name="tipFranquicia" value="1" disabled>
+                        <input label="Oro" type="radio" id="female" name="tipFranquicia" value="2" checked disabled=>
+                        <input label="Platinum" type="radio" id="female" name="tipFranquicia" value="3" disabled>
+                        <input label="Diamante" type="radio" id="female" name="tipFranquicia" value="4" disabled>
                       </div>
                     </div>
                   </div>
@@ -554,80 +554,58 @@
                 <h2>Fotos de Perfil y Franquicia</h2>
                 <div class="card-header">Foto de perfil</div>
                 <div class="card-body bg-white">
-                  <div class="form-group row">
-                    <div class="col-md-8">
-                      <label for=""> &#8212; Adjunta tu Foto</label>
-                      <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
-                        </div>
-                        <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-                          <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4 cust-badge">
-                      <div class="badge badge-primary">MiFoto.jpg</div>
+                  <div class="form-group row portfolio-grid">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
+                      <figure class="effect-text-in">
+                        <img src="assets/images/home/profile.jpg" class="rounded" alt="foto perfil">
+                        <figcaption>
+                          <h4>MiFoto.jpg</h4>
+                          <p>Subida el 05-07-2021</p>
+                        </figcaption>
+                      </figure>
                     </div>
                   </div>
                 </div>
                 <div class="card-header">Fotografías del local</div>
                 <div class="card-body bg-white">
-                  <div class="form-group row">
-                    <div class="col-md-8">
-                      <label for=""> &#8212; <strong>Foto Frontal</strong>: frente de la fachada del local con periódico del día</label>
-                      <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
-                        </div>
-                        <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-                          <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                        </div>
-                      </div>
+                  <div class="form-group row portfolio-grid">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 grid-margin stretch-card">
+                      <figure class="effect-text-in">
+                        <img src="assets/images/solicitud/fotoslocal/frente.jpg" class="rounded img-fluid" alt="foto perfil">
+                        <figcaption>
+                          <h4>Foto Frontal del local</h4>
+                          <p>Subida el 05-07-2021</p>
+                        </figcaption>
+                      </figure>
                     </div>
-                    <div class="col-md-4 cust-badge">
-                      <div class="badge badge-primary">localFrente.jpg</div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 grid-margin stretch-card">
+                      <figure class="effect-text-in">
+                        <img src="assets/images/solicitud/fotoslocal/laterall.jpg" class="rounded img-fluid" alt="foto perfil">
+                        <figcaption>
+                          <h4>Foto Lateral Izquierda</h4>
+                          <p>Subida el 05-07-2021</p>
+                        </figcaption>
+                      </figure>
                     </div>
-                  </div>
-                  <div class="form-group row">
-                    <div class="col-md-8">
-                      <label for=""> &#8212; <strong>Foto Lateral Derecha</strong>: Fotografías donde pararezca el local y se vea el resto de la calle derecha</label>
-                      <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
-                        </div>
-                        <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="inputGroupFile02" aria-describedby="inputGroupFileAddon02">
-                          <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
-                        </div>
-                      </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 grid-margin stretch-card">
+                      <figure class="effect-text-in">
+                        <img src="assets/images/solicitud/fotoslocal/lateralr.jpg" class="rounded img-fluid" alt="foto perfil">
+                        <figcaption>
+                          <h4>Foto Lateral Derecha</h4>
+                          <p>Subida el 05-07-2021</p>
+                        </figcaption>
+                      </figure>
                     </div>
-                    <div class="col-md-4 cust-badge">
-                      <div class="badge badge-primary">localLateralDerecha.jpg</div>
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <div class="col-md-8">
-                      <label for=""> &#8212; <strong>Foto Lateral Izquierda</strong>: Fotografías donde pararezca el local y se vea el resto de la calle izquiera</label>
-                      <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
-                        </div>
-                        <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03">
-                          <label class="custom-file-label" for="inputGroupFile03">Choose file</label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4 cust-badge">
-                      <div class="badge badge-primary">localLateralIzq.jpg</div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 grid-margin stretch-card">
+                      <figure class="effect-text-in">
+                        <img src="assets/images/home/photo-dfl.jpg" class="rounded img-fluid" alt="foto perfil">
+                        <figcaption>
+                          <h4>Sin fotos</h4>
+                          <p>No ha subido foto</p>
+                        </figcaption>
+                      </figure>
                     </div>
                   </div>
-                </div>
-                <div class="card-footer text-right">
-                  <button type="" class="btn btn-primary">Guardar cambios</button>
                 </div>
               </div>
             </div>
@@ -645,42 +623,42 @@
                             <li>
                               <div class="form-check">
                                 <label class="form-check-label">
-                                  <input class="checkbox" type="checkbox">Identificación oficial vigente  <i class="input-helper"></i>
+                                  <input class="checkbox" type="checkbox" disabled>Identificación oficial vigente  <i class="input-helper"></i>
                                 </label>
                               </div>
                             </li>
                             <li class="completed">
                               <div class="form-check">
                                 <label class="form-check-label">
-                                  <input class="checkbox" type="checkbox" checked="">Comprobante de domicilio del local donde estará ubicado el PDV: antigüedad no mayor a 3 meses.  <i class="input-helper"></i>
+                                  <input class="checkbox" type="checkbox" checked="" disabled>Comprobante de domicilio del local donde estará ubicado el PDV: antigüedad no mayor a 3 meses.  <i class="input-helper"></i>
                                 </label>
                               </div>
                             </li>
                             <li>
                               <div class="form-check">
                                 <label class="form-check-label">
-                                  <input class="checkbox" type="checkbox">Comprobante de domicilio particular (antigüedad no mayor a 3 meses luz, agua, etc).  <i class="input-helper"></i>
+                                  <input class="checkbox" type="checkbox" disabled>Comprobante de domicilio particular (antigüedad no mayor a 3 meses luz, agua, etc).  <i class="input-helper"></i>
                                 </label>
                               </div>
                             </li>
                             <li class="completed">
                               <div class="form-check">
                                 <label class="form-check-label">
-                                  <input class="checkbox" type="checkbox" checked="checked">Cuenta bancaria a nombre del franquiciatario y carátula del estado de cuenta.  <i class="input-helper"></i>
+                                  <input class="checkbox" type="checkbox" checked="checked" disabled>Cuenta bancaria a nombre del franquiciatario y carátula del estado de cuenta.  <i class="input-helper"></i>
                                 </label>
                               </div>
                             </li>
                             <li class="completed">
                               <div class="form-check">
                                 <label class="form-check-label">
-                                  <input class="checkbox" type="checkbox" checked="">RFC (Registro Federal de Contribuyentes) <i class="input-helper"></i>
+                                  <input class="checkbox" type="checkbox" checked="" disabled>RFC (Registro Federal de Contribuyentes) <i class="input-helper"></i>
                                 </label>
                               </div>
                             </li>
                             <li>
                               <div class="form-check">
                                 <label class="form-check-label">
-                                  <input class="checkbox" type="checkbox"checked="">Boucher de depósito o comprobante de transferencia <i class="input-helper"></i>
+                                  <input class="checkbox" type="checkbox"checked="" disabled>Boucher de depósito o comprobante de transferencia <i class="input-helper"></i>
                                 </label>
                               </div>
                             </li>
@@ -689,9 +667,6 @@
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="card-footer text-right">
-                  <button type="" class="btn btn-primary">Guardar cambios</button>
                 </div>
               </div>
             </div>
@@ -854,9 +829,6 @@
                       </tfoot>
                     </table>
                   </div>
-                </div>
-                <div class="card-footer text-right">
-                  <button type="" class="btn btn-primary">Guardar cambios</button>
                 </div>
               </div>
             </div>

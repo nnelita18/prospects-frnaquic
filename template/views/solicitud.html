@@ -235,6 +235,7 @@
                 <div class="form-group row">
                   <div class="col-md-8">
                     <label for=""> &#8212; Adjunta tu Foto</label>
+
                     <div class="input-group mb-3">
                       <div class="input-group-prepend">
                         <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
@@ -254,7 +255,9 @@
               <div class="card-body">
                 <div class="form-group row">
                   <div class="col-md-8">
-                    <label for=""> &#8212; <strong>Foto Frontal</strong>: frente de la fachada del local con periódico del día</label>
+                    <label for=""> &#8212; <strong>Foto Frontal</strong> <span class="info-sp bg-info text-white ti-info-alt" alt="Ver ejemplo" data-toggle="modal" data-target="#fotoFrontal" ></span>: frente de la fachada del local con periódico del día</label>
+
+
                     <div class="input-group mb-3">
                       <div class="input-group-prepend">
                         <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
@@ -271,7 +274,8 @@
                 </div>
                 <div class="form-group row">
                   <div class="col-md-8">
-                    <label for=""> &#8212; <strong>Foto Lateral Derecha</strong>: Fotografías donde pararezca el local y se vea el resto de la calle derecha</label>
+                    <label for=""> &#8212; <strong>Foto Lateral Derecha</strong><span class="info-sp bg-info text-white ti-info-alt" alt="Ver ejemplo" data-toggle="modal" data-target="#fotoLarDr" ></span>: Fotografías donde pararezca el local y se vea el resto de la calle derecha</label>
+
                     <div class="input-group mb-3">
                       <div class="input-group-prepend">
                         <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
@@ -288,7 +292,8 @@
                 </div>
                 <div class="form-group row">
                   <div class="col-md-8">
-                    <label for=""> &#8212; <strong>Foto Lateral Izquierda</strong>: Fotografías donde pararezca el local y se vea el resto de la calle izquiera</label>
+                    <label for=""> &#8212; <strong>Foto Lateral Izquierda</strong><span class="info-sp bg-info text-white ti-info-alt" alt="Ver ejemplo" data-toggle="modal" data-target="#fotoLarIz" ></span>: Fotografías donde pararezca el local y se vea el resto de la calle izquiera</label>
+
                     <div class="input-group mb-3">
                       <div class="input-group-prepend">
                         <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
@@ -668,6 +673,67 @@
     </div>
 
   </div>
+
+<!-- Modal Foto Frontal-->
+<div class="modal fade modal-comm" id="fotoFrontal" tabindex="-1" aria-labelledby="fotoFrontalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="fotoFrontalLabel">Ejemplo <strong>Foto Frontal</strong></h5>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" style="color: #ffffff; opacity: 1;">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body p-0 text-center">
+        <img src="assets/images/solicitud/fotoslocal/frente.jpg" alt="Local Frente" class="img-fluid">
+        <p class="card-text py-2">
+          Foto de la frente de la fachada del local con periódico del día
+        </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Foto Izquierda-->
+<div class="modal fade modal-comm" id="fotoLarIz" tabindex="-1" aria-labelledby="fotoLarIzLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="fotoLarIzLabel">Ejemplo <strong>Foto Lateral Izquierda</strong></h5>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" style="color: #ffffff; opacity: 1;">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body p-0 text-center">
+        <img src="assets/images/solicitud/fotoslocal/laterall.jpg" alt="Local Frente" class="img-fluid">
+        <p class="card-text py-2">
+          Fotografías donde pararezca el local y se vea el resto de la calle izquiera.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Foto Derecha-->
+<div class="modal fade modal-comm" id="fotoLarDr" tabindex="-1" aria-labelledby="fotoLarDrLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="fotoLarDrLabel">Ejemplo <strong>Foto Lateral Derecha</strong></h5>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" style="color: #ffffff; opacity: 1;">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body p-0 text-center">
+        <img src="assets/images/solicitud/fotoslocal/lateralr.jpg" alt="Local Frente" class="img-fluid">
+        <p class="card-text py-2">
+          Fotografías donde pararezca el local y se vea el resto de la calle derecha
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
   $(document).ready(function () {

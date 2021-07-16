@@ -91,3 +91,14 @@ $register: '.register-ps';
 	border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
+
+.info-sp {
+	display: inline-block;
+	width: 1.5rem;
+	height: 1.5rem;
+	font-size: 1.5rem;
+	border-radius: 50%;
+	margin: 0 0.5rem;
+	cursor: help;
+}
+
