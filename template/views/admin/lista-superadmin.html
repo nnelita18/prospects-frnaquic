@@ -1,0 +1,335 @@
+
+  <div class="row title-wrapper">
+    <div class="col-12 col-xl-8 mb-4 mb-xl-0 grid-margin">
+      <h3 class="font-weight-bold mb-0">Lista de Solicitudes</h3>
+    </div>
+  </div>
+  <div class="content-wrapper">
+    <div class="row">
+      <div class="col-lg-12 mt-4">
+        <div class="card">
+          <div class="card-header">
+            <h4 class="card-title text-white m-0">Solicitudes</h4>
+          </div>
+          <div class="card-body">
+            <nav>
+              <div class="nav nav-tabs nav nav-pills" id="nav-tab" role="tablist">
+                <a class="nav-link active" id="nav-pendientes-tab" data-toggle="tab" href="#nav-pendientes" role="tab" aria-controls="nav-pendientes" aria-selected="true">Pendientes a Autorizar</a>
+                <a class="nav-link" id="nav-autorizadas-tab" data-toggle="tab" href="#nav-autorizadas" role="tab" aria-controls="nav-autorizadas" aria-selected="false">Autorizadas</a>
+                <a class="nav-link" id="nav-noautorizadas-tab" data-toggle="tab" href="#nav-noautorizadas" role="tab" aria-controls="nav-noautorizadas" aria-selected="false">No Autorizadas</a>
+              </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="nav-pendientes" role="tabpanel" aria-labelledby="nav-pendientes-tab">
+                <div class="table-responsive">
+                  <table id="pendientes" class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Nombre</th>
+                        <th>Descuentos/Límites</th>
+                        <th>E-mail</th>
+                        <th>Fecha registro</th>
+                        <th>Estatus</th>
+                        <th>Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Ramón Flores Sanchéz</td>
+                        <td><label class="badge badge-warning">Pendiente</label></td>
+                        <td>rflores23@gmail.com</td>
+                        <td>05-15-2021</td>
+                        <td><label class="badge badge-primary">Nuevo</label></td>
+                        <td>
+                          <a href="views/admin/actions/descuentos-limites.html" class="btn btn-danger btn-action pageto" title="Autorizar"><i class="ti-check-box"></i></a>
+                          <a href="views/admin/actions/ver-info.html" class="btn btn-primary btn-action pageto" title="Ver Informacion"><i class="ti-id-badge"></i></a>
+                          <a href="views/admin/actions/editar-info.html" class="btn btn-warning btn-action pageto" title="Editar Informacion"><i class="ti-pencil-alt"></i></a>
+                          <a href="views/admin/actions/horario-sam.html" class="btn btn-success btn-action pageto" title="Horario Samtec"><i class="ti-alarm-clock"></i></a>
+                          <a href="views/admin/actions/pagos.html" class="btn btn-outline-danger btn-action pageto" title="Agregar Pago"><i class="ti-money"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Ramón Flores Sanchéz</td>
+                        <td><label class="badge badge-warning">Pendiente</label></td>
+                        <td>rflores23@gmail.com</td>
+                        <td>05-15-2021</td>
+                        <td><label class="badge badge-warning">En Proceso</label></td>
+                        <td>
+                          <a href="views/admin/actions/descuentos-limites.html" class="btn btn-danger btn-action pageto" title="Autorizar"><i class="ti-check-box"></i></a>
+                          <a href="views/admin/actions/ver-info.html" class="btn btn-primary btn-action pageto" title="Ver Informacion"><i class="ti-id-badge"></i></a>
+                          <a href="views/admin/actions/editar-info.html" class="btn btn-warning btn-action pageto" title="Editar Informacion"><i class="ti-pencil-alt"></i></a>
+                          <a href="views/admin/actions/horario-sam.html" class="btn btn-success btn-action pageto" title="Horario Samtec"><i class="ti-alarm-clock"></i></a>
+                          <a href="views/admin/actions/pagos.html" class="btn btn-outline-danger btn-action pageto" title="Agregar Pago"><i class="ti-money"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Ramón Flores Sanchéz</td>
+                        <td><label class="badge badge-warning">Pendiente</label></td>
+                        <td>rflores23@gmail.com</td>
+                        <td>05-15-2021</td>
+                        <td><label class="badge badge-warning">En Proceso</label></td>
+                        <td>
+                          <a href="views/admin/actions/descuentos-limites.html" class="btn btn-danger btn-action pageto" title="Autorizar"><i class="ti-check-box"></i></a>
+                          <a href="views/admin/actions/ver-info.html" class="btn btn-primary btn-action pageto" title="Ver Informacion"><i class="ti-id-badge"></i></a>
+                          <a href="views/admin/actions/editar-info.html" class="btn btn-warning btn-action pageto" title="Editar Informacion"><i class="ti-pencil-alt"></i></a>
+                          <a href="views/admin/actions/horario-sam.html" class="btn btn-success btn-action pageto" title="Horario Samtec"><i class="ti-alarm-clock"></i></a>
+                          <a href="views/admin/actions/pagos.html" class="btn btn-outline-danger btn-action pageto" title="Agregar Pago"><i class="ti-money"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Ramón Flores Sanchéz</td>
+                        <td><label class="badge badge-warning">Pendiente</label></td>
+                        <td>rflores23@gmail.com</td>
+                        <td>05-15-2021</td>
+                        <td><label class="badge badge-info">Completado</label></td>
+                        <td>
+                          <a href="views/admin/actions/descuentos-limites.html" class="btn btn-danger btn-action pageto" title="Autorizar"><i class="ti-check-box"></i></a>
+                          <a href="views/admin/actions/ver-info.html" class="btn btn-primary btn-action pageto" title="Ver Informacion"><i class="ti-id-badge"></i></a>
+                          <a href="views/admin/actions/editar-info.html" class="btn btn-warning btn-action pageto" title="Editar Informacion"><i class="ti-pencil-alt"></i></a>
+                          <a href="views/admin/actions/horario-sam.html" class="btn btn-success btn-action pageto" title="Horario Samtec"><i class="ti-alarm-clock"></i></a>
+                          <a href="views/admin/actions/pagos.html" class="btn btn-outline-danger btn-action pageto" title="Agregar Pago"><i class="ti-money"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Ramón Flores Sanchéz</td>
+                        <td><label class="badge badge-warning">Pendiente</label></td>
+                        <td>rflores23@gmail.com</td>
+                        <td>05-15-2021</td>
+                        <td><label class="badge badge-info">Completado</label></td>
+                        <td>
+                          <a href="views/admin/actions/descuentos-limites.html" class="btn btn-danger btn-action pageto" title="Autorizar"><i class="ti-check-box"></i></a>
+                          <a href="views/admin/actions/ver-info.html" class="btn btn-primary btn-action pageto" title="Ver Informacion"><i class="ti-id-badge"></i></a>
+                          <a href="views/admin/actions/editar-info.html" class="btn btn-warning btn-action pageto" title="Editar Informacion"><i class="ti-pencil-alt"></i></a>
+                          <a href="views/admin/actions/horario-sam.html" class="btn btn-success btn-action pageto" title="Horario Samtec"><i class="ti-alarm-clock"></i></a>
+                          <a href="views/admin/actions/pagos.html" class="btn btn-outline-danger btn-action pageto" title="Agregar Pago"><i class="ti-money"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Ramón Flores Sanchéz</td>
+                        <td><label class="badge badge-warning">Pendiente</label></td>
+                        <td>rflores23@gmail.com</td>
+                        <td>05-15-2021</td>
+                        <td><label class="badge badge-info">Completado</label></td>
+                        <td>
+                          <a href="views/admin/actions/descuentos-limites.html" class="btn btn-danger btn-action pageto" title="Autorizar"><i class="ti-check-box"></i></a>
+                          <a href="views/admin/actions/ver-info.html" class="btn btn-primary btn-action pageto" title="Ver Informacion"><i class="ti-id-badge"></i></a>
+                          <a href="views/admin/actions/editar-info.html" class="btn btn-warning btn-action pageto" title="Editar Informacion"><i class="ti-pencil-alt"></i></a>
+                          <a href="views/admin/actions/horario-sam.html" class="btn btn-success btn-action pageto" title="Horario Samtec"><i class="ti-alarm-clock"></i></a>
+                          <a href="views/admin/actions/pagos.html" class="btn btn-outline-danger btn-action pageto" title="Agregar Pago"><i class="ti-money"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Ramón Flores Sanchéz</td>
+                        <td><label class="badge badge-warning">Pendiente</label></td>
+                        <td>rflores23@gmail.com</td>
+                        <td>05-15-2021</td>
+                        <td><label class="badge badge-info">Completado</label></td>
+                        <td>
+                          <a href="views/admin/actions/descuentos-limites.html" class="btn btn-danger btn-action pageto" title="Autorizar"><i class="ti-check-box"></i></a>
+                          <a href="views/admin/actions/ver-info.html" class="btn btn-primary btn-action pageto" title="Ver Informacion"><i class="ti-id-badge"></i></a>
+                          <a href="views/admin/actions/editar-info.html" class="btn btn-warning btn-action pageto" title="Editar Informacion"><i class="ti-pencil-alt"></i></a>
+                          <a href="views/admin/actions/horario-sam.html" class="btn btn-success btn-action pageto" title="Horario Samtec"><i class="ti-alarm-clock"></i></a>
+                          <a href="views/admin/actions/pagos.html" class="btn btn-outline-danger btn-action pageto" title="Agregar Pago"><i class="ti-money"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Ramón Flores Sanchéz</td>
+                        <td><label class="badge badge-warning">Pendiente</label></td>
+                        <td>rflores23@gmail.com</td>
+                        <td>05-15-2021</td>
+                        <td><label class="badge badge-info">Completado</label></td>
+                        <td>
+                          <a href="views/admin/actions/descuentos-limites.html" class="btn btn-danger btn-action pageto" title="Autorizar"><i class="ti-check-box"></i></a>
+                          <a href="views/admin/actions/ver-info.html" class="btn btn-primary btn-action pageto" title="Ver Informacion"><i class="ti-id-badge"></i></a>
+                          <a href="views/admin/actions/editar-info.html" class="btn btn-warning btn-action pageto" title="Editar Informacion"><i class="ti-pencil-alt"></i></a>
+                          <a href="views/admin/actions/horario-sam.html" class="btn btn-success btn-action pageto" title="Horario Samtec"><i class="ti-alarm-clock"></i></a>
+                          <a href="views/admin/actions/pagos.html" class="btn btn-outline-danger btn-action pageto" title="Agregar Pago"><i class="ti-money"></i></a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="nav-autorizadas" role="tabpanel" aria-labelledby="nav-autorizadas-tab">
+                <div class="table-responsive">
+                  <table id="autorizados" class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Nombre</th>
+                        <th>Descuentos/Límites</th>
+                        <th>E-mail</th>
+                        <th>Fecha registro</th>
+                        <th>Estatus</th>
+                        <th>Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Ramón Flores Sanchéz</td>
+                        <td><label class="badge badge-success">Autorizado</label></td>
+                        <td>rflores23@gmail.com</td>
+                        <td>05-15-2021</td>
+                        <td><label class="badge badge-primary">Nuevo</label></td>
+                        <td>
+                          <a href="views/admin/actions/descuentos-limites-ver.html" class="btn btn-danger btn-action pageto" title="Autorizar"><i class="ti-check-box"></i></a>
+                          <a href="views/admin/actions/ver-info.html" class="btn btn-primary btn-action pageto" title="Ver Informacion"><i class="ti-id-badge"></i></a>
+                          <a href="views/admin/actions/editar-info.html" class="btn btn-warning btn-action pageto" title="Editar Informacion"><i class="ti-pencil-alt"></i></a>
+                          <a href="views/admin/actions/horario-sam.html" class="btn btn-success btn-action pageto" title="Horario Samtec"><i class="ti-alarm-clock"></i></a>
+                          <a href="views/admin/actions/pagos.html" class="btn btn-outline-danger btn-action pageto" title="Agregar Pago"><i class="ti-money"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Ramón Flores Sanchéz</td>
+                        <td><label class="badge badge-success">Autorizado</label></td>
+                        <td>rflores23@gmail.com</td>
+                        <td>05-15-2021</td>
+                        <td><label class="badge badge-primary">Nuevo</label></td>
+                        <td>
+                          <a href="views/admin/actions/descuentos-limites-ver.html" class="btn btn-danger btn-action pageto" title="Autorizar"><i class="ti-check-box"></i></a>
+                          <a href="views/admin/actions/ver-info.html" class="btn btn-primary btn-action pageto" title="Ver Informacion"><i class="ti-id-badge"></i></a>
+                          <a href="views/admin/actions/editar-info.html" class="btn btn-warning btn-action pageto" title="Editar Informacion"><i class="ti-pencil-alt"></i></a>
+                          <a href="views/admin/actions/horario-sam.html" class="btn btn-success btn-action pageto" title="Horario Samtec"><i class="ti-alarm-clock"></i></a>
+                          <a href="views/admin/actions/pagos.html" class="btn btn-outline-danger btn-action pageto" title="Agregar Pago"><i class="ti-money"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Ramón Flores Sanchéz</td>
+                        <td><label class="badge badge-success">Autorizado</label></td>
+                        <td>rflores23@gmail.com</td>
+                        <td>05-15-2021</td>
+                        <td><label class="badge badge-primary">Nuevo</label></td>
+                        <td>
+                          <a href="views/admin/actions/descuentos-limites-ver.html" class="btn btn-danger btn-action pageto" title="Autorizar"><i class="ti-check-box"></i></a>
+                          <a href="views/admin/actions/ver-info.html" class="btn btn-primary btn-action pageto" title="Ver Informacion"><i class="ti-id-badge"></i></a>
+                          <a href="views/admin/actions/editar-info.html" class="btn btn-warning btn-action pageto" title="Editar Informacion"><i class="ti-pencil-alt"></i></a>
+                          <a href="views/admin/actions/horario-sam.html" class="btn btn-success btn-action pageto" title="Horario Samtec"><i class="ti-alarm-clock"></i></a>
+                          <a href="views/admin/actions/pagos.html" class="btn btn-outline-danger btn-action pageto" title="Agregar Pago"><i class="ti-money"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Ramón Flores Sanchéz</td>
+                        <td><label class="badge badge-success">Autorizado</label></td>
+                        <td>rflores23@gmail.com</td>
+                        <td>05-15-2021</td>
+                        <td><label class="badge badge-primary">Nuevo</label></td>
+                        <td>
+                          <a href="views/admin/actions/descuentos-limites-ver.html" class="btn btn-danger btn-action pageto" title="Autorizar"><i class="ti-check-box"></i></a>
+                          <a href="views/admin/actions/ver-info.html" class="btn btn-primary btn-action pageto" title="Ver Informacion"><i class="ti-id-badge"></i></a>
+                          <a href="views/admin/actions/editar-info.html" class="btn btn-warning btn-action pageto" title="Editar Informacion"><i class="ti-pencil-alt"></i></a>
+                          <a href="views/admin/actions/horario-sam.html" class="btn btn-success btn-action pageto" title="Horario Samtec"><i class="ti-alarm-clock"></i></a>
+                          <a href="views/admin/actions/pagos.html" class="btn btn-outline-danger btn-action pageto" title="Agregar Pago"><i class="ti-money"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Ramón Flores Sanchéz</td>
+                        <td><label class="badge badge-success">Autorizado</label></td>
+                        <td>rflores23@gmail.com</td>
+                        <td>05-15-2021</td>
+                        <td><label class="badge badge-primary">Nuevo</label></td>
+                        <td>
+                          <a href="views/admin/actions/descuentos-limites-ver.html" class="btn btn-danger btn-action pageto" title="Autorizar"><i class="ti-check-box"></i></a>
+                          <a href="views/admin/actions/ver-info.html" class="btn btn-primary btn-action pageto" title="Ver Informacion"><i class="ti-id-badge"></i></a>
+                          <a href="views/admin/actions/editar-info.html" class="btn btn-warning btn-action pageto" title="Editar Informacion"><i class="ti-pencil-alt"></i></a>
+                          <a href="views/admin/actions/horario-sam.html" class="btn btn-success btn-action pageto" title="Horario Samtec"><i class="ti-alarm-clock"></i></a>
+                          <a href="views/admin/actions/pagos.html" class="btn btn-outline-danger btn-action pageto" title="Agregar Pago"><i class="ti-money"></i></a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="nav-noautorizadas" role="tabpanel" aria-labelledby="nav-noautorizadas-tab">
+                <div class="table-responsive">
+                  <table id="noautorizados" class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Nombre</th>
+                        <th>Descuentos/Límites</th>
+                        <th>E-mail</th>
+                        <th>Fecha registro</th>
+                        <th>Estatus</th>
+                        <th>Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Ramón Flores Sanchéz</td>
+                        <td><label class="badge badge-danger">No Autorizado</label></td>
+                        <td>rflores23@gmail.com</td>
+                        <td>05-15-2021</td>
+                        <td><label class="badge badge-primary">Nuevo</label></td>
+                        <td>
+                          <a href="views/admin/actions/descuentos-limites-noaut.html" class="btn btn-danger btn-action pageto" title="Autorizar"><i class="ti-check-box"></i></a>
+                          <a href="views/admin/actions/descuentos-limites-noaut.html" class="btn btn-primary btn-action pageto" title="Ver Informacion"><i class="ti-id-badge"></i></a>
+                          <a href="views/admin/actions/editar-info.html" class="btn btn-warning btn-action pageto" title="Editar Informacion"><i class="ti-pencil-alt"></i></a>
+                          <a href="views/admin/actions/horario-sam.html" class="btn btn-success btn-action pageto" title="Horario Samtec"><i class="ti-alarm-clock"></i></a>
+                          <a href="views/admin/actions/pagos.html" class="btn btn-outline-danger btn-action pageto" title="Agregar Pago"><i class="ti-money"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Ramón Flores Sanchéz</td>
+                        <td><label class="badge badge-danger">No Autorizado</label></td>
+                        <td>rflores23@gmail.com</td>
+                        <td>05-15-2021</td>
+                        <td><label class="badge badge-primary">Nuevo</label></td>
+                        <td>
+                          <a href="views/admin/actions/descuentos-limites-noaut.html" class="btn btn-danger btn-action pageto" title="Autorizar"><i class="ti-check-box"></i></a>
+                          <a href="views/admin/actions/descuentos-limites-noaut.html" class="btn btn-primary btn-action pageto" title="Ver Informacion"><i class="ti-id-badge"></i></a>
+                          <a href="views/admin/actions/editar-info.html" class="btn btn-warning btn-action pageto" title="Editar Informacion"><i class="ti-pencil-alt"></i></a>
+                          <a href="views/admin/actions/horario-sam.html" class="btn btn-success btn-action pageto" title="Horario Samtec"><i class="ti-alarm-clock"></i></a>
+                          <a href="views/admin/actions/pagos.html" class="btn btn-outline-danger btn-action pageto" title="Agregar Pago"><i class="ti-money"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Ramón Flores Sanchéz</td>
+                        <td><label class="badge badge-danger">No Autorizado</label></td>
+                        <td>rflores23@gmail.com</td>
+                        <td>05-15-2021</td>
+                        <td><label class="badge badge-primary">Nuevo</label></td>
+                        <td>
+                          <a href="views/admin/actions/descuentos-limites-noaut.html" class="btn btn-danger btn-action pageto" title="Autorizar"><i class="ti-check-box"></i></a>
+                          <a href="views/admin/actions/descuentos-limites-noaut.html" class="btn btn-primary btn-action pageto" title="Ver Informacion"><i class="ti-id-badge"></i></a>
+                          <a href="views/admin/actions/editar-info.html" class="btn btn-warning btn-action pageto" title="Editar Informacion"><i class="ti-pencil-alt"></i></a>
+                          <a href="views/admin/actions/horario-sam.html" class="btn btn-success btn-action pageto" title="Horario Samtec"><i class="ti-alarm-clock"></i></a>
+                          <a href="views/admin/actions/pagos.html" class="btn btn-outline-danger btn-action pageto" title="Agregar Pago"><i class="ti-money"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Ramón Flores Sanchéz</td>
+                        <td><label class="badge badge-danger">No Autorizado</label></td>
+                        <td>rflores23@gmail.com</td>
+                        <td>05-15-2021</td>
+                        <td><label class="badge badge-primary">Nuevo</label></td>
+                        <td>
+                          <a href="views/admin/actions/descuentos-limites-noaut.html" class="btn btn-danger btn-action pageto" title="Autorizar"><i class="ti-check-box"></i></a>
+                          <a href="views/admin/actions/descuentos-limites-noaut.html" class="btn btn-primary btn-action pageto" title="Ver Informacion"><i class="ti-id-badge"></i></a>
+                          <a href="views/admin/actions/editar-info.html" class="btn btn-warning btn-action pageto" title="Editar Informacion"><i class="ti-pencil-alt"></i></a>
+                          <a href="views/admin/actions/horario-sam.html" class="btn btn-success btn-action pageto" title="Horario Samtec"><i class="ti-alarm-clock"></i></a>
+                          <a href="views/admin/actions/pagos.html" class="btn btn-outline-danger btn-action pageto" title="Agregar Pago"><i class="ti-money"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Ramón Flores Sanchéz</td>
+                        <td><label class="badge badge-danger">No Autorizado</label></td>
+                        <td>rflores23@gmail.com</td>
+                        <td>05-15-2021</td>
+                        <td><label class="badge badge-primary">Nuevo</label></td>
+                        <td>
+                          <a href="views/admin/actions/descuentos-limites-noaut.html" class="btn btn-danger btn-action pageto" title="Autorizar"><i class="ti-check-box"></i></a>
+                          <a href="views/admin/actions/descuentos-limites-noaut.html" class="btn btn-primary btn-action pageto" title="Ver Informacion"><i class="ti-id-badge"></i></a>
+                          <a href="views/admin/actions/editar-info.html" class="btn btn-warning btn-action pageto" title="Editar Informacion"><i class="ti-pencil-alt"></i></a>
+                          <a href="views/admin/actions/horario-sam.html" class="btn btn-success btn-action pageto" title="Horario Samtec"><i class="ti-alarm-clock"></i></a>
+                          <a href="views/admin/actions/pagos.html" class="btn btn-outline-danger btn-action pageto" title="Agregar Pago"><i class="ti-money"></i></a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

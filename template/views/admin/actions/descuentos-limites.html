@@ -1,0 +1,189 @@
+  <div class="row title-wrapper">
+    <div class="col-12 col-xl-8 mb-4 mb-xl-0 grid-margin">
+      <h3 class="font-weight-bold mb-2">Descuentos y límites autorizados</h3>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb m-0">
+          <li class="breadcrumb-item"><a href="views/admin/lista-superadmin.html" class="pageto">Autorización de Solicitudes</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Autorizar</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <div class="content-wrapper register-ps">
+    <div class="row">
+      <div class="col-12">
+        <div class="card card-step bg-transparent mt-4">
+
+          <div class="card-header">Descuentos y límites autorizados</div>
+          <div class="card-body bg-white">
+
+            <div id="formEditarLim">
+              <input type="text" class="form-control" id="codigo_dis_lim" name="codigo_dis_lim" hidden>
+              <div class="form-row">
+                <div class="col-md-12 card--inverse-s">
+                  <h5 class="text-center">Tiempo Aire</h5>
+                  <div class="row mt-2">
+                    <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                      <label>Telcel:</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">%</span>
+                        </div>
+                        <input type="text" class="form-control input-sm" name="telcel" id="telcel" placeholder="" pattern="\d+(\.\d+)?" required>
+                      </div>
+                    </div>
+                    <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                      <label>Movistar:</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">%</span>
+                        </div>
+                        <input type="text" class="form-control input-sm" name="movistar" id="movistar" placeholder="" pattern="\d+(\.\d+)?" required>
+                      </div>
+                    </div>
+                    <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                      <label>Unefon:</label>          <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">%</span>
+                        </div>
+                        <input type="text" class="form-control input-sm" name="unefon" id="unefon" placeholder="" pattern="\d+(\.\d+)?" required>
+                      </div>
+                    </div>
+                    <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                      <label>AT&T:</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">%</span>
+                        </div>
+                        <input type="text" class="form-control input-sm" name="att" id="att" placeholder="" pattern="\d+(\.\d+)?" required>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 card--inverse-w">
+                  <h5 class="text-center">Pago de Servicios</h5>
+                  <div class="row mt-2">
+                    <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                      <label>Cargo x servicio:</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">$</span>
+                        </div>
+                        <input type="text" class="form-control input-sm" name="cargo" id="cargo" placeholder="cargo x servicio" pattern="\d+(\.\d+)?" required>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 card--inverse-s">
+                  <h5 class="text-center">Lista de precio para Equipos</h5>
+                  <div class="row mt-2">
+                    <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                      <label>Precio mayoreo:</label>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Lista</span>
+                        </div>
+                        <select class="custom-select" id="equipos_pm" name='equipos_pm'>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 card--inverse-w">
+                  <h5 class="text-center">Lista de precio para Accesorios</h5>
+                  <div class="row mt-2">
+                    <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                      <label>Precio mayoreo:</label>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Mayoreo</span>
+                        </div>
+                        <select class="custom-select" id="acc_pm" name='acc_pm'>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 card--inverse-s">
+                  <h5 class="text-center">Venta de Chip 50</h5>
+                  <div class="row mt-2">
+                    <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                      <label>Costo:</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">$</span>
+                        </div>
+                        <input type="text" class="form-control input-sm" name="chips" id="chips" placeholder="Costo" pattern="\d+(\.\d+)?" required>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 card--inverse-w">
+                  <h5 class="text-center">Cargos</h5>
+                  <div class="row mt-2">
+                    <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                      <label>TAF:</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">$</span>
+                        </div>
+                        <input type="text" class="form-control input-sm" name="cargo_taf" id="cargo_taf" placeholder="Costo" pattern="\d+(\.\d+)?" required>
+                      </div>
+                    </div>
+                    <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                      <label>Portabilidad:</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">$</span>
+                        </div>
+                        <input type="text" class="form-control input-sm" name="cargo_porta" id="cargo_porta" placeholder="Costo" pattern="\d+(\.\d+)?" required>
+                      </div>
+                    </div>
+                    <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                      <label>Recuperación:</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">$</span>
+                        </div>
+                        <input type="text" class="form-control input-sm" name="cargo_rec" id="cargo_rec" placeholder="Costo" pattern="\d+(\.\d+)?" required>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 card--inverse-s">
+                  <h5 class="text-center">Comentarios de autorización</h5>
+                  <div class="row mt-2">
+                    <div class="form-group col-md-12">
+                      <label>Ingrese comentario:</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">$</span>
+                        </div>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="card-footer text-right">
+            <button type="" class="btn btn-info"><i class="ti-check mr-2"></i>Autorizar</button>
+            <button type="" class="btn btn-danger"><i class="ti-close mr-2"></i>No Autorizar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
