@@ -10,7 +10,7 @@
 		position: absolute;
 		content: " ";
 		width: 3px;
-		background-color: theme-color(secondary);
+		background-color: white;
 		left: 50%;
 		margin-left: -1.5px;
 	}
@@ -31,13 +31,14 @@
 		}
 		.timeline-panel {
 			border-radius: 2px;
-			padding: 20px;
+			padding: 0.8rem;
 			position: relative;
-            background: $white;
+			color: white;
+            // background: $white;
             @include border-radius(6px);
             box-shadow: 1px 2px 35px 0 rgba(1, 1, 1, 0.1);
-            width: 35%;
-			margin-left: 15%;
+            width: 50%;
+			margin-left: 0%;
 			&:before {
 				position: absolute;
 				top: 0;
@@ -52,15 +53,15 @@
 				top: 10px;
 				right: -14px;
 				display: inline-block;
-				border-top: 14px solid transparent;
-				border-left: 14px solid $white;
-				border-right: 0 solid $white;
+				// border-top: 14px solid transparent;
+				// border-left: 14px solid $white;
+				// border-right: 0 solid $white;
 				border-bottom: 14px solid transparent;
 				content: " ";
             }
             .timeline-title {
                 margin-top: 0;
-				color: theme-color(dark);
+				color: theme-color(light);
 				text-transform: uppercase;
             }
             .timeline-body {
@@ -103,7 +104,7 @@
             padding-left: 90px;
             .timeline-panel {
                 margin-left: auto;
-                margin-right: 15%;
+                margin-right: 0%;
                 &:after {
                     border-left-width: 0;
                     border-right-width: 14px;
@@ -120,6 +121,7 @@
 			padding-right: 150px;
 			&.timeline-inverted {
 				padding-left: 150px;
+
 			}
 			.timeline-panel {
 				width: 60%;
@@ -142,9 +144,24 @@
 
 @each $color, $value in $theme-colors {
 	.timeline-wrapper-#{$color} {
+		
 		.timeline-panel {
-			&:before {
-				background: theme-color($color);
+			background: theme-color($color);
+			// &:before {
+			// 	background: theme-color($color);
+			// }
+			&:after {
+				border-top: 14px solid transparent;
+				border-left: 14px solid theme-color($color);;
+				border-right: 0 solid theme-color($color);;
+			}
+
+		}
+		&.timeline-inverted  {
+			.timeline-panel {
+				&:after {
+					border-right: 0 solid theme-color($color);
+				}
 			}
 		}
 		.timeline-badge {

@@ -8682,6 +8682,9 @@
   --danger: #FF4747;
   --light: #f8f9fa;
   --dark: #282f3a;
+  --bguser: #f7b24e;
+  --bgsel: #66cefd;
+  --bgadmin: #f98b83;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -10364,6 +10367,72 @@ pre code {
   background-color: #b6b8bc;
 }
 
+.table-bguser,
+.table-bguser > th,
+.table-bguser > td {
+  background-color: #fde9cd;
+}
+
+.table-bguser th,
+.table-bguser td,
+.table-bguser thead th,
+.table-bguser tbody + tbody {
+  border-color: #fbd7a3;
+}
+
+.table-hover .table-bguser:hover {
+  background-color: #fcdeb4;
+}
+
+.table-hover .table-bguser:hover > td,
+.table-hover .table-bguser:hover > th {
+  background-color: #fcdeb4;
+}
+
+.table-bgsel,
+.table-bgsel > th,
+.table-bgsel > td {
+  background-color: #d4f1fe;
+}
+
+.table-bgsel th,
+.table-bgsel td,
+.table-bgsel thead th,
+.table-bgsel tbody + tbody {
+  border-color: #afe6fe;
+}
+
+.table-hover .table-bgsel:hover {
+  background-color: #bbe9fd;
+}
+
+.table-hover .table-bgsel:hover > td,
+.table-hover .table-bgsel:hover > th {
+  background-color: #bbe9fd;
+}
+
+.table-bgadmin,
+.table-bgadmin > th,
+.table-bgadmin > td {
+  background-color: #fddfdc;
+}
+
+.table-bgadmin th,
+.table-bgadmin td,
+.table-bgadmin thead th,
+.table-bgadmin tbody + tbody {
+  border-color: #fcc3bf;
+}
+
+.table-hover .table-bgadmin:hover {
+  background-color: #fcc9c4;
+}
+
+.table-hover .table-bgadmin:hover > td,
+.table-hover .table-bgadmin:hover > th {
+  background-color: #fcc9c4;
+}
+
 .table-active,
 .table-active > th,
 .table-active > td {
@@ -11381,6 +11450,117 @@ fieldset:disabled .wizard > .actions a,
   box-shadow: 0 0 0 0.2rem rgba(72, 78, 88, 0.5);
 }
 
+.btn-bguser {
+  color: #212529;
+  background-color: #f7b24e;
+  border-color: #f7b24e;
+}
+
+.btn-bguser:hover {
+  color: #212529;
+  background-color: #f5a229;
+  border-color: #f59d1d;
+}
+
+.btn-bguser:focus, .btn-bguser.focus {
+  color: #212529;
+  background-color: #f5a229;
+  border-color: #f59d1d;
+  box-shadow: 0 0 0 0.2rem rgba(215, 157, 72, 0.5);
+}
+
+.btn-bguser.disabled, .btn-bguser:disabled {
+  color: #212529;
+  background-color: #f7b24e;
+  border-color: #f7b24e;
+}
+
+.btn-bguser:not(:disabled):not(.disabled):active, .btn-bguser:not(:disabled):not(.disabled).active,
+.show > .btn-bguser.dropdown-toggle {
+  color: #212529;
+  background-color: #f59d1d;
+  border-color: #f49711;
+}
+
+.btn-bguser:not(:disabled):not(.disabled):active:focus, .btn-bguser:not(:disabled):not(.disabled).active:focus,
+.show > .btn-bguser.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(215, 157, 72, 0.5);
+}
+
+.btn-bgsel {
+  color: #212529;
+  background-color: #66cefd;
+  border-color: #66cefd;
+}
+
+.btn-bgsel:hover {
+  color: #212529;
+  background-color: #40c2fd;
+  border-color: #34befc;
+}
+
+.btn-bgsel:focus, .btn-bgsel.focus {
+  color: #212529;
+  background-color: #40c2fd;
+  border-color: #34befc;
+  box-shadow: 0 0 0 0.2rem rgba(92, 181, 221, 0.5);
+}
+
+.btn-bgsel.disabled, .btn-bgsel:disabled {
+  color: #212529;
+  background-color: #66cefd;
+  border-color: #66cefd;
+}
+
+.btn-bgsel:not(:disabled):not(.disabled):active, .btn-bgsel:not(:disabled):not(.disabled).active,
+.show > .btn-bgsel.dropdown-toggle {
+  color: #212529;
+  background-color: #34befc;
+  border-color: #27bafc;
+}
+
+.btn-bgsel:not(:disabled):not(.disabled):active:focus, .btn-bgsel:not(:disabled):not(.disabled).active:focus,
+.show > .btn-bgsel.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(92, 181, 221, 0.5);
+}
+
+.btn-bgadmin {
+  color: #212529;
+  background-color: #f98b83;
+  border-color: #f98b83;
+}
+
+.btn-bgadmin:hover {
+  color: #fff;
+  background-color: #f7695f;
+  border-color: #f75d52;
+}
+
+.btn-bgadmin:focus, .btn-bgadmin.focus {
+  color: #fff;
+  background-color: #f7695f;
+  border-color: #f75d52;
+  box-shadow: 0 0 0 0.2rem rgba(217, 124, 118, 0.5);
+}
+
+.btn-bgadmin.disabled, .btn-bgadmin:disabled {
+  color: #212529;
+  background-color: #f98b83;
+  border-color: #f98b83;
+}
+
+.btn-bgadmin:not(:disabled):not(.disabled):active, .btn-bgadmin:not(:disabled):not(.disabled).active,
+.show > .btn-bgadmin.dropdown-toggle {
+  color: #fff;
+  background-color: #f75d52;
+  border-color: #f65246;
+}
+
+.btn-bgadmin:not(:disabled):not(.disabled):active:focus, .btn-bgadmin:not(:disabled):not(.disabled).active:focus,
+.show > .btn-bgadmin.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(217, 124, 118, 0.5);
+}
+
 .btn-outline-primary {
   color: #122164;
   border-color: #122164;
@@ -11639,6 +11819,102 @@ fieldset:disabled .wizard > .actions a,
 .btn-outline-dark:not(:disabled):not(.disabled):active:focus, .btn-outline-dark:not(:disabled):not(.disabled).active:focus,
 .show > .btn-outline-dark.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(40, 47, 58, 0.5);
+}
+
+.btn-outline-bguser {
+  color: #f7b24e;
+  border-color: #f7b24e;
+}
+
+.btn-outline-bguser:hover {
+  color: #212529;
+  background-color: #f7b24e;
+  border-color: #f7b24e;
+}
+
+.btn-outline-bguser:focus, .btn-outline-bguser.focus {
+  box-shadow: 0 0 0 0.2rem rgba(247, 178, 78, 0.5);
+}
+
+.btn-outline-bguser.disabled, .btn-outline-bguser:disabled {
+  color: #f7b24e;
+  background-color: transparent;
+}
+
+.btn-outline-bguser:not(:disabled):not(.disabled):active, .btn-outline-bguser:not(:disabled):not(.disabled).active,
+.show > .btn-outline-bguser.dropdown-toggle {
+  color: #212529;
+  background-color: #f7b24e;
+  border-color: #f7b24e;
+}
+
+.btn-outline-bguser:not(:disabled):not(.disabled):active:focus, .btn-outline-bguser:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-bguser.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(247, 178, 78, 0.5);
+}
+
+.btn-outline-bgsel {
+  color: #66cefd;
+  border-color: #66cefd;
+}
+
+.btn-outline-bgsel:hover {
+  color: #212529;
+  background-color: #66cefd;
+  border-color: #66cefd;
+}
+
+.btn-outline-bgsel:focus, .btn-outline-bgsel.focus {
+  box-shadow: 0 0 0 0.2rem rgba(102, 206, 253, 0.5);
+}
+
+.btn-outline-bgsel.disabled, .btn-outline-bgsel:disabled {
+  color: #66cefd;
+  background-color: transparent;
+}
+
+.btn-outline-bgsel:not(:disabled):not(.disabled):active, .btn-outline-bgsel:not(:disabled):not(.disabled).active,
+.show > .btn-outline-bgsel.dropdown-toggle {
+  color: #212529;
+  background-color: #66cefd;
+  border-color: #66cefd;
+}
+
+.btn-outline-bgsel:not(:disabled):not(.disabled):active:focus, .btn-outline-bgsel:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-bgsel.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(102, 206, 253, 0.5);
+}
+
+.btn-outline-bgadmin {
+  color: #f98b83;
+  border-color: #f98b83;
+}
+
+.btn-outline-bgadmin:hover {
+  color: #212529;
+  background-color: #f98b83;
+  border-color: #f98b83;
+}
+
+.btn-outline-bgadmin:focus, .btn-outline-bgadmin.focus {
+  box-shadow: 0 0 0 0.2rem rgba(249, 139, 131, 0.5);
+}
+
+.btn-outline-bgadmin.disabled, .btn-outline-bgadmin:disabled {
+  color: #f98b83;
+  background-color: transparent;
+}
+
+.btn-outline-bgadmin:not(:disabled):not(.disabled):active, .btn-outline-bgadmin:not(:disabled):not(.disabled).active,
+.show > .btn-outline-bgadmin.dropdown-toggle {
+  color: #212529;
+  background-color: #f98b83;
+  border-color: #f98b83;
+}
+
+.btn-outline-bgadmin:not(:disabled):not(.disabled):active:focus, .btn-outline-bgadmin:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-bgadmin.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(249, 139, 131, 0.5);
 }
 
 .btn-link {
@@ -14308,6 +14584,51 @@ a.badge-dark:focus, a.badge-dark.focus {
   box-shadow: 0 0 0 0.2rem rgba(40, 47, 58, 0.5);
 }
 
+.badge-bguser {
+  color: #212529;
+  background-color: #f7b24e;
+}
+
+a.badge-bguser:hover, a.badge-bguser:focus {
+  color: #212529;
+  background-color: #f59d1d;
+}
+
+a.badge-bguser:focus, a.badge-bguser.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(247, 178, 78, 0.5);
+}
+
+.badge-bgsel {
+  color: #212529;
+  background-color: #66cefd;
+}
+
+a.badge-bgsel:hover, a.badge-bgsel:focus {
+  color: #212529;
+  background-color: #34befc;
+}
+
+a.badge-bgsel:focus, a.badge-bgsel.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(102, 206, 253, 0.5);
+}
+
+.badge-bgadmin {
+  color: #212529;
+  background-color: #f98b83;
+}
+
+a.badge-bgadmin:hover, a.badge-bgadmin:focus {
+  color: #212529;
+  background-color: #f75d52;
+}
+
+a.badge-bgadmin:focus, a.badge-bgadmin.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(249, 139, 131, 0.5);
+}
+
 .jumbotron {
   padding: 2rem 1rem;
   margin-bottom: 2rem;
@@ -14466,6 +14787,48 @@ a.badge-dark:focus, a.badge-dark.focus {
 
 .alert-dark .alert-link {
   color: black;
+}
+
+.alert-bguser {
+  color: #805d29;
+  background-color: #fdf0dc;
+  border-color: #fde9cd;
+}
+
+.alert-bguser hr {
+  border-top-color: #fcdeb4;
+}
+
+.alert-bguser .alert-link {
+  color: #59411d;
+}
+
+.alert-bgsel {
+  color: #356b84;
+  background-color: #e0f5ff;
+  border-color: #d4f1fe;
+}
+
+.alert-bgsel hr {
+  border-top-color: #bbe9fd;
+}
+
+.alert-bgsel .alert-link {
+  color: #264e60;
+}
+
+.alert-bgadmin {
+  color: #814844;
+  background-color: #fee8e6;
+  border-color: #fddfdc;
+}
+
+.alert-bgadmin hr {
+  border-top-color: #fcc9c4;
+}
+
+.alert-bgadmin .alert-link {
+  color: #603532;
 }
 
 @keyframes progress-bar-stripes {
@@ -14861,6 +15224,54 @@ a.badge-dark:focus, a.badge-dark.focus {
   color: #ffffff;
   background-color: #15181e;
   border-color: #15181e;
+}
+
+.list-group-item-bguser {
+  color: #805d29;
+  background-color: #fde9cd;
+}
+
+.list-group-item-bguser.list-group-item-action:hover, .list-group-item-bguser.list-group-item-action:focus {
+  color: #805d29;
+  background-color: #fcdeb4;
+}
+
+.list-group-item-bguser.list-group-item-action.active {
+  color: #ffffff;
+  background-color: #805d29;
+  border-color: #805d29;
+}
+
+.list-group-item-bgsel {
+  color: #356b84;
+  background-color: #d4f1fe;
+}
+
+.list-group-item-bgsel.list-group-item-action:hover, .list-group-item-bgsel.list-group-item-action:focus {
+  color: #356b84;
+  background-color: #bbe9fd;
+}
+
+.list-group-item-bgsel.list-group-item-action.active {
+  color: #ffffff;
+  background-color: #356b84;
+  border-color: #356b84;
+}
+
+.list-group-item-bgadmin {
+  color: #814844;
+  background-color: #fddfdc;
+}
+
+.list-group-item-bgadmin.list-group-item-action:hover, .list-group-item-bgadmin.list-group-item-action:focus {
+  color: #814844;
+  background-color: #fcc9c4;
+}
+
+.list-group-item-bgadmin.list-group-item-action.active {
+  color: #ffffff;
+  background-color: #814844;
+  border-color: #814844;
 }
 
 .close {
@@ -15784,6 +16195,36 @@ button.bg-dark:focus,
   background-color: #13171c !important;
 }
 
+.bg-bguser {
+  background-color: #f7b24e !important;
+}
+
+a.bg-bguser:hover, a.bg-bguser:focus,
+button.bg-bguser:hover,
+button.bg-bguser:focus {
+  background-color: #f59d1d !important;
+}
+
+.bg-bgsel {
+  background-color: #66cefd !important;
+}
+
+a.bg-bgsel:hover, a.bg-bgsel:focus,
+button.bg-bgsel:hover,
+button.bg-bgsel:focus {
+  background-color: #34befc !important;
+}
+
+.bg-bgadmin {
+  background-color: #f98b83 !important;
+}
+
+a.bg-bgadmin:hover, a.bg-bgadmin:focus,
+button.bg-bgadmin:hover,
+button.bg-bgadmin:focus {
+  background-color: #f75d52 !important;
+}
+
 .bg-white {
   background-color: #ffffff !important;
 }
@@ -15862,6 +16303,18 @@ button.bg-dark:focus,
 
 .border-dark {
   border-color: #282f3a !important;
+}
+
+.border-bguser {
+  border-color: #f7b24e !important;
+}
+
+.border-bgsel {
+  border-color: #66cefd !important;
+}
+
+.border-bgadmin {
+  border-color: #f98b83 !important;
 }
 
 .border-white {
@@ -15946,7 +16399,7 @@ button.bg-dark:focus,
   display: table-cell !important;
 }
 
-.d-flex, .loader-demo-box, .data-icon-card-primary .background-icon, .data-icon-card-secondary .background-icon, .data-icon-card-success .background-icon, .data-icon-card-info .background-icon, .data-icon-card-warning .background-icon, .data-icon-card-danger .background-icon, .data-icon-card-light .background-icon, .data-icon-card-dark .background-icon, .list-wrapper ul li, .email-wrapper .mail-sidebar .menu-bar .profile-list-item a, .email-wrapper .mail-sidebar .menu-bar .profile-list-item a .user, .email-wrapper .mail-list-container .mail-list .details, .email-wrapper .message-body .attachments-sections ul li .thumb, .email-wrapper .message-body .attachments-sections ul li .details .buttons, .lightGallery .image-tile .demo-gallery-poster, .swal2-modal, .navbar .navbar-menu-wrapper .navbar-nav, .navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-profile, .navbar .navbar-menu-wrapper .navbar-nav .nav-item.dropdown .navbar-dropdown .dropdown-item, .navbar .navbar-menu-wrapper .navbar-nav.navbar-nav-right .nav-item {
+.d-flex, .loader-demo-box, .data-icon-card-primary .background-icon, .data-icon-card-secondary .background-icon, .data-icon-card-success .background-icon, .data-icon-card-info .background-icon, .data-icon-card-warning .background-icon, .data-icon-card-danger .background-icon, .data-icon-card-light .background-icon, .data-icon-card-dark .background-icon, .data-icon-card-bguser .background-icon, .data-icon-card-bgsel .background-icon, .data-icon-card-bgadmin .background-icon, .list-wrapper ul li, .email-wrapper .mail-sidebar .menu-bar .profile-list-item a, .email-wrapper .mail-sidebar .menu-bar .profile-list-item a .user, .email-wrapper .mail-list-container .mail-list .details, .email-wrapper .message-body .attachments-sections ul li .thumb, .email-wrapper .message-body .attachments-sections ul li .details .buttons, .lightGallery .image-tile .demo-gallery-poster, .swal2-modal, .navbar .navbar-menu-wrapper .navbar-nav, .navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-profile, .navbar .navbar-menu-wrapper .navbar-nav .nav-item.dropdown .navbar-dropdown .dropdown-item, .navbar .navbar-menu-wrapper .navbar-nav.navbar-nav-right .nav-item {
   display: flex !important;
 }
 
@@ -16215,7 +16668,7 @@ button.bg-dark:focus,
   justify-content: flex-start !important;
 }
 
-.justify-content-end, .data-icon-card-primary .background-icon, .data-icon-card-secondary .background-icon, .data-icon-card-success .background-icon, .data-icon-card-info .background-icon, .data-icon-card-warning .background-icon, .data-icon-card-danger .background-icon, .data-icon-card-light .background-icon, .data-icon-card-dark .background-icon, .email-wrapper .mail-list-container .mail-list .details {
+.justify-content-end, .data-icon-card-primary .background-icon, .data-icon-card-secondary .background-icon, .data-icon-card-success .background-icon, .data-icon-card-info .background-icon, .data-icon-card-warning .background-icon, .data-icon-card-danger .background-icon, .data-icon-card-light .background-icon, .data-icon-card-dark .background-icon, .data-icon-card-bguser .background-icon, .data-icon-card-bgsel .background-icon, .data-icon-card-bgadmin .background-icon, .email-wrapper .mail-list-container .mail-list .details {
   justify-content: flex-end !important;
 }
 
@@ -18958,6 +19411,30 @@ a.text-dark:hover, a.text-dark:focus {
   color: #090a0d !important;
 }
 
+.text-bguser {
+  color: #f7b24e !important;
+}
+
+a.text-bguser:hover, a.text-bguser:focus {
+  color: #ee910b !important;
+}
+
+.text-bgsel {
+  color: #66cefd !important;
+}
+
+a.text-bgsel:hover, a.text-bgsel:focus {
+  color: #1ab6fc !important;
+}
+
+.text-bgadmin {
+  color: #f98b83 !important;
+}
+
+a.text-bgadmin:hover, a.text-bgadmin:focus {
+  color: #f5473a !important;
+}
+
 .text-body {
   color: #1F1F1F !important;
 }
@@ -19596,6 +20073,30 @@ address p {
 
 .blockquote-dark .blockquote-footer {
   color: #282f3a;
+}
+
+.blockquote-bguser {
+  border-color: #f7b24e;
+}
+
+.blockquote-bguser .blockquote-footer {
+  color: #f7b24e;
+}
+
+.blockquote-bgsel {
+  border-color: #66cefd;
+}
+
+.blockquote-bgsel .blockquote-footer {
+  color: #66cefd;
+}
+
+.blockquote-bgadmin {
+  border-color: #f98b83;
+}
+
+.blockquote-bgadmin .blockquote-footer {
+  color: #f98b83;
 }
 
 .error-page h1 {
@@ -20620,6 +21121,21 @@ code {
   border: 1px solid #282f3a;
 }
 
+.badge-outline-bguser {
+  color: #f7b24e;
+  border: 1px solid #f7b24e;
+}
+
+.badge-outline-bgsel {
+  color: #66cefd;
+  border: 1px solid #66cefd;
+}
+
+.badge-outline-bgadmin {
+  color: #f98b83;
+  border: 1px solid #f98b83;
+}
+
 /* Bootstrap Alerts */
 .alert {
   font-size: 0.875rem;
@@ -20744,6 +21260,48 @@ code {
   color: #090b0e;
 }
 
+.alert-bguser {
+  color: #bc873b;
+  background-color: rgba(247, 178, 78, 0.2);
+  border-color: #e3a448;
+}
+
+.alert-bguser hr {
+  border-top-color: #e09932;
+}
+
+.alert-bguser .alert-link {
+  color: #956b2f;
+}
+
+.alert-bgsel {
+  color: #4e9dc0;
+  background-color: rgba(102, 206, 253, 0.2);
+  border-color: #5ebee9;
+}
+
+.alert-bgsel hr {
+  border-top-color: #48b5e6;
+}
+
+.alert-bgsel .alert-link {
+  color: #3982a2;
+}
+
+.alert-bgadmin {
+  color: #bd6a64;
+  background-color: rgba(249, 139, 131, 0.2);
+  border-color: #e58079;
+}
+
+.alert-bgadmin hr {
+  border-top-color: #e16c64;
+}
+
+.alert-bgadmin .alert-link {
+  color: #a74e47;
+}
+
 .alert-fill-primary {
   color: #ffffff;
   background-color: #122164;
@@ -20853,6 +21411,48 @@ code {
 }
 
 .alert-fill-dark .alert-link {
+  color: #e6e6e6;
+}
+
+.alert-fill-bguser {
+  color: #ffffff;
+  background-color: #f7b24e;
+  border-color: #f7b24e;
+}
+
+.alert-fill-bguser hr {
+  border-top-color: #f6a736;
+}
+
+.alert-fill-bguser .alert-link {
+  color: #e6e6e6;
+}
+
+.alert-fill-bgsel {
+  color: #ffffff;
+  background-color: #66cefd;
+  border-color: #66cefd;
+}
+
+.alert-fill-bgsel hr {
+  border-top-color: #4dc6fd;
+}
+
+.alert-fill-bgsel .alert-link {
+  color: #e6e6e6;
+}
+
+.alert-fill-bgadmin {
+  color: #ffffff;
+  background-color: #f98b83;
+  border-color: #f98b83;
+}
+
+.alert-fill-bgadmin hr {
+  border-top-color: #f8746b;
+}
+
+.alert-fill-bgadmin .alert-link {
   color: #e6e6e6;
 }
 
@@ -21542,6 +22142,102 @@ code {
   border-color: #282f3a;
 }
 
+.btn-inverse-bguser {
+  background-color: rgba(247, 178, 78, 0.2);
+  background-image: none;
+  border-color: rgba(247, 178, 78, 0);
+}
+
+.btn-inverse-bguser:not(.btn-inverse-light) {
+  color: #f7b24e;
+}
+
+.btn-inverse-bguser:hover {
+  color: #ffffff;
+  background-color: #f7b24e;
+  border-color: #f7b24e;
+}
+
+.btn-inverse-bguser.focus, .btn-inverse-bguser:focus {
+  box-shadow: 0 0 0 3px rgba(247, 178, 78, 0.5);
+}
+
+.btn-inverse-bguser.disabled, .btn-inverse-bguser:disabled {
+  color: #f7b24e;
+  background-color: transparent;
+}
+
+.btn-inverse-bguser.active, .btn-inverse-bguser:active,
+.show > .btn-inverse-bguser.dropdown-toggle {
+  color: #ffffff;
+  background-color: #f7b24e;
+  border-color: #f7b24e;
+}
+
+.btn-inverse-bgsel {
+  background-color: rgba(102, 206, 253, 0.2);
+  background-image: none;
+  border-color: rgba(102, 206, 253, 0);
+}
+
+.btn-inverse-bgsel:not(.btn-inverse-light) {
+  color: #66cefd;
+}
+
+.btn-inverse-bgsel:hover {
+  color: #ffffff;
+  background-color: #66cefd;
+  border-color: #66cefd;
+}
+
+.btn-inverse-bgsel.focus, .btn-inverse-bgsel:focus {
+  box-shadow: 0 0 0 3px rgba(102, 206, 253, 0.5);
+}
+
+.btn-inverse-bgsel.disabled, .btn-inverse-bgsel:disabled {
+  color: #66cefd;
+  background-color: transparent;
+}
+
+.btn-inverse-bgsel.active, .btn-inverse-bgsel:active,
+.show > .btn-inverse-bgsel.dropdown-toggle {
+  color: #ffffff;
+  background-color: #66cefd;
+  border-color: #66cefd;
+}
+
+.btn-inverse-bgadmin {
+  background-color: rgba(249, 139, 131, 0.2);
+  background-image: none;
+  border-color: rgba(249, 139, 131, 0);
+}
+
+.btn-inverse-bgadmin:not(.btn-inverse-light) {
+  color: #f98b83;
+}
+
+.btn-inverse-bgadmin:hover {
+  color: #ffffff;
+  background-color: #f98b83;
+  border-color: #f98b83;
+}
+
+.btn-inverse-bgadmin.focus, .btn-inverse-bgadmin:focus {
+  box-shadow: 0 0 0 3px rgba(249, 139, 131, 0.5);
+}
+
+.btn-inverse-bgadmin.disabled, .btn-inverse-bgadmin:disabled {
+  color: #f98b83;
+  background-color: transparent;
+}
+
+.btn-inverse-bgadmin.active, .btn-inverse-bgadmin:active,
+.show > .btn-inverse-bgadmin.dropdown-toggle {
+  color: #ffffff;
+  background-color: #f98b83;
+  border-color: #f98b83;
+}
+
 .btn-outline-light {
   color: #6c7383;
   border-color: #e3e3e3;
@@ -21975,6 +22671,132 @@ code {
   background: transparent;
 }
 
+.bg-inverse-bguser {
+  background: #fde7c8;
+  border-color: #f7b24e;
+}
+
+.bg-inverse-bguser .breadcrumb-item {
+  color: #f7b24e;
+}
+
+.bg-inverse-bguser .breadcrumb-item:before {
+  color: inherit;
+}
+
+.bg-inverse-bguser .breadcrumb-item a {
+  color: inherit;
+}
+
+.bg-inverse-bguser.breadcrumb-custom {
+  background: transparent;
+}
+
+.bg-inverse-bguser.breadcrumb-custom .breadcrumb-item {
+  background: #fde7c8;
+}
+
+.bg-inverse-bguser.breadcrumb-custom .breadcrumb-item a {
+  color: #f7b24e;
+  border: none;
+}
+
+.bg-inverse-bguser.breadcrumb-custom .breadcrumb-item a:before {
+  border-left-color: #fde7c8;
+}
+
+.bg-inverse-bguser.breadcrumb-custom .breadcrumb-item span {
+  color: #f7b24e;
+}
+
+.bg-inverse-bguser.breadcrumb-custom .breadcrumb-item:last-child {
+  background: transparent;
+}
+
+.bg-inverse-bgsel {
+  background: #e4f6ff;
+  border-color: #66cefd;
+}
+
+.bg-inverse-bgsel .breadcrumb-item {
+  color: #66cefd;
+}
+
+.bg-inverse-bgsel .breadcrumb-item:before {
+  color: inherit;
+}
+
+.bg-inverse-bgsel .breadcrumb-item a {
+  color: inherit;
+}
+
+.bg-inverse-bgsel.breadcrumb-custom {
+  background: transparent;
+}
+
+.bg-inverse-bgsel.breadcrumb-custom .breadcrumb-item {
+  background: #e4f6ff;
+}
+
+.bg-inverse-bgsel.breadcrumb-custom .breadcrumb-item a {
+  color: #66cefd;
+  border: none;
+}
+
+.bg-inverse-bgsel.breadcrumb-custom .breadcrumb-item a:before {
+  border-left-color: #e4f6ff;
+}
+
+.bg-inverse-bgsel.breadcrumb-custom .breadcrumb-item span {
+  color: #66cefd;
+}
+
+.bg-inverse-bgsel.breadcrumb-custom .breadcrumb-item:last-child {
+  background: transparent;
+}
+
+.bg-inverse-bgadmin {
+  background: #fffdfd;
+  border-color: #f98b83;
+}
+
+.bg-inverse-bgadmin .breadcrumb-item {
+  color: #f98b83;
+}
+
+.bg-inverse-bgadmin .breadcrumb-item:before {
+  color: inherit;
+}
+
+.bg-inverse-bgadmin .breadcrumb-item a {
+  color: inherit;
+}
+
+.bg-inverse-bgadmin.breadcrumb-custom {
+  background: transparent;
+}
+
+.bg-inverse-bgadmin.breadcrumb-custom .breadcrumb-item {
+  background: #fffdfd;
+}
+
+.bg-inverse-bgadmin.breadcrumb-custom .breadcrumb-item a {
+  color: #f98b83;
+  border: none;
+}
+
+.bg-inverse-bgadmin.breadcrumb-custom .breadcrumb-item a:before {
+  border-left-color: #fffdfd;
+}
+
+.bg-inverse-bgadmin.breadcrumb-custom .breadcrumb-item span {
+  color: #f98b83;
+}
+
+.bg-inverse-bgadmin.breadcrumb-custom .breadcrumb-item:last-child {
+  background: transparent;
+}
+
 /* Cards */
 .card {
   box-shadow: none;
@@ -22170,6 +22992,24 @@ code {
   color: #1e242c;
 }
 
+.card-inverse-bguser {
+  background: rgba(247, 178, 78, 0.2);
+  border: 1px solid #e3a448;
+  color: #bc873b;
+}
+
+.card-inverse-bgsel {
+  background: rgba(102, 206, 253, 0.2);
+  border: 1px solid #5ebee9;
+  color: #4e9dc0;
+}
+
+.card-inverse-bgadmin {
+  background: rgba(249, 139, 131, 0.2);
+  border: 1px solid #e58079;
+  color: #bd6a64;
+}
+
 .data-icon-card-primary {
   background: #122164;
   color: #ffffff;
@@ -22318,6 +23158,63 @@ code {
 }
 
 .data-icon-card-dark .background-icon i {
+  z-index: 1;
+  color: #ffffff;
+}
+
+.data-icon-card-bguser {
+  background: #f7b24e;
+  color: #ffffff;
+}
+
+.data-icon-card-bguser .card-title {
+  color: #ffffff;
+}
+
+.data-icon-card-bguser .background-icon::before {
+  content: url("../../images/dashboard/shape-4.svg");
+  position: absolute;
+}
+
+.data-icon-card-bguser .background-icon i {
+  z-index: 1;
+  color: #ffffff;
+}
+
+.data-icon-card-bgsel {
+  background: #66cefd;
+  color: #ffffff;
+}
+
+.data-icon-card-bgsel .card-title {
+  color: #ffffff;
+}
+
+.data-icon-card-bgsel .background-icon::before {
+  content: url("../../images/dashboard/shape-4.svg");
+  position: absolute;
+}
+
+.data-icon-card-bgsel .background-icon i {
+  z-index: 1;
+  color: #ffffff;
+}
+
+.data-icon-card-bgadmin {
+  background: #f98b83;
+  color: #ffffff;
+}
+
+.data-icon-card-bgadmin .card-title {
+  color: #ffffff;
+}
+
+.data-icon-card-bgadmin .background-icon::before {
+  content: url("../../images/dashboard/shape-4.svg");
+  position: absolute;
+}
+
+.data-icon-card-bgadmin .background-icon i {
   z-index: 1;
   color: #ffffff;
 }
@@ -22596,6 +23493,36 @@ code {
   background: #282f3a;
 }
 
+.form-check-bguser.form-check label input[type="checkbox"] + .input-helper:before,
+.form-check-bguser.form-check label input[type="radio"] + .input-helper:before {
+  border-color: #f7b24e;
+}
+
+.form-check-bguser.form-check label input[type="checkbox"]:checked + .input-helper:before,
+.form-check-bguser.form-check label input[type="radio"]:checked + .input-helper:before {
+  background: #f7b24e;
+}
+
+.form-check-bgsel.form-check label input[type="checkbox"] + .input-helper:before,
+.form-check-bgsel.form-check label input[type="radio"] + .input-helper:before {
+  border-color: #66cefd;
+}
+
+.form-check-bgsel.form-check label input[type="checkbox"]:checked + .input-helper:before,
+.form-check-bgsel.form-check label input[type="radio"]:checked + .input-helper:before {
+  background: #66cefd;
+}
+
+.form-check-bgadmin.form-check label input[type="checkbox"] + .input-helper:before,
+.form-check-bgadmin.form-check label input[type="radio"] + .input-helper:before {
+  border-color: #f98b83;
+}
+
+.form-check-bgadmin.form-check label input[type="checkbox"]:checked + .input-helper:before,
+.form-check-bgadmin.form-check label input[type="radio"]:checked + .input-helper:before {
+  background: #f98b83;
+}
+
 /* Dropdowns */
 .dropdown .dropdown-toggle:after {
   border-top: 0;
@@ -22800,6 +23727,48 @@ select.border-dark.tt-hint:focus {
   outline: 1px solid #282f3a;
 }
 
+select.form-control.border-bguser, select.border-bguser.asColorPicker-input, .dataTables_wrapper select.border-bguser,
+.jsgrid .jsgrid-table .jsgrid-filter-row select.border-bguser, .select2-container--default select.border-bguser.select2-selection--single, .select2-container--default .select2-selection--single select.border-bguser.select2-search__field, select.border-bguser.typeahead,
+select.border-bguser.tt-query,
+select.border-bguser.tt-hint {
+  outline: 1px solid #f7b24e;
+}
+
+select.form-control.border-bguser:focus, select.border-bguser.asColorPicker-input:focus, .dataTables_wrapper select.border-bguser:focus,
+.jsgrid .jsgrid-table .jsgrid-filter-row select.border-bguser:focus, .select2-container--default select.border-bguser.select2-selection--single:focus, .select2-container--default .select2-selection--single select.border-bguser.select2-search__field:focus, select.border-bguser.typeahead:focus,
+select.border-bguser.tt-query:focus,
+select.border-bguser.tt-hint:focus {
+  outline: 1px solid #f7b24e;
+}
+
+select.form-control.border-bgsel, select.border-bgsel.asColorPicker-input, .dataTables_wrapper select.border-bgsel,
+.jsgrid .jsgrid-table .jsgrid-filter-row select.border-bgsel, .select2-container--default select.border-bgsel.select2-selection--single, .select2-container--default .select2-selection--single select.border-bgsel.select2-search__field, select.border-bgsel.typeahead,
+select.border-bgsel.tt-query,
+select.border-bgsel.tt-hint {
+  outline: 1px solid #66cefd;
+}
+
+select.form-control.border-bgsel:focus, select.border-bgsel.asColorPicker-input:focus, .dataTables_wrapper select.border-bgsel:focus,
+.jsgrid .jsgrid-table .jsgrid-filter-row select.border-bgsel:focus, .select2-container--default select.border-bgsel.select2-selection--single:focus, .select2-container--default .select2-selection--single select.border-bgsel.select2-search__field:focus, select.border-bgsel.typeahead:focus,
+select.border-bgsel.tt-query:focus,
+select.border-bgsel.tt-hint:focus {
+  outline: 1px solid #66cefd;
+}
+
+select.form-control.border-bgadmin, select.border-bgadmin.asColorPicker-input, .dataTables_wrapper select.border-bgadmin,
+.jsgrid .jsgrid-table .jsgrid-filter-row select.border-bgadmin, .select2-container--default select.border-bgadmin.select2-selection--single, .select2-container--default .select2-selection--single select.border-bgadmin.select2-search__field, select.border-bgadmin.typeahead,
+select.border-bgadmin.tt-query,
+select.border-bgadmin.tt-hint {
+  outline: 1px solid #f98b83;
+}
+
+select.form-control.border-bgadmin:focus, select.border-bgadmin.asColorPicker-input:focus, .dataTables_wrapper select.border-bgadmin:focus,
+.jsgrid .jsgrid-table .jsgrid-filter-row select.border-bgadmin:focus, .select2-container--default select.border-bgadmin.select2-selection--single:focus, .select2-container--default .select2-selection--single select.border-bgadmin.select2-search__field:focus, select.border-bgadmin.typeahead:focus,
+select.border-bgadmin.tt-query:focus,
+select.border-bgadmin.tt-hint:focus {
+  outline: 1px solid #f98b83;
+}
+
 .form-group label {
   font-size: 0.875rem;
   line-height: 1.4rem;
@@ -22887,7 +23856,7 @@ select.border-dark.tt-hint:focus {
   justify-content: center;
 }
 
-.icon-lg, .data-icon-card-primary .background-icon i, .data-icon-card-secondary .background-icon i, .data-icon-card-success .background-icon i, .data-icon-card-info .background-icon i, .data-icon-card-warning .background-icon i, .data-icon-card-danger .background-icon i, .data-icon-card-light .background-icon i, .data-icon-card-dark .background-icon i {
+.icon-lg, .data-icon-card-primary .background-icon i, .data-icon-card-secondary .background-icon i, .data-icon-card-success .background-icon i, .data-icon-card-info .background-icon i, .data-icon-card-warning .background-icon i, .data-icon-card-danger .background-icon i, .data-icon-card-light .background-icon i, .data-icon-card-dark .background-icon i, .data-icon-card-bguser .background-icon i, .data-icon-card-bgsel .background-icon i, .data-icon-card-bgadmin .background-icon i {
   font-size: 2.875rem;
 }
 
@@ -22930,8 +23899,8 @@ select.border-dark.tt-hint:focus {
   background: #57B657;
   -webkit-transform-origin: 50% 250%;
   transform-origin: 50% 250%;
-  -webkit-animation: rota 1.13s linear infinite, opa 3.67s ease-in-out infinite alternate;
-  animation: rota 1.13s linear infinite, opa 3.67s ease-in-out infinite alternate;
+  -webkit-animation: rota 1.13s linear infinite, opa 3.67s ease-in-out infinite alternate;
+  animation: rota 1.13s linear infinite, opa 3.67s ease-in-out infinite alternate;
 }
 
 #pgloading .bokeh li:nth-child(2) {
@@ -22941,8 +23910,8 @@ select.border-dark.tt-hint:focus {
   background: #FF4747;
   -webkit-transform-origin: -150% 50%;
   transform-origin: -150% 50%;
-  -webkit-animation: rota 1.86s linear infinite, opa 4.29s ease-in-out infinite alternate;
-  animation: rota 1.86s linear infinite, opa 4.29s ease-in-out infinite alternate;
+  -webkit-animation: rota 1.86s linear infinite, opa 4.29s ease-in-out infinite alternate;
+  animation: rota 1.86s linear infinite, opa 4.29s ease-in-out infinite alternate;
 }
 
 #pgloading .bokeh li:nth-child(3) {
@@ -22952,8 +23921,8 @@ select.border-dark.tt-hint:focus {
   background: #FFC100;
   -webkit-transform-origin: 50% -150%;
   transform-origin: 50% -150%;
-  -webkit-animation: rota 1.45s linear infinite, opa 5.12s ease-in-out infinite alternate;
-  animation: rota 1.45s linear infinite, opa 5.12s ease-in-out infinite alternate;
+  -webkit-animation: rota 1.45s linear infinite, opa 5.12s ease-in-out infinite alternate;
+  animation: rota 1.45s linear infinite, opa 5.12s ease-in-out infinite alternate;
 }
 
 #pgloading .bokeh li:nth-child(4) {
@@ -22963,8 +23932,8 @@ select.border-dark.tt-hint:focus {
   background: #122164;
   -webkit-transform-origin: 250% 50%;
   transform-origin: 250% 50%;
-  -webkit-animation: rota 1.72s linear infinite, opa 5.25s ease-in-out infinite alternate;
-  animation: rota 1.72s linear infinite, opa 5.25s ease-in-out infinite alternate;
+  -webkit-animation: rota 1.72s linear infinite, opa 5.25s ease-in-out infinite alternate;
+  animation: rota 1.72s linear infinite, opa 5.25s ease-in-out infinite alternate;
 }
 
 @-webkit-keyframes rota {
@@ -23213,7 +24182,7 @@ select.border-dark.tt-hint:focus {
   background: #FFC100;
   color: #FFC100;
   margin: 80px auto;
-  box-shadow: 15px 15px  0 0, -15px -15px  0 0, 15px -15px  0 0, -15px 15px  0 0, 0 15px  0 0, 15px 0  0 0, -15px 0  0 0, 0 -15px 0 0;
+  box-shadow: 15px 15px  0 0, -15px -15px  0 0, 15px -15px  0 0, -15px 15px  0 0, 0 15px  0 0, 15px 0  0 0, -15px 0  0 0, 0 -15px 0 0;
   animation: anim 2s linear infinite;
 }
 
@@ -23222,10 +24191,10 @@ select.border-dark.tt-hint:focus {
     -webkit-filter: hue-rotate(0deg);
   }
   50% {
-    box-shadow: 20px 20px  0 0, -20px -20px  0 0, 20px -20px  0 0, -20px 20px  0 0, 0 10px  0 0, 10px 0  0 0, -10px 0  0 0, 0 -10px 0 0;
+    box-shadow: 20px 20px  0 0, -20px -20px  0 0, 20px -20px  0 0, -20px 20px  0 0, 0 10px  0 0, 10px 0  0 0, -10px 0  0 0, 0 -10px 0 0;
   }
   75% {
-    box-shadow: 20px 20px  0 0, -20px -20px  0 0, 20px -20px  0 0, -20px 20px  0 0, 0 10px  0 0, 10px 0  0 0, -10px 0  0 0, 0 -10px 0 0;
+    box-shadow: 20px 20px  0 0, -20px -20px  0 0, 20px -20px  0 0, -20px 20px  0 0, 0 10px  0 0, 10px 0  0 0, -10px 0  0 0, 0 -10px 0 0;
   }
   100% {
     transform: rotate(360deg);
@@ -24102,6 +25071,51 @@ dl li {
   color: #ffffff;
 }
 
+.pagination-bguser .page-item.active .page-link, .pagination-bguser .jsgrid .jsgrid-pager .active.jsgrid-pager-nav-button .page-link, .jsgrid .jsgrid-pager .pagination-bguser .active.jsgrid-pager-nav-button .page-link, .pagination-bguser .jsgrid .jsgrid-pager .active.jsgrid-pager-page .page-link, .jsgrid .jsgrid-pager .pagination-bguser .active.jsgrid-pager-page .page-link, .pagination-bguser .page-item.active .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .pagination-bguser .page-item.active a, .pagination-bguser .jsgrid .jsgrid-pager .active.jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .pagination-bguser .active.jsgrid-pager-nav-button a,
+.pagination-bguser .page-item.active .jsgrid .jsgrid-pager .jsgrid-pager-page a, .jsgrid .jsgrid-pager .jsgrid-pager-page .pagination-bguser .page-item.active a,
+.pagination-bguser .jsgrid .jsgrid-pager .active.jsgrid-pager-page a, .jsgrid .jsgrid-pager .pagination-bguser .active.jsgrid-pager-page a {
+  background: #f7b24e;
+  border-color: #f7b24e;
+}
+
+.pagination-bguser .page-item:hover .page-link, .pagination-bguser .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:hover .page-link, .jsgrid .jsgrid-pager .pagination-bguser .jsgrid-pager-nav-button:hover .page-link, .pagination-bguser .jsgrid .jsgrid-pager .jsgrid-pager-page:hover .page-link, .jsgrid .jsgrid-pager .pagination-bguser .jsgrid-pager-page:hover .page-link, .pagination-bguser .page-item:hover .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .pagination-bguser .page-item:hover a, .pagination-bguser .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:hover a, .jsgrid .jsgrid-pager .pagination-bguser .jsgrid-pager-nav-button:hover a,
+.pagination-bguser .page-item:hover .jsgrid .jsgrid-pager .jsgrid-pager-page a, .jsgrid .jsgrid-pager .jsgrid-pager-page .pagination-bguser .page-item:hover a,
+.pagination-bguser .jsgrid .jsgrid-pager .jsgrid-pager-page:hover a, .jsgrid .jsgrid-pager .pagination-bguser .jsgrid-pager-page:hover a {
+  background: #f8bd66;
+  border-color: #f7b24e;
+  color: #ffffff;
+}
+
+.pagination-bgsel .page-item.active .page-link, .pagination-bgsel .jsgrid .jsgrid-pager .active.jsgrid-pager-nav-button .page-link, .jsgrid .jsgrid-pager .pagination-bgsel .active.jsgrid-pager-nav-button .page-link, .pagination-bgsel .jsgrid .jsgrid-pager .active.jsgrid-pager-page .page-link, .jsgrid .jsgrid-pager .pagination-bgsel .active.jsgrid-pager-page .page-link, .pagination-bgsel .page-item.active .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .pagination-bgsel .page-item.active a, .pagination-bgsel .jsgrid .jsgrid-pager .active.jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .pagination-bgsel .active.jsgrid-pager-nav-button a,
+.pagination-bgsel .page-item.active .jsgrid .jsgrid-pager .jsgrid-pager-page a, .jsgrid .jsgrid-pager .jsgrid-pager-page .pagination-bgsel .page-item.active a,
+.pagination-bgsel .jsgrid .jsgrid-pager .active.jsgrid-pager-page a, .jsgrid .jsgrid-pager .pagination-bgsel .active.jsgrid-pager-page a {
+  background: #66cefd;
+  border-color: #66cefd;
+}
+
+.pagination-bgsel .page-item:hover .page-link, .pagination-bgsel .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:hover .page-link, .jsgrid .jsgrid-pager .pagination-bgsel .jsgrid-pager-nav-button:hover .page-link, .pagination-bgsel .jsgrid .jsgrid-pager .jsgrid-pager-page:hover .page-link, .jsgrid .jsgrid-pager .pagination-bgsel .jsgrid-pager-page:hover .page-link, .pagination-bgsel .page-item:hover .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .pagination-bgsel .page-item:hover a, .pagination-bgsel .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:hover a, .jsgrid .jsgrid-pager .pagination-bgsel .jsgrid-pager-nav-button:hover a,
+.pagination-bgsel .page-item:hover .jsgrid .jsgrid-pager .jsgrid-pager-page a, .jsgrid .jsgrid-pager .jsgrid-pager-page .pagination-bgsel .page-item:hover a,
+.pagination-bgsel .jsgrid .jsgrid-pager .jsgrid-pager-page:hover a, .jsgrid .jsgrid-pager .pagination-bgsel .jsgrid-pager-page:hover a {
+  background: #7fd6fd;
+  border-color: #66cefd;
+  color: #ffffff;
+}
+
+.pagination-bgadmin .page-item.active .page-link, .pagination-bgadmin .jsgrid .jsgrid-pager .active.jsgrid-pager-nav-button .page-link, .jsgrid .jsgrid-pager .pagination-bgadmin .active.jsgrid-pager-nav-button .page-link, .pagination-bgadmin .jsgrid .jsgrid-pager .active.jsgrid-pager-page .page-link, .jsgrid .jsgrid-pager .pagination-bgadmin .active.jsgrid-pager-page .page-link, .pagination-bgadmin .page-item.active .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .pagination-bgadmin .page-item.active a, .pagination-bgadmin .jsgrid .jsgrid-pager .active.jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .pagination-bgadmin .active.jsgrid-pager-nav-button a,
+.pagination-bgadmin .page-item.active .jsgrid .jsgrid-pager .jsgrid-pager-page a, .jsgrid .jsgrid-pager .jsgrid-pager-page .pagination-bgadmin .page-item.active a,
+.pagination-bgadmin .jsgrid .jsgrid-pager .active.jsgrid-pager-page a, .jsgrid .jsgrid-pager .pagination-bgadmin .active.jsgrid-pager-page a {
+  background: #f98b83;
+  border-color: #f98b83;
+}
+
+.pagination-bgadmin .page-item:hover .page-link, .pagination-bgadmin .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:hover .page-link, .jsgrid .jsgrid-pager .pagination-bgadmin .jsgrid-pager-nav-button:hover .page-link, .pagination-bgadmin .jsgrid .jsgrid-pager .jsgrid-pager-page:hover .page-link, .jsgrid .jsgrid-pager .pagination-bgadmin .jsgrid-pager-page:hover .page-link, .pagination-bgadmin .page-item:hover .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .pagination-bgadmin .page-item:hover a, .pagination-bgadmin .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:hover a, .jsgrid .jsgrid-pager .pagination-bgadmin .jsgrid-pager-nav-button:hover a,
+.pagination-bgadmin .page-item:hover .jsgrid .jsgrid-pager .jsgrid-pager-page a, .jsgrid .jsgrid-pager .jsgrid-pager-page .pagination-bgadmin .page-item:hover a,
+.pagination-bgadmin .jsgrid .jsgrid-pager .jsgrid-pager-page:hover a, .jsgrid .jsgrid-pager .pagination-bgadmin .jsgrid-pager-page:hover a {
+  background: #faa29b;
+  border-color: #f98b83;
+  color: #ffffff;
+}
+
 /* Popovers */
 .popover-static-demo .popover {
   width: 185px;
@@ -24410,6 +25424,84 @@ dl li {
 
 .popover-dark.bs-popover-left .arrow:before, .popover-dark.bs-popover-auto[x-placement^="left"] .arrow:before, .popover-dark.bs-popover-left .arrow:after, .popover-dark.bs-popover-auto[x-placement^="left"] .arrow:after {
   border-left-color: #282f3a;
+}
+
+.popover-bguser {
+  border-color: bguser;
+}
+
+.popover-bguser .popover-header {
+  background: #f7b24e;
+  color: #ffffff;
+  border-bottom: 0;
+}
+
+.popover-bguser.bs-popover-top .arrow:before, .popover-bguser.bs-popover-auto[x-placement^="top"] .arrow:before, .popover-bguser.bs-popover-top .arrow:after, .popover-bguser.bs-popover-auto[x-placement^="top"] .arrow:after {
+  border-top-color: #f7b24e;
+}
+
+.popover-bguser.bs-popover-right .arrow:before, .popover-bguser.bs-popover-auto[x-placement^="right"] .arrow:before, .popover-bguser.bs-popover-right .arrow:after, .popover-bguser.bs-popover-auto[x-placement^="right"] .arrow:after {
+  border-right-color: #f7b24e;
+}
+
+.popover-bguser.bs-popover-bottom .arrow:before, .popover-bguser.bs-popover-auto[x-placement^="bottom"] .arrow:before, .popover-bguser.bs-popover-bottom .arrow:after, .popover-bguser.bs-popover-auto[x-placement^="bottom"] .arrow:after {
+  border-bottom-color: #f7b24e;
+}
+
+.popover-bguser.bs-popover-left .arrow:before, .popover-bguser.bs-popover-auto[x-placement^="left"] .arrow:before, .popover-bguser.bs-popover-left .arrow:after, .popover-bguser.bs-popover-auto[x-placement^="left"] .arrow:after {
+  border-left-color: #f7b24e;
+}
+
+.popover-bgsel {
+  border-color: bgsel;
+}
+
+.popover-bgsel .popover-header {
+  background: #66cefd;
+  color: #ffffff;
+  border-bottom: 0;
+}
+
+.popover-bgsel.bs-popover-top .arrow:before, .popover-bgsel.bs-popover-auto[x-placement^="top"] .arrow:before, .popover-bgsel.bs-popover-top .arrow:after, .popover-bgsel.bs-popover-auto[x-placement^="top"] .arrow:after {
+  border-top-color: #66cefd;
+}
+
+.popover-bgsel.bs-popover-right .arrow:before, .popover-bgsel.bs-popover-auto[x-placement^="right"] .arrow:before, .popover-bgsel.bs-popover-right .arrow:after, .popover-bgsel.bs-popover-auto[x-placement^="right"] .arrow:after {
+  border-right-color: #66cefd;
+}
+
+.popover-bgsel.bs-popover-bottom .arrow:before, .popover-bgsel.bs-popover-auto[x-placement^="bottom"] .arrow:before, .popover-bgsel.bs-popover-bottom .arrow:after, .popover-bgsel.bs-popover-auto[x-placement^="bottom"] .arrow:after {
+  border-bottom-color: #66cefd;
+}
+
+.popover-bgsel.bs-popover-left .arrow:before, .popover-bgsel.bs-popover-auto[x-placement^="left"] .arrow:before, .popover-bgsel.bs-popover-left .arrow:after, .popover-bgsel.bs-popover-auto[x-placement^="left"] .arrow:after {
+  border-left-color: #66cefd;
+}
+
+.popover-bgadmin {
+  border-color: bgadmin;
+}
+
+.popover-bgadmin .popover-header {
+  background: #f98b83;
+  color: #ffffff;
+  border-bottom: 0;
+}
+
+.popover-bgadmin.bs-popover-top .arrow:before, .popover-bgadmin.bs-popover-auto[x-placement^="top"] .arrow:before, .popover-bgadmin.bs-popover-top .arrow:after, .popover-bgadmin.bs-popover-auto[x-placement^="top"] .arrow:after {
+  border-top-color: #f98b83;
+}
+
+.popover-bgadmin.bs-popover-right .arrow:before, .popover-bgadmin.bs-popover-auto[x-placement^="right"] .arrow:before, .popover-bgadmin.bs-popover-right .arrow:after, .popover-bgadmin.bs-popover-auto[x-placement^="right"] .arrow:after {
+  border-right-color: #f98b83;
+}
+
+.popover-bgadmin.bs-popover-bottom .arrow:before, .popover-bgadmin.bs-popover-auto[x-placement^="bottom"] .arrow:before, .popover-bgadmin.bs-popover-bottom .arrow:after, .popover-bgadmin.bs-popover-auto[x-placement^="bottom"] .arrow:after {
+  border-bottom-color: #f98b83;
+}
+
+.popover-bgadmin.bs-popover-left .arrow:before, .popover-bgadmin.bs-popover-auto[x-placement^="left"] .arrow:before, .popover-bgadmin.bs-popover-left .arrow:after, .popover-bgadmin.bs-popover-auto[x-placement^="left"] .arrow:after {
+  border-left-color: #f98b83;
 }
 
 /* Portfolio */
@@ -24875,6 +25967,30 @@ dl li {
   background: #282f3a;
 }
 
+.nav-pills-bguser .nav-link {
+  color: #f7b24e;
+}
+
+.nav-pills-bguser .nav-link.active {
+  background: #f7b24e;
+}
+
+.nav-pills-bgsel .nav-link {
+  color: #66cefd;
+}
+
+.nav-pills-bgsel .nav-link.active {
+  background: #66cefd;
+}
+
+.nav-pills-bgadmin .nav-link {
+  color: #f98b83;
+}
+
+.nav-pills-bgadmin .nav-link.active {
+  background: #f98b83;
+}
+
 .tab-content {
   border: 1px solid #CED4DA;
   border-top: 0;
@@ -24909,7 +26025,7 @@ dl li {
   position: absolute;
   content: " ";
   width: 3px;
-  background-color: #f78f01;
+  background-color: white;
   left: 50%;
   margin-left: -1.5px;
 }
@@ -24935,13 +26051,13 @@ dl li {
 
 .timeline .timeline-wrapper .timeline-panel {
   border-radius: 2px;
-  padding: 20px;
+  padding: 0.8rem;
   position: relative;
-  background: #ffffff;
+  color: white;
   border-radius: 6px;
   box-shadow: 1px 2px 35px 0 rgba(1, 1, 1, 0.1);
-  width: 35%;
-  margin-left: 15%;
+  width: 50%;
+  margin-left: 0%;
 }
 
 .timeline .timeline-wrapper .timeline-panel:before {
@@ -24959,16 +26075,13 @@ dl li {
   top: 10px;
   right: -14px;
   display: inline-block;
-  border-top: 14px solid transparent;
-  border-left: 14px solid #ffffff;
-  border-right: 0 solid #ffffff;
   border-bottom: 14px solid transparent;
   content: " ";
 }
 
 .timeline .timeline-wrapper .timeline-panel .timeline-title {
   margin-top: 0;
-  color: #282f3a;
+  color: #f8f9fa;
   text-transform: uppercase;
 }
 
@@ -25013,7 +26126,7 @@ dl li {
 
 .timeline .timeline-wrapper.timeline-inverted .timeline-panel {
   margin-left: auto;
-  margin-right: 15%;
+  margin-right: 0%;
 }
 
 .timeline .timeline-wrapper.timeline-inverted .timeline-panel:after {
@@ -25043,68 +26156,202 @@ dl li {
   }
 }
 
-.timeline-wrapper-primary .timeline-panel:before {
+.timeline-wrapper-primary .timeline-panel {
   background: #122164;
+}
+
+.timeline-wrapper-primary .timeline-panel:after {
+  border-top: 14px solid transparent;
+  border-left: 14px solid #122164;
+  border-right: 0 solid #122164;
+}
+
+.timeline-wrapper-primary.timeline-inverted .timeline-panel:after {
+  border-right: 0 solid #122164;
 }
 
 .timeline-wrapper-primary .timeline-badge {
   background: #122164;
 }
 
-.timeline-wrapper-secondary .timeline-panel:before {
+.timeline-wrapper-secondary .timeline-panel {
   background: #f78f01;
+}
+
+.timeline-wrapper-secondary .timeline-panel:after {
+  border-top: 14px solid transparent;
+  border-left: 14px solid #f78f01;
+  border-right: 0 solid #f78f01;
+}
+
+.timeline-wrapper-secondary.timeline-inverted .timeline-panel:after {
+  border-right: 0 solid #f78f01;
 }
 
 .timeline-wrapper-secondary .timeline-badge {
   background: #f78f01;
 }
 
-.timeline-wrapper-success .timeline-panel:before {
+.timeline-wrapper-success .timeline-panel {
   background: #57B657;
+}
+
+.timeline-wrapper-success .timeline-panel:after {
+  border-top: 14px solid transparent;
+  border-left: 14px solid #57B657;
+  border-right: 0 solid #57B657;
+}
+
+.timeline-wrapper-success.timeline-inverted .timeline-panel:after {
+  border-right: 0 solid #57B657;
 }
 
 .timeline-wrapper-success .timeline-badge {
   background: #57B657;
 }
 
-.timeline-wrapper-info .timeline-panel:before {
+.timeline-wrapper-info .timeline-panel {
   background: #248AFD;
+}
+
+.timeline-wrapper-info .timeline-panel:after {
+  border-top: 14px solid transparent;
+  border-left: 14px solid #248AFD;
+  border-right: 0 solid #248AFD;
+}
+
+.timeline-wrapper-info.timeline-inverted .timeline-panel:after {
+  border-right: 0 solid #248AFD;
 }
 
 .timeline-wrapper-info .timeline-badge {
   background: #248AFD;
 }
 
-.timeline-wrapper-warning .timeline-panel:before {
+.timeline-wrapper-warning .timeline-panel {
   background: #FFC100;
+}
+
+.timeline-wrapper-warning .timeline-panel:after {
+  border-top: 14px solid transparent;
+  border-left: 14px solid #FFC100;
+  border-right: 0 solid #FFC100;
+}
+
+.timeline-wrapper-warning.timeline-inverted .timeline-panel:after {
+  border-right: 0 solid #FFC100;
 }
 
 .timeline-wrapper-warning .timeline-badge {
   background: #FFC100;
 }
 
-.timeline-wrapper-danger .timeline-panel:before {
+.timeline-wrapper-danger .timeline-panel {
   background: #FF4747;
+}
+
+.timeline-wrapper-danger .timeline-panel:after {
+  border-top: 14px solid transparent;
+  border-left: 14px solid #FF4747;
+  border-right: 0 solid #FF4747;
+}
+
+.timeline-wrapper-danger.timeline-inverted .timeline-panel:after {
+  border-right: 0 solid #FF4747;
 }
 
 .timeline-wrapper-danger .timeline-badge {
   background: #FF4747;
 }
 
-.timeline-wrapper-light .timeline-panel:before {
+.timeline-wrapper-light .timeline-panel {
   background: #f8f9fa;
+}
+
+.timeline-wrapper-light .timeline-panel:after {
+  border-top: 14px solid transparent;
+  border-left: 14px solid #f8f9fa;
+  border-right: 0 solid #f8f9fa;
+}
+
+.timeline-wrapper-light.timeline-inverted .timeline-panel:after {
+  border-right: 0 solid #f8f9fa;
 }
 
 .timeline-wrapper-light .timeline-badge {
   background: #f8f9fa;
 }
 
-.timeline-wrapper-dark .timeline-panel:before {
+.timeline-wrapper-dark .timeline-panel {
   background: #282f3a;
+}
+
+.timeline-wrapper-dark .timeline-panel:after {
+  border-top: 14px solid transparent;
+  border-left: 14px solid #282f3a;
+  border-right: 0 solid #282f3a;
+}
+
+.timeline-wrapper-dark.timeline-inverted .timeline-panel:after {
+  border-right: 0 solid #282f3a;
 }
 
 .timeline-wrapper-dark .timeline-badge {
   background: #282f3a;
+}
+
+.timeline-wrapper-bguser .timeline-panel {
+  background: #f7b24e;
+}
+
+.timeline-wrapper-bguser .timeline-panel:after {
+  border-top: 14px solid transparent;
+  border-left: 14px solid #f7b24e;
+  border-right: 0 solid #f7b24e;
+}
+
+.timeline-wrapper-bguser.timeline-inverted .timeline-panel:after {
+  border-right: 0 solid #f7b24e;
+}
+
+.timeline-wrapper-bguser .timeline-badge {
+  background: #f7b24e;
+}
+
+.timeline-wrapper-bgsel .timeline-panel {
+  background: #66cefd;
+}
+
+.timeline-wrapper-bgsel .timeline-panel:after {
+  border-top: 14px solid transparent;
+  border-left: 14px solid #66cefd;
+  border-right: 0 solid #66cefd;
+}
+
+.timeline-wrapper-bgsel.timeline-inverted .timeline-panel:after {
+  border-right: 0 solid #66cefd;
+}
+
+.timeline-wrapper-bgsel .timeline-badge {
+  background: #66cefd;
+}
+
+.timeline-wrapper-bgadmin .timeline-panel {
+  background: #f98b83;
+}
+
+.timeline-wrapper-bgadmin .timeline-panel:after {
+  border-top: 14px solid transparent;
+  border-left: 14px solid #f98b83;
+  border-right: 0 solid #f98b83;
+}
+
+.timeline-wrapper-bgadmin.timeline-inverted .timeline-panel:after {
+  border-right: 0 solid #f98b83;
+}
+
+.timeline-wrapper-bgadmin .timeline-badge {
+  background: #f98b83;
 }
 
 /* Tabs */
@@ -25398,6 +26645,69 @@ dl li {
 
 .tooltip-dark.bs-tooltip-left .arrow::before, .tooltip-dark.bs-tooltip-auto[x-placement^="left"] .arrow::before {
   border-left-color: #282f3a;
+}
+
+.tooltip-bguser .tooltip-inner {
+  background: #f7b24e;
+  color: #ffffff;
+}
+
+.tooltip-bguser.bs-tooltip-top .arrow::before, .tooltip-bguser.bs-tooltip-auto[x-placement^="top"] .arrow::before {
+  border-top-color: #f7b24e;
+}
+
+.tooltip-bguser.bs-tooltip-right .arrow::before, .tooltip-bguser.bs-tooltip-auto[x-placement^="right"] .arrow::before {
+  border-right-color: #f7b24e;
+}
+
+.tooltip-bguser.bs-tooltip-bottom .arrow::before, .tooltip-bguser.bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
+  border-bottom-color: #f7b24e;
+}
+
+.tooltip-bguser.bs-tooltip-left .arrow::before, .tooltip-bguser.bs-tooltip-auto[x-placement^="left"] .arrow::before {
+  border-left-color: #f7b24e;
+}
+
+.tooltip-bgsel .tooltip-inner {
+  background: #66cefd;
+  color: #ffffff;
+}
+
+.tooltip-bgsel.bs-tooltip-top .arrow::before, .tooltip-bgsel.bs-tooltip-auto[x-placement^="top"] .arrow::before {
+  border-top-color: #66cefd;
+}
+
+.tooltip-bgsel.bs-tooltip-right .arrow::before, .tooltip-bgsel.bs-tooltip-auto[x-placement^="right"] .arrow::before {
+  border-right-color: #66cefd;
+}
+
+.tooltip-bgsel.bs-tooltip-bottom .arrow::before, .tooltip-bgsel.bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
+  border-bottom-color: #66cefd;
+}
+
+.tooltip-bgsel.bs-tooltip-left .arrow::before, .tooltip-bgsel.bs-tooltip-auto[x-placement^="left"] .arrow::before {
+  border-left-color: #66cefd;
+}
+
+.tooltip-bgadmin .tooltip-inner {
+  background: #f98b83;
+  color: #ffffff;
+}
+
+.tooltip-bgadmin.bs-tooltip-top .arrow::before, .tooltip-bgadmin.bs-tooltip-auto[x-placement^="top"] .arrow::before {
+  border-top-color: #f98b83;
+}
+
+.tooltip-bgadmin.bs-tooltip-right .arrow::before, .tooltip-bgadmin.bs-tooltip-auto[x-placement^="right"] .arrow::before {
+  border-right-color: #f98b83;
+}
+
+.tooltip-bgadmin.bs-tooltip-bottom .arrow::before, .tooltip-bgadmin.bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
+  border-bottom-color: #f98b83;
+}
+
+.tooltip-bgadmin.bs-tooltip-left .arrow::before, .tooltip-bgadmin.bs-tooltip-auto[x-placement^="left"] .arrow::before {
+  border-left-color: #f98b83;
 }
 
 .profile-navbar .nav-item .nav-link {
@@ -27322,6 +28632,57 @@ table.dataTable tbody td.select-checkbox:after {
 
 .slider-dark .noUi-base .noUi-origin .noUi-handle .noUi-tooltip {
   background: #282f3a;
+  color: #ffffff;
+}
+
+.slider-bguser .noUi-base .noUi-connect {
+  background: #f7b24e;
+}
+
+.slider-bguser .noUi-base .noUi-origin {
+  background: #f7b24e;
+}
+
+.slider-bguser .noUi-base .noUi-origin .noUi-handle:after {
+  background: #f7b24e;
+}
+
+.slider-bguser .noUi-base .noUi-origin .noUi-handle .noUi-tooltip {
+  background: #f7b24e;
+  color: #ffffff;
+}
+
+.slider-bgsel .noUi-base .noUi-connect {
+  background: #66cefd;
+}
+
+.slider-bgsel .noUi-base .noUi-origin {
+  background: #66cefd;
+}
+
+.slider-bgsel .noUi-base .noUi-origin .noUi-handle:after {
+  background: #66cefd;
+}
+
+.slider-bgsel .noUi-base .noUi-origin .noUi-handle .noUi-tooltip {
+  background: #66cefd;
+  color: #ffffff;
+}
+
+.slider-bgadmin .noUi-base .noUi-connect {
+  background: #f98b83;
+}
+
+.slider-bgadmin .noUi-base .noUi-origin {
+  background: #f98b83;
+}
+
+.slider-bgadmin .noUi-base .noUi-origin .noUi-handle:after {
+  background: #f98b83;
+}
+
+.slider-bgadmin .noUi-base .noUi-origin .noUi-handle .noUi-tooltip {
+  background: #f98b83;
   color: #ffffff;
 }
 
@@ -30174,6 +31535,279 @@ div.tagsinput span.tag a {
   background: #122164;
 }
 
+.navbar.navbar-bguser .navbar-menu-wrapper {
+  background: #f7b24e;
+}
+
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .navbar-toggler {
+  color: #ffffff;
+}
+
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item .nav-link {
+  color: #ffffff;
+}
+
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .form-control, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .form-control, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .asColorPicker-input, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .asColorPicker-input, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .dataTables_wrapper select, .dataTables_wrapper .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group select, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .dataTables_wrapper select, .dataTables_wrapper .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap select, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group input[type=text], .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap input[type=text],
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row select, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group select,
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row select, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap select, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group input[type=number], .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap input[type=number], .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-container--default .select2-selection--single, .select2-container--default .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-selection--single, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single, .select2-container--default .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-selection--single, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-container--default .select2-selection--single .select2-search__field, .select2-container--default .select2-selection--single .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-search__field, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single .select2-search__field, .select2-container--default .select2-selection--single .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-search__field, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .typeahead, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .typeahead,
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .tt-query,
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .tt-query,
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .tt-hint,
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .tt-hint {
+  color: #ffffff;
+}
+
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .form-control::-webkit-input-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .form-control::-webkit-input-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .asColorPicker-input::-webkit-input-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .asColorPicker-input::-webkit-input-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .dataTables_wrapper select::-webkit-input-placeholder, .dataTables_wrapper .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group select::-webkit-input-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .dataTables_wrapper select::-webkit-input-placeholder, .dataTables_wrapper .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap select::-webkit-input-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text]::-webkit-input-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group input[type=text]::-webkit-input-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text]::-webkit-input-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap input[type=text]::-webkit-input-placeholder,
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row select::-webkit-input-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group select::-webkit-input-placeholder,
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row select::-webkit-input-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap select::-webkit-input-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number]::-webkit-input-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group input[type=number]::-webkit-input-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number]::-webkit-input-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap input[type=number]::-webkit-input-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-container--default .select2-selection--single::-webkit-input-placeholder, .select2-container--default .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-selection--single::-webkit-input-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single::-webkit-input-placeholder, .select2-container--default .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-selection--single::-webkit-input-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-container--default .select2-selection--single .select2-search__field::-webkit-input-placeholder, .select2-container--default .select2-selection--single .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-search__field::-webkit-input-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single .select2-search__field::-webkit-input-placeholder, .select2-container--default .select2-selection--single .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-search__field::-webkit-input-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .typeahead::-webkit-input-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .typeahead::-webkit-input-placeholder,
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .tt-query::-webkit-input-placeholder,
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .tt-query::-webkit-input-placeholder,
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .tt-hint::-webkit-input-placeholder,
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .tt-hint::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .form-control:-moz-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .form-control:-moz-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .asColorPicker-input:-moz-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .asColorPicker-input:-moz-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .dataTables_wrapper select:-moz-placeholder, .dataTables_wrapper .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group select:-moz-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .dataTables_wrapper select:-moz-placeholder, .dataTables_wrapper .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap select:-moz-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input:-moz-placeholder[type=text], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group input:-moz-placeholder[type=text], .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input:-moz-placeholder[type=text], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap input:-moz-placeholder[type=text],
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row select:-moz-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group select:-moz-placeholder,
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row select:-moz-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap select:-moz-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input:-moz-placeholder[type=number], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group input:-moz-placeholder[type=number], .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input:-moz-placeholder[type=number], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap input:-moz-placeholder[type=number], .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-container--default .select2-selection--single:-moz-placeholder, .select2-container--default .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-selection--single:-moz-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single:-moz-placeholder, .select2-container--default .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-selection--single:-moz-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-container--default .select2-selection--single .select2-search__field:-moz-placeholder, .select2-container--default .select2-selection--single .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-search__field:-moz-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single .select2-search__field:-moz-placeholder, .select2-container--default .select2-selection--single .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-search__field:-moz-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .typeahead:-moz-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .typeahead:-moz-placeholder,
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .tt-query:-moz-placeholder,
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .tt-query:-moz-placeholder,
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .tt-hint:-moz-placeholder,
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .tt-hint:-moz-placeholder {
+  color: #ffffff;
+}
+
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .form-control::-moz-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .form-control::-moz-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .asColorPicker-input::-moz-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .asColorPicker-input::-moz-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .dataTables_wrapper select::-moz-placeholder, .dataTables_wrapper .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group select::-moz-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .dataTables_wrapper select::-moz-placeholder, .dataTables_wrapper .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap select::-moz-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text]::-moz-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group input[type=text]::-moz-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text]::-moz-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap input[type=text]::-moz-placeholder,
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row select::-moz-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group select::-moz-placeholder,
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row select::-moz-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap select::-moz-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number]::-moz-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group input[type=number]::-moz-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number]::-moz-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap input[type=number]::-moz-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-container--default .select2-selection--single::-moz-placeholder, .select2-container--default .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-selection--single::-moz-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single::-moz-placeholder, .select2-container--default .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-selection--single::-moz-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-container--default .select2-selection--single .select2-search__field::-moz-placeholder, .select2-container--default .select2-selection--single .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-search__field::-moz-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single .select2-search__field::-moz-placeholder, .select2-container--default .select2-selection--single .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-search__field::-moz-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .typeahead::-moz-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .typeahead::-moz-placeholder,
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .tt-query::-moz-placeholder,
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .tt-query::-moz-placeholder,
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .tt-hint::-moz-placeholder,
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .tt-hint::-moz-placeholder {
+  color: #ffffff;
+}
+
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .form-control:-ms-input-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .form-control:-ms-input-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .asColorPicker-input:-ms-input-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .asColorPicker-input:-ms-input-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .dataTables_wrapper select:-ms-input-placeholder, .dataTables_wrapper .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group select:-ms-input-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .dataTables_wrapper select:-ms-input-placeholder, .dataTables_wrapper .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap select:-ms-input-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input:-ms-input-placeholder[type=text], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group input:-ms-input-placeholder[type=text], .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input:-ms-input-placeholder[type=text], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap input:-ms-input-placeholder[type=text],
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row select:-ms-input-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group select:-ms-input-placeholder,
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row select:-ms-input-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap select:-ms-input-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input:-ms-input-placeholder[type=number], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group input:-ms-input-placeholder[type=number], .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input:-ms-input-placeholder[type=number], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap input:-ms-input-placeholder[type=number], .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-container--default .select2-selection--single:-ms-input-placeholder, .select2-container--default .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-selection--single:-ms-input-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single:-ms-input-placeholder, .select2-container--default .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-selection--single:-ms-input-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-container--default .select2-selection--single .select2-search__field:-ms-input-placeholder, .select2-container--default .select2-selection--single .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-search__field:-ms-input-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single .select2-search__field:-ms-input-placeholder, .select2-container--default .select2-selection--single .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-search__field:-ms-input-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .typeahead:-ms-input-placeholder, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .typeahead:-ms-input-placeholder,
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .tt-query:-ms-input-placeholder,
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .tt-query:-ms-input-placeholder,
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .tt-hint:-ms-input-placeholder,
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .tt-hint:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .input-group-text i, .navbar.navbar-bguser:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .input-group-text i {
+  color: #ffffff;
+}
+
+.navbar.navbar-light .navbar-menu-wrapper {
+  background: #ffffff;
+  border-left: 1px solid #CED4DA;
+}
+
+.navbar.navbar-light .navbar-menu-wrapper .navbar-toggler {
+  color: #282f3a;
+}
+
+.navbar.navbar-light .navbar-menu-wrapper .nav-item .nav-link {
+  color: #282f3a;
+}
+
+.navbar.navbar-light .navbar-menu-wrapper .nav-item.nav-search .input-group, .navbar.navbar-light .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap {
+  background: rgba(40, 47, 58, 0.24);
+}
+
+.navbar.navbar-dark .navbar-menu-wrapper {
+  border-left-color: #495560;
+}
+
+.navbar.navbar-danger .navbar-menu-wrapper .nav-item .nav-link.count-indicator .count {
+  background: #122164;
+}
+
+.navbar.navbar-bgsel .navbar-menu-wrapper {
+  background: #66cefd;
+}
+
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .navbar-toggler {
+  color: #ffffff;
+}
+
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item .nav-link {
+  color: #ffffff;
+}
+
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .form-control, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .form-control, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .asColorPicker-input, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .asColorPicker-input, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .dataTables_wrapper select, .dataTables_wrapper .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group select, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .dataTables_wrapper select, .dataTables_wrapper .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap select, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group input[type=text], .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap input[type=text],
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row select, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group select,
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row select, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap select, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group input[type=number], .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap input[type=number], .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-container--default .select2-selection--single, .select2-container--default .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-selection--single, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single, .select2-container--default .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-selection--single, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-container--default .select2-selection--single .select2-search__field, .select2-container--default .select2-selection--single .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-search__field, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single .select2-search__field, .select2-container--default .select2-selection--single .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-search__field, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .typeahead, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .typeahead,
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .tt-query,
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .tt-query,
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .tt-hint,
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .tt-hint {
+  color: #ffffff;
+}
+
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .form-control::-webkit-input-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .form-control::-webkit-input-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .asColorPicker-input::-webkit-input-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .asColorPicker-input::-webkit-input-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .dataTables_wrapper select::-webkit-input-placeholder, .dataTables_wrapper .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group select::-webkit-input-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .dataTables_wrapper select::-webkit-input-placeholder, .dataTables_wrapper .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap select::-webkit-input-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text]::-webkit-input-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group input[type=text]::-webkit-input-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text]::-webkit-input-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap input[type=text]::-webkit-input-placeholder,
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row select::-webkit-input-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group select::-webkit-input-placeholder,
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row select::-webkit-input-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap select::-webkit-input-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number]::-webkit-input-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group input[type=number]::-webkit-input-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number]::-webkit-input-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap input[type=number]::-webkit-input-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-container--default .select2-selection--single::-webkit-input-placeholder, .select2-container--default .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-selection--single::-webkit-input-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single::-webkit-input-placeholder, .select2-container--default .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-selection--single::-webkit-input-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-container--default .select2-selection--single .select2-search__field::-webkit-input-placeholder, .select2-container--default .select2-selection--single .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-search__field::-webkit-input-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single .select2-search__field::-webkit-input-placeholder, .select2-container--default .select2-selection--single .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-search__field::-webkit-input-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .typeahead::-webkit-input-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .typeahead::-webkit-input-placeholder,
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .tt-query::-webkit-input-placeholder,
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .tt-query::-webkit-input-placeholder,
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .tt-hint::-webkit-input-placeholder,
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .tt-hint::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .form-control:-moz-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .form-control:-moz-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .asColorPicker-input:-moz-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .asColorPicker-input:-moz-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .dataTables_wrapper select:-moz-placeholder, .dataTables_wrapper .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group select:-moz-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .dataTables_wrapper select:-moz-placeholder, .dataTables_wrapper .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap select:-moz-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input:-moz-placeholder[type=text], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group input:-moz-placeholder[type=text], .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input:-moz-placeholder[type=text], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap input:-moz-placeholder[type=text],
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row select:-moz-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group select:-moz-placeholder,
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row select:-moz-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap select:-moz-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input:-moz-placeholder[type=number], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group input:-moz-placeholder[type=number], .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input:-moz-placeholder[type=number], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap input:-moz-placeholder[type=number], .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-container--default .select2-selection--single:-moz-placeholder, .select2-container--default .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-selection--single:-moz-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single:-moz-placeholder, .select2-container--default .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-selection--single:-moz-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-container--default .select2-selection--single .select2-search__field:-moz-placeholder, .select2-container--default .select2-selection--single .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-search__field:-moz-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single .select2-search__field:-moz-placeholder, .select2-container--default .select2-selection--single .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-search__field:-moz-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .typeahead:-moz-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .typeahead:-moz-placeholder,
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .tt-query:-moz-placeholder,
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .tt-query:-moz-placeholder,
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .tt-hint:-moz-placeholder,
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .tt-hint:-moz-placeholder {
+  color: #ffffff;
+}
+
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .form-control::-moz-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .form-control::-moz-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .asColorPicker-input::-moz-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .asColorPicker-input::-moz-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .dataTables_wrapper select::-moz-placeholder, .dataTables_wrapper .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group select::-moz-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .dataTables_wrapper select::-moz-placeholder, .dataTables_wrapper .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap select::-moz-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text]::-moz-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group input[type=text]::-moz-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text]::-moz-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap input[type=text]::-moz-placeholder,
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row select::-moz-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group select::-moz-placeholder,
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row select::-moz-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap select::-moz-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number]::-moz-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group input[type=number]::-moz-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number]::-moz-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap input[type=number]::-moz-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-container--default .select2-selection--single::-moz-placeholder, .select2-container--default .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-selection--single::-moz-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single::-moz-placeholder, .select2-container--default .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-selection--single::-moz-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-container--default .select2-selection--single .select2-search__field::-moz-placeholder, .select2-container--default .select2-selection--single .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-search__field::-moz-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single .select2-search__field::-moz-placeholder, .select2-container--default .select2-selection--single .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-search__field::-moz-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .typeahead::-moz-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .typeahead::-moz-placeholder,
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .tt-query::-moz-placeholder,
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .tt-query::-moz-placeholder,
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .tt-hint::-moz-placeholder,
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .tt-hint::-moz-placeholder {
+  color: #ffffff;
+}
+
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .form-control:-ms-input-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .form-control:-ms-input-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .asColorPicker-input:-ms-input-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .asColorPicker-input:-ms-input-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .dataTables_wrapper select:-ms-input-placeholder, .dataTables_wrapper .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group select:-ms-input-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .dataTables_wrapper select:-ms-input-placeholder, .dataTables_wrapper .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap select:-ms-input-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input:-ms-input-placeholder[type=text], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group input:-ms-input-placeholder[type=text], .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input:-ms-input-placeholder[type=text], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap input:-ms-input-placeholder[type=text],
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row select:-ms-input-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group select:-ms-input-placeholder,
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row select:-ms-input-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap select:-ms-input-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input:-ms-input-placeholder[type=number], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group input:-ms-input-placeholder[type=number], .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input:-ms-input-placeholder[type=number], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap input:-ms-input-placeholder[type=number], .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-container--default .select2-selection--single:-ms-input-placeholder, .select2-container--default .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-selection--single:-ms-input-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single:-ms-input-placeholder, .select2-container--default .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-selection--single:-ms-input-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-container--default .select2-selection--single .select2-search__field:-ms-input-placeholder, .select2-container--default .select2-selection--single .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-search__field:-ms-input-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single .select2-search__field:-ms-input-placeholder, .select2-container--default .select2-selection--single .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-search__field:-ms-input-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .typeahead:-ms-input-placeholder, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .typeahead:-ms-input-placeholder,
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .tt-query:-ms-input-placeholder,
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .tt-query:-ms-input-placeholder,
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .tt-hint:-ms-input-placeholder,
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .tt-hint:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .input-group-text i, .navbar.navbar-bgsel:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .input-group-text i {
+  color: #ffffff;
+}
+
+.navbar.navbar-light .navbar-menu-wrapper {
+  background: #ffffff;
+  border-left: 1px solid #CED4DA;
+}
+
+.navbar.navbar-light .navbar-menu-wrapper .navbar-toggler {
+  color: #282f3a;
+}
+
+.navbar.navbar-light .navbar-menu-wrapper .nav-item .nav-link {
+  color: #282f3a;
+}
+
+.navbar.navbar-light .navbar-menu-wrapper .nav-item.nav-search .input-group, .navbar.navbar-light .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap {
+  background: rgba(40, 47, 58, 0.24);
+}
+
+.navbar.navbar-dark .navbar-menu-wrapper {
+  border-left-color: #495560;
+}
+
+.navbar.navbar-danger .navbar-menu-wrapper .nav-item .nav-link.count-indicator .count {
+  background: #122164;
+}
+
+.navbar.navbar-bgadmin .navbar-menu-wrapper {
+  background: #f98b83;
+}
+
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .navbar-toggler {
+  color: #ffffff;
+}
+
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item .nav-link {
+  color: #ffffff;
+}
+
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .form-control, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .form-control, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .asColorPicker-input, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .asColorPicker-input, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .dataTables_wrapper select, .dataTables_wrapper .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group select, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .dataTables_wrapper select, .dataTables_wrapper .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap select, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group input[type=text], .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap input[type=text],
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row select, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group select,
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row select, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap select, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group input[type=number], .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap input[type=number], .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-container--default .select2-selection--single, .select2-container--default .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-selection--single, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single, .select2-container--default .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-selection--single, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-container--default .select2-selection--single .select2-search__field, .select2-container--default .select2-selection--single .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-search__field, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single .select2-search__field, .select2-container--default .select2-selection--single .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-search__field, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .typeahead, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .typeahead,
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .tt-query,
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .tt-query,
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .tt-hint,
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .tt-hint {
+  color: #ffffff;
+}
+
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .form-control::-webkit-input-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .form-control::-webkit-input-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .asColorPicker-input::-webkit-input-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .asColorPicker-input::-webkit-input-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .dataTables_wrapper select::-webkit-input-placeholder, .dataTables_wrapper .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group select::-webkit-input-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .dataTables_wrapper select::-webkit-input-placeholder, .dataTables_wrapper .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap select::-webkit-input-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text]::-webkit-input-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group input[type=text]::-webkit-input-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text]::-webkit-input-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap input[type=text]::-webkit-input-placeholder,
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row select::-webkit-input-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group select::-webkit-input-placeholder,
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row select::-webkit-input-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap select::-webkit-input-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number]::-webkit-input-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group input[type=number]::-webkit-input-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number]::-webkit-input-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap input[type=number]::-webkit-input-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-container--default .select2-selection--single::-webkit-input-placeholder, .select2-container--default .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-selection--single::-webkit-input-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single::-webkit-input-placeholder, .select2-container--default .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-selection--single::-webkit-input-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-container--default .select2-selection--single .select2-search__field::-webkit-input-placeholder, .select2-container--default .select2-selection--single .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-search__field::-webkit-input-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single .select2-search__field::-webkit-input-placeholder, .select2-container--default .select2-selection--single .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-search__field::-webkit-input-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .typeahead::-webkit-input-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .typeahead::-webkit-input-placeholder,
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .tt-query::-webkit-input-placeholder,
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .tt-query::-webkit-input-placeholder,
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .tt-hint::-webkit-input-placeholder,
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .tt-hint::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .form-control:-moz-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .form-control:-moz-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .asColorPicker-input:-moz-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .asColorPicker-input:-moz-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .dataTables_wrapper select:-moz-placeholder, .dataTables_wrapper .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group select:-moz-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .dataTables_wrapper select:-moz-placeholder, .dataTables_wrapper .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap select:-moz-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input:-moz-placeholder[type=text], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group input:-moz-placeholder[type=text], .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input:-moz-placeholder[type=text], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap input:-moz-placeholder[type=text],
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row select:-moz-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group select:-moz-placeholder,
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row select:-moz-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap select:-moz-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input:-moz-placeholder[type=number], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group input:-moz-placeholder[type=number], .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input:-moz-placeholder[type=number], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap input:-moz-placeholder[type=number], .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-container--default .select2-selection--single:-moz-placeholder, .select2-container--default .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-selection--single:-moz-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single:-moz-placeholder, .select2-container--default .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-selection--single:-moz-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-container--default .select2-selection--single .select2-search__field:-moz-placeholder, .select2-container--default .select2-selection--single .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-search__field:-moz-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single .select2-search__field:-moz-placeholder, .select2-container--default .select2-selection--single .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-search__field:-moz-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .typeahead:-moz-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .typeahead:-moz-placeholder,
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .tt-query:-moz-placeholder,
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .tt-query:-moz-placeholder,
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .tt-hint:-moz-placeholder,
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .tt-hint:-moz-placeholder {
+  color: #ffffff;
+}
+
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .form-control::-moz-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .form-control::-moz-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .asColorPicker-input::-moz-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .asColorPicker-input::-moz-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .dataTables_wrapper select::-moz-placeholder, .dataTables_wrapper .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group select::-moz-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .dataTables_wrapper select::-moz-placeholder, .dataTables_wrapper .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap select::-moz-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text]::-moz-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group input[type=text]::-moz-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text]::-moz-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap input[type=text]::-moz-placeholder,
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row select::-moz-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group select::-moz-placeholder,
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row select::-moz-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap select::-moz-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number]::-moz-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group input[type=number]::-moz-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number]::-moz-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap input[type=number]::-moz-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-container--default .select2-selection--single::-moz-placeholder, .select2-container--default .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-selection--single::-moz-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single::-moz-placeholder, .select2-container--default .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-selection--single::-moz-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-container--default .select2-selection--single .select2-search__field::-moz-placeholder, .select2-container--default .select2-selection--single .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-search__field::-moz-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single .select2-search__field::-moz-placeholder, .select2-container--default .select2-selection--single .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-search__field::-moz-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .typeahead::-moz-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .typeahead::-moz-placeholder,
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .tt-query::-moz-placeholder,
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .tt-query::-moz-placeholder,
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .tt-hint::-moz-placeholder,
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .tt-hint::-moz-placeholder {
+  color: #ffffff;
+}
+
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .form-control:-ms-input-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .form-control:-ms-input-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .asColorPicker-input:-ms-input-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .asColorPicker-input:-ms-input-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .dataTables_wrapper select:-ms-input-placeholder, .dataTables_wrapper .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group select:-ms-input-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .dataTables_wrapper select:-ms-input-placeholder, .dataTables_wrapper .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap select:-ms-input-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input:-ms-input-placeholder[type=text], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group input:-ms-input-placeholder[type=text], .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input:-ms-input-placeholder[type=text], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap input:-ms-input-placeholder[type=text],
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row select:-ms-input-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group select:-ms-input-placeholder,
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row select:-ms-input-placeholder, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap select:-ms-input-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input:-ms-input-placeholder[type=number], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group input:-ms-input-placeholder[type=number], .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input:-ms-input-placeholder[type=number], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap input:-ms-input-placeholder[type=number], .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-container--default .select2-selection--single:-ms-input-placeholder, .select2-container--default .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-selection--single:-ms-input-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single:-ms-input-placeholder, .select2-container--default .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-selection--single:-ms-input-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-container--default .select2-selection--single .select2-search__field:-ms-input-placeholder, .select2-container--default .select2-selection--single .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .select2-search__field:-ms-input-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single .select2-search__field:-ms-input-placeholder, .select2-container--default .select2-selection--single .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .select2-search__field:-ms-input-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .typeahead:-ms-input-placeholder, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .typeahead:-ms-input-placeholder,
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .tt-query:-ms-input-placeholder,
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .tt-query:-ms-input-placeholder,
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .tt-hint:-ms-input-placeholder,
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .tt-hint:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .input-group .input-group-text i, .navbar.navbar-bgadmin:not(.navbar-light) .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap .input-group-text i {
+  color: #ffffff;
+}
+
+.navbar.navbar-light .navbar-menu-wrapper {
+  background: #ffffff;
+  border-left: 1px solid #CED4DA;
+}
+
+.navbar.navbar-light .navbar-menu-wrapper .navbar-toggler {
+  color: #282f3a;
+}
+
+.navbar.navbar-light .navbar-menu-wrapper .nav-item .nav-link {
+  color: #282f3a;
+}
+
+.navbar.navbar-light .navbar-menu-wrapper .nav-item.nav-search .input-group, .navbar.navbar-light .navbar-menu-wrapper .nav-item.nav-search .asColorPicker-wrap {
+  background: rgba(40, 47, 58, 0.24);
+}
+
+.navbar.navbar-dark .navbar-menu-wrapper {
+  border-left-color: #495560;
+}
+
+.navbar.navbar-danger .navbar-menu-wrapper .nav-item .nav-link.count-indicator .count {
+  background: #122164;
+}
+
 @media (max-width: 991px) {
   .navbar {
     -webkit-box-orient: horizontal;
@@ -31249,6 +32883,285 @@ div.tagsinput span.tag a {
 .table-sc .head {
   display: table-cell;
   padding: 0.2rem;
+}
+
+.timeline {
+  position: relative;
+  margin-bottom: 100px;
+  z-index: 1;
+}
+
+.timeline:before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 1px;
+  top: 0;
+  border-right: 1px solid #5CC9DF;
+  z-index: -1;
+}
+
+.timeline:after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100px;
+  left: 1px;
+  bottom: -105px;
+  border-right: 1px dashed #5CC9DF;
+  z-index: -1;
+}
+
+.timeline .date-title {
+  text-align: center;
+  margin: 70px 0 50px;
+}
+
+.timeline .date-title span {
+  padding: 15px 30px;
+  font-size: 21px;
+  font-weight: 400;
+  color: #fff;
+  background: #5CC9DF;
+  border-radius: 5px;
+}
+
+.news-item {
+  padding-bottom: 45px;
+}
+
+.news-item.right {
+  float: right;
+  margin-top: 40px;
+}
+
+.news-item .news-content {
+  margin: 20px 30px 0 0;
+  position: relative;
+  padding: 30px;
+  padding-left: 100px;
+  background: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: -5px 5px 0 rgba(0, 0, 0, 0.08);
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.news-item:hover .news-content {
+  background: #5CC9DF;
+  color: #fff;
+}
+
+.news-item.right .news-content {
+  margin: 20px 0 0 30px;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.08);
+}
+
+.news-item .news-content:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50px;
+  right: -40px;
+  width: 0px;
+  height: 0px;
+  background: transparent;
+  border: 20px solid transparent;
+  border-left: 20px solid #f5f5f5;
+  -webkit-transition: border-left-color .3s ease-out;
+  transition: border-left-color .3s ease-out;
+}
+
+.news-item.right .news-content:after {
+  position: absolute;
+  left: -40px;
+  right: auto;
+  border-left: 20px solid transparent;
+  border-right: 20px solid #f5f5f5;
+  -webkit-transition: border-right-color .3s ease-out;
+  transition: border-right-color .3s ease-out;
+}
+
+.news-item:hover .news-content:after {
+  border-left-color: #5CC9DF;
+}
+
+.news-item.right:hover .news-content:after {
+  border-left-color: transparent;
+  border-right-color: #5CC9DF;
+}
+
+.news-item .news-content:before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -55px;
+  top: 60px;
+  background: #5CC9DF;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  -webkit-transition: background .3s ease-out;
+  transition: background .3s ease-out;
+}
+
+.news-item.right .news-content:before {
+  left: -55px;
+  right: auto;
+}
+
+.news-content .date {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 10px;
+  text-align: center;
+  color: #5CC9DF;
+  -webkit-transition: color .3s ease-out;
+  transition: color .3s ease-out;
+}
+
+.news-item:hover .news-content .date {
+  color: #fff;
+}
+
+.news-content .date p {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 48px;
+}
+
+.news-content .date small {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.news-content .news-title {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.news-content p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  margin-bottom: 10px;
+}
+
+.news-content .read-more,
+.news-content .read-more:hover,
+.news-content .read-more:active,
+.news-content .read-more:focus {
+  padding: 10px 0;
+  text-decoration: none;
+  font-size: 16px;
+  color: #7A7C7F;
+  line-height: 24px;
+}
+
+.news-item:hover .news-content .read-more,
+.news-item:hover .news-content .read-more:hover,
+.news-item:hover .news-content .read-more:active,
+.news-item:hover .news-content .read-more:focus {
+  color: #fff;
+}
+
+.news-content .read-more {
+  -webkit-transition: padding .3s ease-out;
+  transition: padding .3s ease-out;
+}
+
+.news-content .read-more:hover {
+  padding-left: 7px;
+}
+
+.news-content .read-more:after {
+  content: '\f054';
+  padding-left: 15px;
+  font-family: 'FontAwesome';
+  font-size: 21px;
+  line-height: 21px;
+  color: #5CC9DF;
+  vertical-align: middle;
+  -webkit-transition: padding .3s ease-out;
+  transition: padding .3s ease-out;
+}
+
+.news-content .read-more:hover:after {
+  padding-left: 20px;
+}
+
+.news-item:hover .news-content .read-more:after {
+  color: #fff;
+}
+
+.news-content .news-media {
+  position: absolute;
+  width: 80px;
+  bottom: -45px;
+  right: 40px;
+  border-radius: 8px;
+}
+
+.news-content .news-media img {
+  border-radius: 8px;
+  transform: scale(1);
+  -webkit-transition: -webkit-transform .3s ease-out;
+  transition: transform .3s ease-out;
+}
+
+.news-content .news-media a {
+  display: block;
+  text-decoration: none;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(circle, white, black);
+}
+
+.news-content .news-media a:hover img {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+.news-content .news-media a:after {
+  content: '\f065';
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  font-family: FontAwesome;
+  font-size: 32px;
+  line-height: 80px;
+  text-align: center;
+  color: #5CC9DF;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+  -webkit-transition: all .2s ease-out .1s;
+  transition: all .2s ease-out .1s;
+}
+
+.news-content .news-media.video a:after {
+  content: '\f04b';
+}
+
+.news-content .news-media a:hover:after {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+.news-content .news-media.gallery {
+  box-shadow: 4px 4px 0 #bbb,8px 8px 0 #ddd;
 }
 
 /*# sourceMappingURL=../assets/maps/vertical-layout-light/style.css.map */
