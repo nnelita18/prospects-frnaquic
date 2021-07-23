@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Nuevos Franquiciatarios Microtec</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="vendors/feather/feather.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" type="text/css" href="vendors/DataTables/datatables.min.css"/>
+  <!-- <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css"> -->
+  <!-- <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css"> -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="assets/css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="assets/images/favicon.png" />
+</head>
+<body class="sidebar-dark">
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5 text-warning" href="index.html">Franquicias</a>
+        <a class="navbar-brand brand-logo-mini" href="index.html">F</a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav mr-lg-2">
+          <li class="nav-item nav-search d-none d-lg-block"></li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item dropdown px-3">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+              <i class="icon-bell mx-0"></i>
+              <span class="count bg-danger" ></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Tienes notificaciones nuevas</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning">
+                    <i class="ti-info-alt mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Tu próximo depósito esta por vencer</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    6:30pm
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="ti-check mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Tu depósito con fecha 15-07-2021 fué acreditado</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                     12:03pm
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="ti-check mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Tu depósito con fecha 30-06-2021 fué acreditado</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                     11:20am
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="ti-check mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Tu depósito con fecha 15-05-2021 fué acreditado</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                     10:30am
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="assets/images/home/profile.jpg" alt="profile"/>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item" data-toggle="modal" data-target="#change-psw"> <i class="ti-unlock text-primary"></i>
+                Cambiar Contraseña
+              </a>
+              <a class="dropdown-item">
+                <i class="ti-power-off text-primary"></i>
+                Cerrar Sesión
+              </a>
+            </div>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Inicio</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pageto" href="views/solicitud.html">
+              <i class="ti-write menu-icon"></i>
+              <span class="menu-title">Mi Solicitud</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pageto" href="views/prospecto/depositos.html">
+              <i class="ti-receipt menu-icon"></i>
+              <span class="menu-title">Depósitos</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pageto" href="views/prospecto/pagos.html">
+              <i class="ti-money menu-icon"></i>
+              <span class="menu-title">Pagos</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div id="change-content" class="main-panel">
+
+  <div class="row title-wrapper">
+    <div class="col-12 col-xl-8">
+      <h3 class="font-weight-bold mb-0">Mi solicitud</h3>
+    </div>
+  </div>
+  <div class="content-wrapper register-ps">
+    <div class="row">
+      <div class="col-12 grid-margin">
+        <div class="container pt-4">
+          <!-- <h1>Sucursal: Franquicia Y </h1> -->
+          <p>
+            Información de su Solicitud.
+          </p>
+          <div class="progress progress--reg">
+            <div class="progress-bar bg-secondary progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <nav class="navssm__sem">
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <a class="nav-link active" id="nav-infoper-tab" data-toggle="tab" href="#nav-infoper" role="tab" aria-controls="nav-infoper" aria-selected="true">Información Personal</a>
+              <a class="nav-link" id="nav-infonegocio-tab" data-toggle="tab" href="#nav-infonegocio" role="tab" aria-controls="nav-infonegocio" aria-selected="false">Información del Negocio y Ubicación</a>
+              <a class="nav-link" id="nav-fotos-tab" data-toggle="tab" href="#nav-fotos" role="tab" aria-controls="nav-fotos" aria-selected="false">Fotos de Perfil y Franquicia</a>
+              <a class="nav-link d-none" id="nav-docs-tab" data-toggle="tab" href="#nav-docs" role="tab" aria-controls="nav-docs" aria-selected="false">Documentos</a>
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-infoper" role="tabpanel" aria-labelledby="nav-infoper-tab"><div class="card card--orange">
+                <div class="card-header">Datos Personales</div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                      <div class="form-group">
+                        <label>Nombre:</label><span class="requered_class">*</span>
+                        <input class="form-control input-sm notEmpty" onkeypress="return soloLetras(event)" type="text" placeholder="Nombre (s)" name="nombre" id="nombre" readonly>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                      <div class="form-group">
+                        <label>A. Paterno:</label><span class="requered_class">*</span>
+                        <input class="form-control input-sm notEmpty" onkeypress="return soloLetras(event)" type="text" placeholder="Apellido paterno" name="apaterno" id="apaterno" readonly>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                      <div class="form-group">
+                        <label>A. Materno:</label><span class="requered_class">*</span>
+                        <input class="form-control input-sm notEmpty" onkeypress="return soloLetras(event)" type="text" placeholder="Apellido materno" name="amaterno" id="amaterno" readonly>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                      <div class="form-group">
+                        <label>Tel Celular:</label><span class="requered_class">*</span>
+                        <input class="form-control input-sm istel" onKeyPress="return soloNum(event)" type="text" placeholder="Celular a 10 digitos obligatorio" name="cel" id="cel" maxlength="10" minlength="10" readonly>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                      <div class="form-group">
+                        <label>Tel Casa:</label>
+                        <input class="form-control input-sm " onKeyPress="return soloNum(event)" type="text" placeholder="Número a 10 digitos obligatorio" name="tel" id="tel" maxlength="10" minlength="10" readonly>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                      <div class="form-group">
+                        <label>E-mail:</label><span class="requered_class">*</span>
+                        <input class="form-control input-sm notEmpty" type="text" placeholder="E-mail" name="email" id="email" readonly>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                      <div class="form-group">
+                        <label>RFC (Solo Si Requiere Factura):</label>
+                        <input class="form-control input-sm " maxlength="13" minlength="13" type="text" placeholder="RFC" onchange="ValidaRfc(this.value)" name="rfc" id="rfc" readonly>
+                        <label id="errfc"></label>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="nav-infonegocio" role="tabpanel" aria-labelledby="nav-infonegocio-tab">
+              <div class="card card--orange card-step">
+                <div class="card-header">Información del Negocio y Ubicación</div>
+                <div class="card-body mb-3">
+                  <div class="row">
+                    <div class="col-md-8 col-sm-8 form-group">
+                      <label>Nombre del Negocio:</label><span class="requered_class">*</span>
+                      <input class="form-control input-sm notEmpty" type="text" placeholder="Nombre del Negocio" name="nnego" id="nnego" required>
+                    </div>
+                  </div>
+
+                  <div id="mapInfo">
+                    <div class="row" id="inputsAddress">
+                        <div class="col-md-4 col-sm-6">
+                            <label>Estado:<span class="required">*</span></label>
+                            <input type="text" name="edo" id="edo" class="form-control"
+                                   placeholder="Entidad Federativa" />
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <label>Municipio:<span class="required">*</span></label>
+                            <input type="text" class="form-control" name="muni" id="muni"
+                                   placeholder="Municipio" />
+                        </div>
+
+                        <div class="col-md-4 col-sm-6">
+                            <label>Ciudad:<span class="required">*</span></label>
+                            <input type="text" class="form-control" name="cd" id="cd" placeholder="Ciudad" />
+                        </div>
+
+                        <div class="col-md-4 col-sm-6">
+                            <label>Colonia:<span class="required">*</span></label>
+                            <input type="text" class="form-control" name="col" id="col"
+                                   placeholder="Colonia">
+                        </div>
+
+                        <div class="col-md-4 col-sm-6">
+                            <label>Cod. Postal:<span class="required">*</span></label>
+                            <input type="text" class="form-control" name="cp" id="cp" maxlength="5"
+                                   minlength="5" placeholder="Código Postal" onKeyPress="return soloNum(event)" />
+                        </div>
+
+                        <div class="col-md-4 col-sm-6">
+                            <label>Calle:<span class="required">*</span></label>
+                            <input type="text" class="form-control" name="calle" id="calle"
+                                   placeholder="Calle" />
+                        </div>
+
+                        <div class="col-md-4 col-sm-6">
+                            <label>Num. Exterior:<span class="required">*</span></label>
+                            <input type="text" class="form-control" name="next" id="next"
+                                   placeholder="Num. Exterior"/>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6">
+                            <label>Num. Interior:</label>
+                            <input type="text" class="form-control" name="nint" id="nint" placeholder="Num. Interior">
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 ">
+                          <label>Entre calle:<span class="txr">*</span>
+                          </label>
+                          <input type="text" class="form-control input-sm notEmpty" name="ecalle" id="ecalle" placeholder="Primer calle">
+                        </div>
+                        <div class="col-md-4 col-sm-6 ">
+                          <label>Y Calle:<span class="txr">*</span>
+                          </label>
+                          <input type="text" class="form-control input-sm notEmpty" name="ycalle" id="ycalle" placeholder="Segunda calle">
+                        </div>
+                    </div>
+                    <div class="row hide text-center">
+                        <div class="col-md-12 mt-3" id="map" style="height: 25rem;"></div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="nav-fotos" role="tabpanel" aria-labelledby="nav-fotos-tab">
+              <div class="card card--orange card-step bg-transparent">
+                <div class="card-header">Foto de perfil</div>
+                <div class="card-body bg-white">
+                  <div class="form-group row portfolio-grid">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
+                      <figure class="effect-text-in">
+                        <img src="assets/images/home/profile.jpg" class="rounded" alt="foto perfil">
+                        <figcaption>
+                          <h4>MiFoto.jpg</h4>
+                          <p>Subida el 05-07-2021</p>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
+                      <figure class="effect-text-in bg-white">
+                        <img src="assets/images/home/profile-default.png" class="rounded" alt="foto perfil">
+                        <figcaption>
+                          <h4>Ejemplo-foto.jpg</h4>
+                          <p>Subida el 09-07-2021</p>
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-header">Fotografías del local</div>
+                <div class="card-body bg-white">
+                  <div class="form-group row portfolio-grid">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 grid-margin stretch-card">
+                      <figure class="effect-text-in">
+                        <img src="assets/images/solicitud/fotoslocal/frente.jpg" class="rounded img-fluid" alt="foto perfil">
+                        <figcaption>
+                          <h4>Foto Frontal del local</h4>
+                          <p>Subida el 05-07-2021</p>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 grid-margin stretch-card">
+                      <figure class="effect-text-in">
+                        <img src="assets/images/solicitud/fotoslocal/laterall.jpg" class="rounded img-fluid" alt="foto perfil">
+                        <figcaption>
+                          <h4>Foto Lateral Izquierda</h4>
+                          <p>Subida el 05-07-2021</p>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 grid-margin stretch-card">
+                      <figure class="effect-text-in">
+                        <img src="assets/images/solicitud/fotoslocal/lateralr.jpg" class="rounded img-fluid" alt="foto perfil">
+                        <figcaption>
+                          <h4>Foto Lateral Derecha</h4>
+                          <p>Subida el 05-07-2021</p>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 grid-margin stretch-card">
+                      <figure class="effect-text-in">
+                        <img src="assets/images/home/photo-dfl.jpg" class="rounded img-fluid" alt="foto perfil">
+                        <figcaption>
+                          <h4>Sin fotos</h4>
+                          <p>No ha subido foto</p>
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade d-none" id="nav-docs" role="tabpanel" aria-labelledby="nav-docs-tab">
+              <div class="card card--orange card-step bg-transparent">
+                <div class="card-header">Documentos</div>
+                <div class="card-body bg-white">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="card-body">
+                        <h4 class="card-title">Lista de Documentación</h4>
+                        <div class="list-wrapper">
+                          <ul class="d-flex flex-column todo-list doc-list">
+                            <li>
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input class="checkbox" type="checkbox" disabled>Identificación oficial vigente  <i class="input-helper"></i>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="completed">
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input class="checkbox" type="checkbox" checked="" disabled>Comprobante de domicilio del local donde estará ubicado el PDV: antigüedad no mayor a 3 meses.  <i class="input-helper"></i>
+                                </label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input class="checkbox" type="checkbox" disabled>Comprobante de domicilio particular (antigüedad no mayor a 3 meses luz, agua, etc).  <i class="input-helper"></i>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="completed">
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input class="checkbox" type="checkbox" checked="checked" disabled>Cuenta bancaria a nombre del franquiciatario y carátula del estado de cuenta.  <i class="input-helper"></i>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="completed">
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input class="checkbox" type="checkbox" checked="" disabled>RFC (Registro Federal de Contribuyentes) <i class="input-helper"></i>
+                                </label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input class="checkbox" type="checkbox"checked="" disabled>Boucher de depósito o comprobante de transferencia <i class="input-helper"></i>
+                                </label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Modal Foto Frontal-->
+  <div class="modal fade modal-comm" id="fotoFrontal" tabindex="-1" aria-labelledby="fotoFrontalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="fotoFrontalLabel">Ejemplo <strong>Foto Frontal</strong></h5>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" style="color: #ffffff; opacity: 1;">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body p-0 text-center">
+          <img src="assets/images/solicitud/fotoslocal/frente.jpg" alt="Local Frente" class="img-fluid">
+          <p class="card-text py-2">
+            Foto de la frente de la fachada del local con periódico del día
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Foto Izquierda-->
+  <div class="modal fade modal-comm" id="fotoLarIz" tabindex="-1" aria-labelledby="fotoLarIzLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="fotoLarIzLabel">Ejemplo <strong>Foto Lateral Izquierda</strong></h5>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" style="color: #ffffff; opacity: 1;">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body p-0 text-center">
+          <img src="assets/images/solicitud/fotoslocal/laterall.jpg" alt="Local Frente" class="img-fluid">
+          <p class="card-text py-2">
+            Fotografías donde pararezca el local y se vea el resto de la calle izquiera.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Foto Derecha-->
+  <div class="modal fade modal-comm" id="fotoLarDr" tabindex="-1" aria-labelledby="fotoLarDrLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="fotoLarDrLabel">Ejemplo <strong>Foto Lateral Derecha</strong></h5>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" style="color: #ffffff; opacity: 1;">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body p-0 text-center">
+          <img src="assets/images/solicitud/fotoslocal/lateralr.jpg" alt="Local Frente" class="img-fluid">
+          <p class="card-text py-2">
+            Fotografías donde pararezca el local y se vea el resto de la calle derecha
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="controllers/solicitud/solicitud-ubicacion.js"></script>
+  <script src="controllers/solicitud.js"></script>
+
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between"> <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021  Microtecnologías Móviles S.A. de C.V.</span>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- Cambiar COntraseña Modal -->
+    <div class="modal fade modal-comm" id="change-psw" tabindex="-1" role="dialog" aria-labelledby="change-pswLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="change-pswLabel">Cambiar Contraseña</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="auth-form-transparent text-left p-3">
+                        <form class="pt-3">
+                            <div class="form-group">
+                                <label for="exampleInputEmail">Ingresa los siguientes datos para cambiar tu
+                                    contraseña.</label>
+                                <div class="input-group">
+                                    <input type="password" class="form-control form-control-lg" id="passActual"
+                                        placeholder="Contraseña actual">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="password" class="form-control form-control-lg" id="passNuevo"
+                                        placeholder="Nueva Contraseña">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="password" class="form-control form-control-lg" id="passNuevo2"
+                                        placeholder="Confirmar Nueva Contraseña">
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" id="btnCambiarPass" class="btn btn-primary mr-3">Cambiar
+                        Contraseña</button>
+                    <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <!-- plugins:js -->
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDciw1GU7AFDx3gQydToRyPi3oehMwWpDk"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script type="text/javascript" src="vendors/DataTables/datatables.min.js"></script>
+  <script type="text/javascript" src="vendors/sweetalert/sweetalert.min.js"></script>
+  <!-- <script src="vendors/chart.js/Chart.min.js"></script> -->
+<!--   <script src="vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="assets/js/dataTables.select.min.js"></script> -->
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="assets/js/off-canvas.js"></script>
+  <script src="assets/js/hoverable-collapse.js"></script>
+  <script src="assets/js/template.js"></script>
+  <!-- <script src="assets/js/settings.js"></script> -->
+  <script src="assets/js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <!-- <script src="assets/js/dashboard.js"></script> -->
+  <!-- <script src="assets/js/Chart.roundedBarCharts.js"></script> -->
+  <script src="assets/js/init.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>
+
