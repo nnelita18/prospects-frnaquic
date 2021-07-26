@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Nuevos Franquiciatarios Microtec</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="vendors/feather/feather.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+   <link rel="stylesheet" type="text/css" href="vendors/DataTables/datatables.min.css"/>
+  <!-- <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css"> -->
+  <!-- <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css"> -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="assets/css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="assets/images/favicon.png" />
+</head>
+<body class="sidebar-dark">
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5 text-warning" href="index.html">Franquicias</a>
+        <a class="navbar-brand brand-logo-mini" href="index.html">F</a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav mr-lg-2">
+          <li class="nav-item nav-search d-none d-lg-block"></li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="assets/images/home/profile.jpg" alt="profile"/>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item">
+                <i class="ti-power-off text-primary"></i>
+                Cerrar Sesión
+              </a>
+            </div>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Inicio</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pageto" href="solicitud.html">
+              <i class="ti-write menu-icon"></i>
+              <span class="menu-title">Mi Solicitud</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pageto" href="pagos.html">
+              <i class="ti-money menu-icon"></i>
+              <span class="menu-title">Pagos</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div id="change-content" class="main-panel">
+        <div class="row title-wrapper">
+          <div class="col-12 col-xl-8 mb-4 mb-xl-0 grid-margin">
+            <h3 class="font-weight-bold mb-0">Lista de Solicitudes</h3>
+          </div>
+        </div>
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-lg-12 mt-4">
+              <div class="card">
+                <div class="card-header">
+                  <h4 class="card-title text-white m-0">Solicitudes</h4>
+                </div>
+                <div class="card-body">
+                  <nav>
+                    <div class="nav nav-tabs nav nav-pills" id="nav-tab" role="tablist">
+                      <a class="nav-link active" id="nav-pendientes-tab" data-toggle="tab" href="#nav-pendientes" role="tab" aria-controls="nav-pendientes" aria-selected="true">Pendientes a Autorizar</a>
+                      <a class="nav-link" id="nav-autorizadas-tab" data-toggle="tab" href="#nav-autorizadas" role="tab" aria-controls="nav-autorizadas" aria-selected="false">Autorizadas</a>
+                      <a class="nav-link" id="nav-noautorizadas-tab" data-toggle="tab" href="#nav-noautorizadas" role="tab" aria-controls="nav-noautorizadas" aria-selected="false">No Autorizadas</a>
+                    </div>
+                  </nav>
+                  <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-pendientes" role="tabpanel" aria-labelledby="nav-pendientes-tab">
+                      <div class="table-responsive">
+                        <table id="pendientes" class="table table-striped">
+                          <thead>
+                            <tr>
+                              <th>Nombre</th>
+                              <th>Descuentos/Límites</th>
+                              <th>E-mail</th>
+                              <th>Fecha registro</th>
+                              <th>Estatus</th>
+                              <th>Acciones</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Ramón Flores Sanchéz</td>
+                              <td><label class="badge badge-warning">Pendiente</label></td>
+                              <td>rflores23@gmail.com</td>
+                              <td>05-15-2021</td>
+                              <td><label class="badge badge-primary">Nuevo</label></td>
+                              <td>
+                                <a href="views/admin/actions/ver-info.html" class="btn btn-primary btn-action pageto" title="Ver Informacion"><i class="ti-id-badge"></i></a>
+                                <a href="views/admin/actions/descuentos-limites.html" class="btn btn-danger btn-action pageto" title="Autorizar Limites"><i class="ti-check-box"></i></a>
+                                <a href="views/admin/actions/horario-sam-ad.html" class="btn btn-success btn-action pageto" title="Horario Samtec"><i class="ti-alarm-clock"></i></a>
+                                <a href="" class="btn btn-info btn-action" title="Lìmite de crèdito" data-toggle="modal" data-target="#limi-cre"><i class="ti-stats-up"></i></a>
+                                <a href="views/admin/actions/estatus-sol.html" class="btn btn-secondary btn-action pageto" title="Ver historial"><i class="ti-comment-alt text-white"></i></a>
+                                <a href="" class="btn btn-outline-info btn-action pageto " title="Autorizar apertura" data-toggle="modal" data-target="#autorApertura"><i class="ti-thumb-up"></i></a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Ramón Flores Sanchéz</td>
+                              <td><label class="badge badge-warning">Pendiente</label></td>
+                              <td>rflores23@gmail.com</td>
+                              <td>05-15-2021</td>
+                              <td><label class="badge badge-primary">Nuevo</label></td>
+                              <td>
+                                <a href="views/admin/actions/ver-info.html" class="btn btn-primary btn-action pageto" title="Ver Informacion"><i class="ti-id-badge"></i></a>
+                                <a href="views/admin/actions/descuentos-limites.html" class="btn btn-danger btn-action pageto" title="Autorizar Limites"><i class="ti-check-box"></i></a>
+                                <a href="views/admin/actions/horario-sam-ad.html" class="btn btn-success btn-action pageto" title="Horario Samtec"><i class="ti-alarm-clock"></i></a>
+                                <a href="" class="btn btn-info btn-action" title="Lìmite de crèdito" data-toggle="modal" data-target="#limi-cre"><i class="ti-stats-up"></i></a>
+                                <a href="views/admin/actions/estatus-sol.html" class="btn btn-secondary btn-action pageto" title="Ver historial"><i class="ti-comment-alt text-white"></i></a>
+                                <a href="" class="btn btn-outline-info btn-action pageto " title="Autorizar apertura" data-toggle="modal" data-target="#autorApertura"><i class="ti-thumb-up"></i></a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Ramón Flores Sanchéz</td>
+                              <td><label class="badge badge-warning">Pendiente</label></td>
+                              <td>rflores23@gmail.com</td>
+                              <td>05-15-2021</td>
+                              <td><label class="badge badge-primary">Nuevo</label></td>
+                              <td>
+                                <a href="views/admin/actions/ver-info.html" class="btn btn-primary btn-action pageto" title="Ver Informacion"><i class="ti-id-badge"></i></a>
+                                <a href="views/admin/actions/descuentos-limites.html" class="btn btn-danger btn-action pageto" title="Autorizar Limites"><i class="ti-check-box"></i></a>
+                                <a href="views/admin/actions/horario-sam-ad.html" class="btn btn-success btn-action pageto" title="Horario Samtec"><i class="ti-alarm-clock"></i></a>
+                                <a href="" class="btn btn-info btn-action" title="Lìmite de crèdito" data-toggle="modal" data-target="#limi-cre"><i class="ti-stats-up"></i></a>
+                                <a href="views/admin/actions/estatus-sol.html" class="btn btn-secondary btn-action pageto" title="Ver historial"><i class="ti-comment-alt text-white"></i></a>
+                                <a href="" class="btn btn-outline-info btn-action pageto " title="Autorizar apertura" data-toggle="modal" data-target="#autorApertura"><i class="ti-thumb-up"></i></a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Ramón Flores Sanchéz</td>
+                              <td><label class="badge badge-warning">Pendiente</label></td>
+                              <td>rflores23@gmail.com</td>
+                              <td>05-15-2021</td>
+                              <td><label class="badge badge-primary">Nuevo</label></td>
+                              <td>
+                                <a href="views/admin/actions/ver-info.html" class="btn btn-primary btn-action pageto" title="Ver Informacion"><i class="ti-id-badge"></i></a>
+                                <a href="views/admin/actions/descuentos-limites.html" class="btn btn-danger btn-action pageto" title="Autorizar Limites"><i class="ti-check-box"></i></a>
+                                <a href="views/admin/actions/horario-sam-ad.html" class="btn btn-success btn-action pageto" title="Horario Samtec"><i class="ti-alarm-clock"></i></a>
+                                <a href="" class="btn btn-info btn-action" title="Lìmite de crèdito" data-toggle="modal" data-target="#limi-cre"><i class="ti-stats-up"></i></a>
+                                <a href="views/admin/actions/estatus-sol.html" class="btn btn-secondary btn-action pageto" title="Ver historial"><i class="ti-comment-alt text-white"></i></a>
+                                <a href="" class="btn btn-outline-info btn-action pageto " title="Autorizar apertura" data-toggle="modal" data-target="#autorApertura"><i class="ti-thumb-up"></i></a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-autorizadas" role="tabpanel" aria-labelledby="nav-autorizadas-tab">
+                      <div class="table-responsive">
+                        <table id="autorizados" class="table table-striped">
+                          <thead>
+                            <tr>
+                              <th>Nombre</th>
+                              <th>Descuentos/Límites</th>
+                              <th>E-mail</th>
+                              <th>Fecha registro</th>
+                              <th>Estatus</th>
+                              <th>Acciones</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Ramón Flores Sanchéz</td>
+                              <td><label class="badge badge-success">Autorizado</label></td>
+                              <td>rflores23@gmail.com</td>
+                              <td>05-15-2021</td>
+                              <td><label class="badge badge-primary">Nuevo</label></td>
+                              <td>
+                                <a href="views/admin/actions/ver-info.html" class="btn btn-primary btn-action pageto" title="Ver Informacion"><i class="ti-id-badge"></i></a>
+                                <a href="views/admin/actions/editar-info.html" class="btn btn-warning btn-action pageto" title="Editar Informacion"><i class="ti-pencil-alt"></i></a>
+                                <a href="views/admin/actions/horario-sam.html" class="btn btn-success btn-action pageto" title="Horario Samtec"><i class="ti-alarm-clock"></i></a>
+                                <a href="views/admin/actions/pagos.html" class="btn btn-outline-danger btn-action pageto" title="Agregar Pago"><i class="ti-money"></i></a>
+                                <a href="views/admin/actions/descuentos-limites-ver.html" class="btn btn-danger btn-action pageto" title="Autorizar"><i class="ti-check-box"></i></a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Ramón Flores Sanchéz</td>
+                              <td><label class="badge badge-success">Autorizado</label></td>
+                              <td>rflores23@gmail.com</td>
+                              <td>05-15-2021</td>
+                              <td><label class="badge badge-primary">Nuevo</label></td>
+                              <td>
+                                <a href="views/admin/actions/ver-info.html" class="btn btn-primary btn-action pageto" title="Ver Informacion"><i class="ti-id-badge"></i></a>
+                                <a href="views/admin/actions/editar-info.html" class="btn btn-warning btn-action pageto" title="Editar Informacion"><i class="ti-pencil-alt"></i></a>
+                                <a href="views/admin/actions/horario-sam.html" class="btn btn-success btn-action pageto" title="Horario Samtec"><i class="ti-alarm-clock"></i></a>
+                                <a href="views/admin/actions/pagos.html" class="btn btn-outline-danger btn-action pageto" title="Agregar Pago"><i class="ti-money"></i></a>
+                                <a href="views/admin/actions/descuentos-limites-ver.html" class="btn btn-danger btn-action pageto" title="Autorizar"><i class="ti-check-box"></i></a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Ramón Flores Sanchéz</td>
+                              <td><label class="badge badge-success">Autorizado</label></td>
+                              <td>rflores23@gmail.com</td>
+                              <td>05-15-2021</td>
+                              <td><label class="badge badge-primary">Nuevo</label></td>
+                              <td>
+                                <a href="views/admin/actions/ver-info.html" class="btn btn-primary btn-action pageto" title="Ver Informacion"><i class="ti-id-badge"></i></a>
+                                <a href="views/admin/actions/editar-info.html" class="btn btn-warning btn-action pageto" title="Editar Informacion"><i class="ti-pencil-alt"></i></a>
+                                <a href="views/admin/actions/horario-sam.html" class="btn btn-success btn-action pageto" title="Horario Samtec"><i class="ti-alarm-clock"></i></a>
+                                <a href="views/admin/actions/pagos.html" class="btn btn-outline-danger btn-action pageto" title="Agregar Pago"><i class="ti-money"></i></a>
+                                <a href="views/admin/actions/descuentos-limites-ver.html" class="btn btn-danger btn-action pageto" title="Autorizar"><i class="ti-check-box"></i></a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Ramón Flores Sanchéz</td>
+                              <td><label class="badge badge-success">Autorizado</label></td>
+                              <td>rflores23@gmail.com</td>
+                              <td>05-15-2021</td>
+                              <td><label class="badge badge-primary">Nuevo</label></td>
+                              <td>
+                                <a href="views/admin/actions/ver-info.html" class="btn btn-primary btn-action pageto" title="Ver Informacion"><i class="ti-id-badge"></i></a>
+                                <a href="views/admin/actions/editar-info.html" class="btn btn-warning btn-action pageto" title="Editar Informacion"><i class="ti-pencil-alt"></i></a>
+                                <a href="views/admin/actions/horario-sam.html" class="btn btn-success btn-action pageto" title="Horario Samtec"><i class="ti-alarm-clock"></i></a>
+                                <a href="views/admin/actions/pagos.html" class="btn btn-outline-danger btn-action pageto" title="Agregar Pago"><i class="ti-money"></i></a>
+                                <a href="views/admin/actions/descuentos-limites-ver.html" class="btn btn-danger btn-action pageto" title="Autorizar"><i class="ti-check-box"></i></a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Ramón Flores Sanchéz</td>
+                              <td><label class="badge badge-success">Autorizado</label></td>
+                              <td>rflores23@gmail.com</td>
+                              <td>05-15-2021</td>
+                              <td><label class="badge badge-primary">Nuevo</label></td>
+                              <td>
+                                <a href="views/admin/actions/ver-info.html" class="btn btn-primary btn-action pageto" title="Ver Informacion"><i class="ti-id-badge"></i></a>
+                                <a href="views/admin/actions/editar-info.html" class="btn btn-warning btn-action pageto" title="Editar Informacion"><i class="ti-pencil-alt"></i></a>
+                                <a href="views/admin/actions/horario-sam.html" class="btn btn-success btn-action pageto" title="Horario Samtec"><i class="ti-alarm-clock"></i></a>
+                                <a href="views/admin/actions/pagos.html" class="btn btn-outline-danger btn-action pageto" title="Agregar Pago"><i class="ti-money"></i></a>
+                                <a href="views/admin/actions/descuentos-limites-ver.html" class="btn btn-danger btn-action pageto" title="Autorizar"><i class="ti-check-box"></i></a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-noautorizadas" role="tabpanel" aria-labelledby="nav-noautorizadas-tab">
+                      <div class="table-responsive">
+                        <table id="noautorizados" class="table table-striped">
+                          <thead>
+                            <tr>
+                              <th>Nombre</th>
+                              <th>Descuentos/Límites</th>
+                              <th>E-mail</th>
+                              <th>Fecha registro</th>
+                              <th>Estatus</th>
+                              <th>Acciones</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Ramón Flores Sanchéz</td>
+                              <td><label class="badge badge-danger">No Autorizado</label></td>
+                              <td>rflores23@gmail.com</td>
+                              <td>05-15-2021</td>
+                              <td><label class="badge badge-primary">Nuevo</label></td>
+                              <td>
+                                <a href="views/admin/actions/descuentos-limites-noaut.html" class="btn btn-primary btn-action pageto" title="Ver Informacion"><i class="ti-id-badge"></i></a>
+                                <a href="views/admin/actions/editar-info.html" class="btn btn-warning btn-action pageto" title="Editar Informacion"><i class="ti-pencil-alt"></i></a>
+                                <a href="views/admin/actions/horario-sam.html" class="btn btn-success btn-action pageto" title="Horario Samtec"><i class="ti-alarm-clock"></i></a>
+                                <a href="views/admin/actions/pagos.html" class="btn btn-outline-danger btn-action pageto" title="Agregar Pago"><i class="ti-money"></i></a>
+                                <a href="views/admin/actions/descuentos-limites-noaut.html" class="btn btn-danger btn-action pageto" title="Autorizar"><i class="ti-check-box"></i></a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Ramón Flores Sanchéz</td>
+                              <td><label class="badge badge-danger">No Autorizado</label></td>
+                              <td>rflores23@gmail.com</td>
+                              <td>05-15-2021</td>
+                              <td><label class="badge badge-primary">Nuevo</label></td>
+                              <td>
+                                <a href="views/admin/actions/descuentos-limites-noaut.html" class="btn btn-primary btn-action pageto" title="Ver Informacion"><i class="ti-id-badge"></i></a>
+                                <a href="views/admin/actions/editar-info.html" class="btn btn-warning btn-action pageto" title="Editar Informacion"><i class="ti-pencil-alt"></i></a>
+                                <a href="views/admin/actions/horario-sam.html" class="btn btn-success btn-action pageto" title="Horario Samtec"><i class="ti-alarm-clock"></i></a>
+                                <a href="views/admin/actions/pagos.html" class="btn btn-outline-danger btn-action pageto" title="Agregar Pago"><i class="ti-money"></i></a>
+                                <a href="views/admin/actions/descuentos-limites-noaut.html" class="btn btn-danger btn-action pageto" title="Autorizar"><i class="ti-check-box"></i></a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Ramón Flores Sanchéz</td>
+                              <td><label class="badge badge-danger">No Autorizado</label></td>
+                              <td>rflores23@gmail.com</td>
+                              <td>05-15-2021</td>
+                              <td><label class="badge badge-primary">Nuevo</label></td>
+                              <td>
+                                <a href="views/admin/actions/descuentos-limites-noaut.html" class="btn btn-primary btn-action pageto" title="Ver Informacion"><i class="ti-id-badge"></i></a>
+                                <a href="views/admin/actions/editar-info.html" class="btn btn-warning btn-action pageto" title="Editar Informacion"><i class="ti-pencil-alt"></i></a>
+                                <a href="views/admin/actions/horario-sam.html" class="btn btn-success btn-action pageto" title="Horario Samtec"><i class="ti-alarm-clock"></i></a>
+                                <a href="views/admin/actions/pagos.html" class="btn btn-outline-danger btn-action pageto" title="Agregar Pago"><i class="ti-money"></i></a>
+                                <a href="views/admin/actions/descuentos-limites-noaut.html" class="btn btn-danger btn-action pageto" title="Autorizar"><i class="ti-check-box"></i></a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Ramón Flores Sanchéz</td>
+                              <td><label class="badge badge-danger">No Autorizado</label></td>
+                              <td>rflores23@gmail.com</td>
+                              <td>05-15-2021</td>
+                              <td><label class="badge badge-primary">Nuevo</label></td>
+                              <td>
+                                <a href="views/admin/actions/descuentos-limites-noaut.html" class="btn btn-primary btn-action pageto" title="Ver Informacion"><i class="ti-id-badge"></i></a>
+                                <a href="views/admin/actions/editar-info.html" class="btn btn-warning btn-action pageto" title="Editar Informacion"><i class="ti-pencil-alt"></i></a>
+                                <a href="views/admin/actions/horario-sam.html" class="btn btn-success btn-action pageto" title="Horario Samtec"><i class="ti-alarm-clock"></i></a>
+                                <a href="views/admin/actions/pagos.html" class="btn btn-outline-danger btn-action pageto" title="Agregar Pago"><i class="ti-money"></i></a>
+                                <a href="views/admin/actions/descuentos-limites-noaut.html" class="btn btn-danger btn-action pageto" title="Autorizar"><i class="ti-check-box"></i></a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Ramón Flores Sanchéz</td>
+                              <td><label class="badge badge-danger">No Autorizado</label></td>
+                              <td>rflores23@gmail.com</td>
+                              <td>05-15-2021</td>
+                              <td><label class="badge badge-primary">Nuevo</label></td>
+                              <td>
+                                <a href="views/admin/actions/descuentos-limites-noaut.html" class="btn btn-primary btn-action pageto" title="Ver Informacion"><i class="ti-id-badge"></i></a>
+                                <a href="views/admin/actions/editar-info.html" class="btn btn-warning btn-action pageto" title="Editar Informacion"><i class="ti-pencil-alt"></i></a>
+                                <a href="views/admin/actions/horario-sam.html" class="btn btn-success btn-action pageto" title="Horario Samtec"><i class="ti-alarm-clock"></i></a>
+                                <a href="views/admin/actions/pagos.html" class="btn btn-outline-danger btn-action pageto" title="Agregar Pago"><i class="ti-money"></i></a>
+                                <a href="views/admin/actions/descuentos-limites-noaut.html" class="btn btn-danger btn-action pageto" title="Autorizar"><i class="ti-check-box"></i></a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021.  Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash. All rights reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="ti-heart text-danger ml-1"></i></span>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+<!-- Modal Limite de credito-->
+<div class="modal fade" id="limi-cre" tabindex="-1" aria-labelledby="limi-creLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="limi-creLabel">Limite de crédito</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body p-3">
+        <form>
+          <div class="form-group">
+            <label for="limcredito">Ingrese el límite de crédito requerido:</label>
+            <input type="text" class="form-control" id="limcredito" placeholder="20,000.00">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Agregar Comentario:</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Solicitar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Autorizar Apertura -->
+<div class="modal fade" id="autorApertura" tabindex="-1" aria-labelledby="ModalLabel" style="display: none;" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalLabel">Autorizar Apertura</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body py-0">
+        <form>
+          <div class="form-group">
+            <label for="coments" class="col-form-label">Comentarios:</label>
+            <textarea class="form-control" id="coments"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="" class="btn btn-info"><i class="ti-check mr-2"></i>Autorizar Apertura</button>
+        <button type="" class="btn btn-danger"><i class="ti-close mr-2"></i>No Autorizar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- plugins:js -->
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script type="text/javascript" src="vendors/DataTables/datatables.min.js"></script>
+  <!-- <script src="vendors/chart.js/Chart.min.js"></script> -->
+<!--   <script src="vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="assets/js/dataTables.select.min.js"></script> -->
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="assets/js/off-canvas.js"></script>
+  <script src="assets/js/hoverable-collapse.js"></script>
+  <script src="assets/js/template.js"></script>
+  <!-- <script src="assets/js/settings.js"></script> -->
+  <script src="assets/js/todolist.js"></script>
+  <script src="assets/js/jquery.repeater/jquery.repeater.min.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <!-- <script src="assets/js/dashboard.js"></script> -->
+  <!-- <script src="assets/js/Chart.roundedBarCharts.js"></script> -->
+  <script src="assets/js/init.js"></script>
+  <!-- End custom js for this page-->
+
+  <script>
+    (function($) {
+      'use strict';
+      $(function() {
+        $('#mis-pagos').DataTable({
+          "iDisplayLength": 10,
+          "language": {
+            "url": "//cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json"
+          }
+        });
+      });
+    })(jQuery);
+  </script>
+</body>
+
+</html>
+
