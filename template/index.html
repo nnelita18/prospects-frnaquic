@@ -104,6 +104,9 @@
               <img src="assets/images/home/profile.jpg" alt="profile"/>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item" data-toggle="modal" data-target="#edit-user"> <i class="ti-user text-primary"></i>
+                Mi perfil
+              </a>
               <a class="dropdown-item" data-toggle="modal" data-target="#change-psw"> <i class="ti-unlock text-primary"></i>
                 Cambiar Contraseña
               </a>
@@ -298,51 +301,172 @@
   <!-- container-scroller -->
 
   <!-- Cambiar COntraseña Modal -->
-    <div class="modal fade modal-comm" id="change-psw" tabindex="-1" role="dialog" aria-labelledby="change-pswLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="change-pswLabel">Cambiar Contraseña</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="auth-form-transparent text-left p-3">
-                        <form class="pt-3">
-                            <div class="form-group">
-                                <label for="exampleInputEmail">Ingresa los siguientes datos para cambiar tu
-                                    contraseña.</label>
-                                <div class="input-group">
-                                    <input type="password" class="form-control form-control-lg" id="passActual"
-                                        placeholder="Contraseña actual">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <input type="password" class="form-control form-control-lg" id="passNuevo"
-                                        placeholder="Nueva Contraseña">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <input type="password" class="form-control form-control-lg" id="passNuevo2"
-                                        placeholder="Confirmar Nueva Contraseña">
-                                </div>
-                            </div>
+  <div class="modal fade modal-comm" id="change-psw" tabindex="-1" role="dialog" aria-labelledby="change-pswLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="change-pswLabel">Cambiar Contraseña</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <div class="auth-form-transparent text-left p-3">
+                      <form class="pt-3">
+                          <div class="form-group">
+                              <label for="exampleInputEmail">Ingresa los siguientes datos para cambiar tu
+                                  contraseña.</label>
+                              <div class="input-group">
+                                  <input type="password" class="form-control form-control-lg" id="passActual"
+                                      placeholder="Contraseña actual">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <div class="input-group">
+                                  <input type="password" class="form-control form-control-lg" id="passNuevo"
+                                      placeholder="Nueva Contraseña">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <div class="input-group">
+                                  <input type="password" class="form-control form-control-lg" id="passNuevo2"
+                                      placeholder="Confirmar Nueva Contraseña">
+                              </div>
+                          </div>
 
-                        </form>
-                    </div>
-                </div>
-                <div class="modal-footer justify-content-center">
-                    <button type="button" id="btnCambiarPass" class="btn btn-primary mr-3">Cambiar
-                        Contraseña</button>
-                    <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
-                </div>
-            </div>
+                      </form>
+                  </div>
+              </div>
+              <div class="modal-footer justify-content-center">
+                  <button type="button" id="btnCambiarPass" class="btn btn-primary mr-3">Cambiar
+                      Contraseña</button>
+                  <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Modal Edit user-->
+  <div class="modal fade" id="edit-user" tabindex="-1" role="dialog" aria-labelledby="edit-userLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="edit-userLabel">Editar información de Perfil</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
+        <div class="modal-body">
+          <div class="card card-step card--orange">
+            <div class="card-header">Datos Personales</div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-4 col-sm-6">
+                  <div class="form-group">
+                    <label>Nombre:</label><span class="requered_class">*</span>
+                    <input class="form-control input-sm notEmpty" onkeypress="return soloLetras(event)" type="text" placeholder="Nombre (s)" name="nombre" id="nombre" required>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="form-group">
+                    <label>A. Paterno:</label><span class="requered_class">*</span>
+                    <input class="form-control input-sm notEmpty" onkeypress="return soloLetras(event)" type="text" placeholder="Apellido paterno" name="apaterno" id="apaterno" required>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="form-group">
+                    <label>A. Materno:</label><span class="requered_class">*</span>
+                    <input class="form-control input-sm notEmpty" onkeypress="return soloLetras(event)" type="text" placeholder="Apellido materno" name="amaterno" id="amaterno" required>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 col-sm-6">
+                  <div class="form-group">
+                    <label>Tel Celular:</label><span class="requered_class">*</span>
+                    <input class="form-control input-sm istel" onKeyPress="return soloNum(event)" type="text" placeholder="Celular a 10 digitos obligatorio" name="cel" id="cel" maxlength="10" minlength="10" required>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="form-group">
+                    <label>Tel Casa:</label>
+                    <input class="form-control input-sm " onKeyPress="return soloNum(event)" type="text" placeholder="Número a 10 digitos obligatorio" name="tel" id="tel" maxlength="10" minlength="10" required>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="form-group">
+                    <label>E-mail:</label><span class="requered_class">*</span>
+                    <input class="form-control input-sm notEmpty" type="text" placeholder="E-mail" name="email" id="email" required>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="form-group">
+                    <label>RFC (Solo Si Requiere Factura):</label>
+                    <input class="form-control input-sm " maxlength="13" minlength="13" type="text" placeholder="RFC" onchange="ValidaRfc(this.value)" name="rfc" id="rfc" required>
+                    <label id="errfc"></label>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="card-header">Fotos de Perfil<</div>
+            <div class="card-body bg-white">
+              <div class="row portfolio-grid">
+                <div class="col-md-12">
+                  <p>Selecciona tu foto y haz click en Cambiar para actualizar tu foto de perfil.</p>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
+                  <figure class="effect-text-in">
+                    <img src="assets/images/home/profile.jpg" class="rounded" alt="foto perfil">
+                    <figcaption>
+                      <h4>MiFoto.jpg</h4>
+                      <p>
+                        <button type="button" class="btn btn-info btn-lg btn-block" data-toggle="collapse" href="#edituserinfo" role="button" aria-expanded="false" aria-controls="edituserinfo">Cambiar
+                          <i class="ti-edit float-right"></i>
+                        </button>
+                      </p>
+
+                    </figcaption>
+                  </figure>
+                </div>
+                <div class="collapse col-xl-9 col-lg-9 col-md-9 col-sm-9 col-12" id="edituserinfo">
+                  <div class="card card-body">
+                    <div class="form-group row">
+                      <div class="col-md-8">
+                        <label for=""> &#8212; Adjunta tu Foto</label>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text py-0" id="inputGroupFileAddon01">Upload</span>
+                          </div>
+                          <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4 cust-badge">
+                        <div class="badge badge-primary">MiFoto.jpg</div>
+                      </div>
+                      <div class="col-md-12">
+                        <button class="btn btn-warning" type="button" data-toggle="collapse" data-target="#edituserinfo" aria-expanded="false" aria-controls="edituserinfo">
+                         cancelar
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary">Guardar cambios</button>
+        </div>
+      </div>
     </div>
+  </div>
 
   <!-- plugins:js -->
   <script src="vendors/js/vendor.bundle.base.js"></script>
